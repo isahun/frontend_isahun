@@ -1,0 +1,30 @@
+header {
+    background: #00008b;
+    color: #ababe0;
+    text-align: center;
+    padding: top
+}
+
+/*
+header 
+    contanins h1
+    has dark background color
+    has light text color
+    text is center aligned
+    has padding top and bottom of 25px
+    has a margin bottom of 25px    
+main
+    place img here
+    place text here using headings paragraphs and lists
+    give it a light background color
+    give it a width of 600px
+    give it equal padding on all sides
+    give it a solid red border that is 5px thick
+footer
+    place provided text in paragraph
+    give it dark background color
+    give it a light text color
+    center align text
+    padding top and bottom 25 px
+    margin of 25px on top only
+*/
