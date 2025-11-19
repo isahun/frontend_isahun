@@ -1,3 +1,13 @@
+/*  Reset  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*  Global  */
+
 :root {
     font-family: Verdana;
     color: black;
@@ -5,16 +15,14 @@
 
 
 body {
-    margin: 0 auto;
-    padding: 0;
     background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
 }
 
 p {
     color: #959895;
 }
+
+/* header i navbar */
 
 header {
     background-color: white;
@@ -23,7 +31,6 @@ header {
 
 .navbar {
     display: flex;
-
 }
 
 .navbar > img {
@@ -36,7 +43,34 @@ header {
     background-color: #ffffff;
 }
 
+/* hero */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 30px;
+
+}
+
 .hero-image {
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    margin-bottom: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    margin-bottom: 30px;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
