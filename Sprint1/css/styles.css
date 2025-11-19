@@ -1,7 +1,6 @@
 :root {
     font-family: Verdana;
     color: black;
-    width: 576px; /* Ancho del contenido para MÓVILES*/
 }
 
 
@@ -24,6 +23,7 @@ header {
 
 .navbar {
     display: flex;
+
 }
 
 .navbar > img {
@@ -34,4 +34,9 @@ header {
     margin-left: auto;
     border: none;
     background-color: #ffffff;
+}
+
+.hero-image {
+    margin-left: auto;
+    margin-right: auto;
 }
