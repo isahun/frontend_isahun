@@ -6,154 +6,156 @@
     <meta name="keywords" content="Mòdul , exercicis o apunts, temes">
     <meta name="author" content="Irene Sahun">
     <title>Sprint1 HTML+CSS</title>
+    <link href="node_modules/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <nav class="navbar">
-        <!--PREGUNTA, cal un div que contingui tot això, dins de nav?-->
-        <img src="bookmark-landing-page/starter-code/images/logo-bookmark.svg" alt="The bookmark logo and the name of the company">
-        <button class="menu-button">
-            <img src="bookmark-landing-page/starter-code/images/icon-hamburger.svg" alt="Three parallel lines in vertical axis">
-        </button>
-    </nav>
-</header>
+    <header>
+        <nav class="navbar">
+            <!--PREGUNTA, cal un div que contingui tot això, dins de nav?-->
+            <img src="bookmark-landing-page/starter-code/images/logo-bookmark.svg" alt="The bookmark logo and the name of the company">
+            <button class="menu-button">
+                <img src="bookmark-landing-page/starter-code/images/icon-hamburger.svg" alt="Three parallel lines in vertical axis">
+            </button>
+        </nav>
+    </header>
 
-<section class="hero">
-    <div class="hero-image">
-        <img src="bookmark-landing-page/starter-code/images/illustration-hero.svg" alt="A digital drawing of a blank website displayed on PC screen">
-    </div>
-<!---->
-    <div class="hero-text">
-        <h1>A Simple Bookmark Manager</h1>
-        <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-    </div>
-
-    <div class="hero-buttons">
-        <a href="#" class="herobutton-1">Get it on Chrome</a>
-        <a href="#" class="herobutton-2">Get it on Firefox</a>
-    </div>
-</section>
-
-<section class="features">
-    <h2>Features</h2>
-    <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
-
-    <div class="tabs">
-        <button class="tab active">Simple Bookmarking</button>
-        <button class="tab">Speedy Searching</button>
-        <button class="tab">Easy Sharing</button>
-    </div>
-    
-    <div class="tabs-content">
-
-        <div class="tab-content active" id="simple-bookmarking">
-            <img src="bookmark-landing-page/starter-code/images/illustration-features-tab-1.svg" alt="A digital drawing of a person saving a website as a bookmark">
-            <h3>Bookmark in one click</h3>
-            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+    <section class="hero">
+        <div class="hero-image">
+            <img src="bookmark-landing-page/starter-code/images/illustration-hero.svg" alt="A digital drawing of a blank website displayed on PC screen">
         </div>
 
-        <div class="tab-content" id="speedy-searching">
-            <img src="bookmark-landing-page/starter-code/images/illustration-features-tab-2.svg" alt="A digital drawing of a person searching for a website">
-            <h3>Intelligent search</h3>
-            <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-        </div>
-    
-        <div class="tab-content" id="easy-sharing">
-            <img src="bookmark-landing-page/starter-code/images/illustration-features-tab-3.svg" alt="A digital drawing of a person sharing a website with another person">
-            <h3>Intelligent search</h3>
-            <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+        <div class="hero-text">
+            <h1>A Simple Bookmark Manager</h1>
+            <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
         </div>
 
-    </div>
-</section>
-
-<section class="download">
-    <h2>Download the extension</h2>
-    <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
-
-    <div class="cards">
-        <div class="card-chrome">
-            <img src="bookmark-landing-page/starter-code/images/logo-chrome.svg" alt="The Google Chrome logo">
-            <h3>Add to Chrome</h3>
-            <p>Minimum version 62</p>
-            <img src="bookmark-landing-page/starter-code/images/bg-dots.svg" alt="A pattern of small grey dots">
-            <a href="#" class="downbutton-1">Add & Install Extension</a>
+        <div class="hero-buttons">
+            <a href="#" class="herobutton-1">Get it on Chrome</a>
+            <a href="#" class="herobutton-2">Get it on Firefox</a>
         </div>
+    </section>
 
-        <div class="card-firefox">
-            <img src="bookmark-landing-page/starter-code/images/logo-firefox.svg" alt="The Mozilla Firefox logo">
-            <h3>Add to Firefox</h3>
-            <p>Minimum version 55</p>
-            <img src="bookmark-landing-page/starter-code/images/bg-dots.svg" alt="A pattern of small grey dots">
-            <a href="#" class="downbutton-2">Add & Install Extension</a>
+    <section class="features">
+        <h2>Features</h2>
+        <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+
+        <div class="tabs">
+            <button class="tab active">Simple Bookmarking</button>
+            <button class="tab">Speedy Searching</button>
+            <button class="tab">Easy Sharing</button>
         </div>
         
-        <div class="card-opera">
-            <img src="bookmark-landing-page/starter-code/images/logo-opera.svg" alt="The Opera logo">
-            <h3>Add to Opera</h3>
-            <p>Minimum version 46</p>
-            <img src="bookmark-landing-page/starter-code/images/bg-dots.svg" alt="A pattern of small grey dots">
-            <a href="#" class="downbutton-3">Add & Install Extension</a>
+        <div class="tabs-content">
+
+            <div class="tab-content active" id="simple-bookmarking">
+                <img src="bookmark-landing-page/starter-code/images/illustration-features-tab-1.svg" alt="A digital drawing of a person saving a website as a bookmark">
+                <h3>Bookmark in one click</h3>
+                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+            </div>
+
+            <div class="tab-content" id="speedy-searching">
+                <img src="bookmark-landing-page/starter-code/images/illustration-features-tab-2.svg" alt="A digital drawing of a person searching for a website">
+                <h3>Intelligent search</h3>
+                <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+            </div>
+        
+            <div class="tab-content" id="easy-sharing">
+                <img src="bookmark-landing-page/starter-code/images/illustration-features-tab-3.svg" alt="A digital drawing of a person sharing a website with another person">
+                <h3>Easy sharing</h3>
+                <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+            </div>
+
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
+    <section class="download">
+        <h2>Download the extension</h2>
+        <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
 
-    <div class="questions"> <!--es millor dins d'un container d'aquest tipus especificar o distingir cada element anidat? 
-            osigui, distingim les questions o p'alante nomes posant question a tot?-->
-        <div class="question">
-            <h3>What is Bookmark?</h3>
-            <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
+        <div class="cards">
+            <div class="card-chrome">
+                <img src="bookmark-landing-page/starter-code/images/logo-chrome.svg" alt="The Google Chrome logo">
+                <h3>Add to Chrome</h3>
+                <p>Minimum version 62</p>
+                <img src="bookmark-landing-page/starter-code/images/bg-dots.svg" alt="A pattern of small grey dots">
+                <a href="#" class="downbutton-1">Add & Install Extension</a>
+            </div>
+
+            <div class="card-firefox">
+                <img src="bookmark-landing-page/starter-code/images/logo-firefox.svg" alt="The Mozilla Firefox logo">
+                <h3>Add to Firefox</h3>
+                <p>Minimum version 55</p>
+                <img src="bookmark-landing-page/starter-code/images/bg-dots.svg" alt="A pattern of small grey dots">
+                <a href="#" class="downbutton-2">Add & Install Extension</a>
+            </div>
+            
+            <div class="card-opera">
+                <img src="bookmark-landing-page/starter-code/images/logo-opera.svg" alt="The Opera logo">
+                <h3>Add to Opera</h3>
+                <p>Minimum version 46</p>
+                <img src="bookmark-landing-page/starter-code/images/bg-dots.svg" alt="A pattern of small grey dots">
+                <a href="#" class="downbutton-3">Add & Install Extension</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
+
+        <div class="questions"> <!--es millor dins d'un container d'aquest tipus especificar o distingir cada element anidat? 
+                osigui, distingim les questions o p'alante nomes posant question a tot?-->
+            <div class="question">
+                <h3>What is Bookmark?</h3>
+                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
+            </div>
+
+            <div class="question"> 
+                <h3>How can I request a new browser?</h3>
+                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
+            </div>
+
+            <div class="question">
+                <h3>Is there a mobile app?</h3>
+                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
+            </div>
+
+            <div class="question">
+                <h3>What about other Chromium browsers?</h3>
+                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
+            </div>
+
+            <button class="faq-button">More Info</button>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>35,000+ already joined</h2>
+        <p>Stay up-to-date with what we're doing</p>
+
+        <form class="contact-form">
+            <input type="email" placeholder="Enter your email address">
+            <button class="contact-button">Contact Us</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="bookmark-landing-page/starter-code/images/logo-bookmark.svg" alt="The bookmark logo and the name of the company">
         </div>
 
-        <div class="question"> 
-            <h3>How can I request a new browser?</h3>
-            <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
+        <ul class="footer-links">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="social-media">
+            <a href="#"><img src="bookmark-landing-page/starter-code/images/icon-facebook.svg" alt="The Facebook logo"></a>
+            <a href="#"><img src="bookmark-landing-page/starter-code/images/icon-twitter.svg" alt="The Twitter logo"></a>
         </div>
-
-        <div class="question">
-            <h3>Is there a mobile app?</h3>
-            <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
-        </div>
-
-        <div class="question">
-            <h3>What about other Chromium browsers?</h3>
-            <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
-        </div>
-
-        <button class="faq-button">More Info</button>
-    </div>
-</section>
-
-<section class="contact">
-    <h2>35,000+ already joined</h2>
-    <p>Stay up-to-date with what we're doing</p>
-
-    <form class="contact-form">
-        <input type="email" placeholder="Enter your email address">
-        <button class="contact-button">Contact Us</button>
-    </form>
-</section>
-
-<footer>
-    <div class="footer-logo">
-        <img src="bookmark-landing-page/starter-code/images/logo-bookmark.svg" alt="The bookmark logo and the name of the company">
-    </div>
-
-    <ul class="footer-links">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-
-    <div class="social-media">
-        <a href="#"><img src="bookmark-landing-page/starter-code/images/icon-facebook.svg" alt="The Facebook logo"></a>
-        <a href="#"><img src="bookmark-landing-page/starter-code/images/icon-twitter.svg" alt="The Twitter logo"></a>
-    </div>
-</footer>
-
+    </footer>
 </body>
 </html>
