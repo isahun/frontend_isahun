@@ -6,15 +6,14 @@
     <meta name="keywords" content="Mòdul , exercicis o apunts, temes">
     <meta name="author" content="Irene Sahun">
     <title>Sprint1 HTML+CSS</title>
-    <link href="node_modules/normalize.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <!--PREGUNTA, cal un div que contingui tot això, dins de nav?-->
-            <img src="bookmark-landing-page/starter-code/images/logo-bookmark.svg" alt="The bookmark logo and the name of the company">
+            <h1><img src="bookmark-landing-page/starter-code/images/logo-bookmark.svg" alt="The bookmark logo and the name of the company"></h1>
             <button class="menu-button">
                 <img src="bookmark-landing-page/starter-code/images/icon-hamburger.svg" alt="Three parallel lines in vertical axis">
             </button>
@@ -32,8 +31,8 @@
         </div>
 
         <div class="hero-buttons">
-            <a href="#" class="herobutton-1">Get it on Chrome</a>
-            <a href="#" class="herobutton-2">Get it on Firefox</a>
+            <a href="#" class="chrome-btn">Get it on Chrome</a>
+            <a href="#" class="firefox-btn">Get it on Firefox</a>
         </div>
     </section>
 
@@ -42,13 +41,12 @@
         <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
 
         <div class="tabs">
-            <button class="tab active">Simple Bookmarking</button>
-            <button class="tab">Speedy Searching</button>
-            <button class="tab">Easy Sharing</button>
+            <div class="btn-line"><button class="tab active">Simple Bookmarking</button></div>
+            <div class="btn-line"><button class="tab">Speedy Searching</button></div>
+            <div class="btn-line"><button class="tab">Easy Sharing</button></div>
         </div>
         
         <div class="tabs-content">
-
             <div class="tab-content active" id="simple-bookmarking">
                 <img src="bookmark-landing-page/starter-code/images/illustration-features-tab-1.svg" alt="A digital drawing of a person saving a website as a bookmark">
                 <h3>Bookmark in one click</h3>
@@ -157,5 +155,8 @@
             <a href="#"><img src="bookmark-landing-page/starter-code/images/icon-twitter.svg" alt="The Twitter logo"></a>
         </div>
     </footer>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
