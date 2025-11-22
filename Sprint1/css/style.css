@@ -52,7 +52,6 @@ header {
     text-align: center;
     padding: 40px 30px;
     margin-bottom: 100px;
-
 }
 
 .hero-image {
@@ -201,6 +200,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
     gap: 30px;
 }
 
@@ -246,6 +246,92 @@ header {
     border-radius: 5px;
     font-weight: normal;
     box-shadow: 0px 5px 15px #6564644d;
+}
+
+/* FAQ section */
+
+.faq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 100px;
+}
+
+.faq h2 {
+    margin-bottom: 30px;
+}
+
+.faq h3 {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.faq p {   
+    margin-bottom: 70px;
+    line-height: 30px;
+}
+
+.questions {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.question {
+    list-style-type: none;
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 0px;
+    border-bottom: 1px solid #7a7777;
+    cursor: pointer;
+}
+.question-header h3 {
+    flex: 1; /* perque el text ocupi tot l'espai possible */
+    text-align: left;
+    margin-right: 10px; /* perque no estigui enganxat a la fletxa */
+    overflow-wrap: anywhere; /* perque el text es trenqui si es massa llarg */
+}
+
+.question-header .arrow { 
+/* classe per girar la fletxa quan la resposta esta oberta */
+    width: 20px;
+    transform: rotate(0deg); /* per defecte la fletxa apunta cap amunt */
+    transition: transform 0.3s ease; /* animacio suau al girar la fletxa */
+}
+
+.question-header .answer{ /* classe per la resposta de cada pregunta */
+    display: none;
+    text-align: left;
+    margin-top: 15px;
+    color: #7a7777;
+    line-height: 1.6;
+}
+
+.answer { /* quan la pregunta esta activa, mostra la resposta */
+    display: block;
+}
+
+.question-header.active .arrow { /* quan la pregunta esta activa, gira la fletxa cap avall */
+    transform: rotate(180deg);
+}
+
+.faq-button {
+    margin-top: 50px;
+    background-color: #5368df;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-weight: normal;
+    box-shadow: 0px 5px 15px #6564644d;
+    cursor: pointer;
 }
 
 
