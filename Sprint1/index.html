@@ -106,10 +106,12 @@
         <ul class="questions"> <!--es millor dins d'un container d'aquest tipus especificar o distingir cada element anidat? 
                 osigui, distingim les questions o p'alante nomes posant question a tot?-->
             <li class="question">
-                <div class="question-header active">
-                <h3>What is Bookmark?</h3>
-                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow">
-                </div>
+                <div class="question-header">
+                    <h3>What is Bookmark?</h3>
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>    
+            </div>
                 <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
                     est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                     Cras mattis consectetur purus sit amet fermentum. Mauris sed odio massa. Suspendisse 
@@ -118,8 +120,10 @@
 
             <li class="question">  
                 <div class="question-header">
-                <h3>How can I request a new browser?</h3>
-                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow" class="arrow">
+                    <h3>How can I request a new browser?</h3>
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
                 </div>
                 <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
                     est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
@@ -129,9 +133,11 @@
 
             <li class="question">
                 <div class="question-header">
-                <h3>Is there a mobile app?</h3>
-                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow" class="arrow">
-                </div>
+                    <h3>Is there a mobile app?</h3>
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+            </div>
                 <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
                     est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                     Cras mattis consectetur purus sit amet fermentum. Mauris sed odio massa. Suspendisse 
@@ -140,8 +146,10 @@
 
             <li class="question">
                 <div class="question-header">
-                <h3>What about other Chromium browsers?</h3>
-                <img src="bookmark-landing-page/starter-code/images/icon-arrow.svg" alt="A downward pointing arrow" class="arrow">
+                    <h3>What about other Chromium browsers?</h3>
+                    <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                        <path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
                 </div>
                 <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
                     est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
@@ -153,13 +161,16 @@
     </section>
 
     <section class="contact">
-        <h2>35,000+ already joined</h2>
-        <p>Stay up-to-date with what we're doing</p>
+        <div class="container">
+            <p>35,000+ already joined</p>
+            <h2>Stay up-to-date with what we're doing</h2>
 
-        <form class="contact-form">
-            <input type="email" placeholder="Enter your email address">
-            <button class="contact-button">Contact Us</button>
-        </form>
+            <form class="contact-form">
+                <input type="email" name="user-email" placeholder="Enter your email address">
+                <p class="email-error"></p>
+                <button type="submit" class="contact-button">Contact Us</button>
+            </form>
+        </div>
     </section>
 
     <footer>

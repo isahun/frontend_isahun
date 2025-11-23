@@ -274,7 +274,7 @@ header {
     line-height: 30px;
 }
 
-.questions {
+.questions { /* contenedor de las preguntas */
     width: 100%;
     max-width: 600px;
     display: flex;
@@ -284,6 +284,11 @@ header {
     list-style-type: none;
 }
 
+.question h3:hover {
+    color: #2c3be0;
+}
+
+/* botó h3+arrow per a cada pregunta */
 .question-header {
     display: flex;
     align-items: center;
@@ -292,21 +297,21 @@ header {
     border-bottom: 1px solid #7a7777;
     cursor: pointer;
 }
-.question-header h3 {
+.question h3 {
     flex: 1; /* perque el text ocupi tot l'espai possible */
     text-align: left;
     margin-right: 10px; /* perque no estigui enganxat a la fletxa */
     overflow-wrap: anywhere; /* perque el text es trenqui si es massa llarg */
 }
 
-.question-header .arrow { 
+.arrow { 
 /* classe per girar la fletxa quan la resposta esta oberta */
     width: 20px;
-    transform: rotate(0deg); /* per defecte la fletxa apunta cap amunt */
-    transition: transform 0.3s ease; /* animacio suau al girar la fletxa */
+    transition: transform 0.3s ease; /* animacio suau al girar la fletxa. Params: propietat, durada, tipus d'animacio */
+    color: #5267DF;
 }
 
-.question-header .answer{ /* classe per la resposta de cada pregunta */
+.answer { /* classe per la resposta de cada pregunta */
     display: none;
     text-align: left;
     margin-top: 15px;
@@ -314,11 +319,12 @@ header {
     line-height: 1.6;
 }
 
-.answer { /* quan la pregunta esta activa, mostra la resposta */
+.question.active .answer{ /* quan la pregunta esta activa, mostra la resposta */
     display: block;
 }
 
-.question-header.active .arrow { /* quan la pregunta esta activa, gira la fletxa cap avall */
+.question-header.active .arrow path { /* quan la pregunta esta activa, gira la fletxa cap avall */
+    stroke: currentColor; 
     transform: rotate(180deg);
 }
 
@@ -332,12 +338,88 @@ header {
     font-weight: normal;
     box-shadow: 0px 5px 15px #6564644d;
     cursor: pointer;
+    text-decoration: none;
 }
 
+/* contact section */
+.contact {
+    background-color: #5368df;
+    padding: 100px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
+.container{
+    max-width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    text-align: center;
+}
 
+.contact p {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
 
+.contact h2 {
+    color: white;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #ff6565;
+    color: #ffffff;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.email-error {
+    color: white;
+}
+
+/* footer */
+
+footer {
+    background-color: #303869;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
 
 
