@@ -36,23 +36,27 @@ for (let i = 0; i < buttons.length; i++) {
             arrow.style.transform = "rotate(0deg)"; // torna la fletxa a la posició original
             arrow.style.color = "#5267DF";
         }
-  });
+    });
 }
 
 function validateForm() {
-    const form = document.getElementByClass("contact-form");
     const userEmail = document.forms["contact-form"]["user-email"].value;
-    const error = document.getElementByClass("email-error");
+    const error = document.querySelector(".email-error"); /* aqui hem d posar un punt pk fem getelementbyclassname */
 
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-    
-    if (!userEmail) {
+    if (userEmail == "") {
         error.innerHTML = '<img src="bookmark-landing-page/starter-code/images/icon-error.svg" alt="error" style="width:16px;height:16px;"> Has d\'escriure un e-mail.';
+        return false;
     } else if (!userEmail.includes("@")) {
         error.innerHTML = '<img src="bookmark-landing-page/starter-code/images/icon-error.svg" alt="error" style="width:16px;height:16px;"> Introdueix un e-mail vàlid.';
-    } else {
-        error.innerHTML = "Formulari enviat amb èxit!"
+        return false;
     }
-})
+    error.innerHTML = "Formulari enviat amb èxit!"
+    return true;
 }
+
+const emailInput = document.getElementById("email");
+const errorMessage = document.querySelector(".email-error");
+
+emailInput.addEventListener("focus", function() {
+    errorMessage.innerHTML = ""; // neteja missatge quan es clica dins el input
+});
