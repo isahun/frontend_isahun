@@ -165,7 +165,7 @@
             <p>35,000+ already joined</p>
             <h2>Stay up-to-date with what we're doing</h2>
 
-            <form class="contact-form">
+            <form class="contact-form" onsubmit="return validateForm()" method="post">
                 <input type="email" name="user-email" placeholder="Enter your email address">
                 <p class="email-error"></p>
                 <button type="submit" class="contact-button">Contact Us</button>

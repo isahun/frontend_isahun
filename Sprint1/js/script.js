@@ -42,7 +42,7 @@ for (let i = 0; i < buttons.length; i++) {
 function validateForm() {
     const form = document.getElementByClass("contact-form");
     const userEmail = document.forms["contact-form"]["user-email"].value;
-    const error = document.getElementById("email-error");
+    const error = document.getElementByClass("email-error");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
