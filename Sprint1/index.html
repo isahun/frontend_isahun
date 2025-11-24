@@ -113,7 +113,7 @@
                     </svg>    
             </div>
             <div class="answer">
-                <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
                     est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                     Cras mattis consectetur purus sit amet fermentum. Mauris sed odio massa. Suspendisse 
                     in orci enim. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
@@ -127,10 +127,12 @@
                         <path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="3" fill="none"/>
                     </svg>
                 </div>
-                <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
+                <div class="answer">
+                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
                     est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                     Cras mattis consectetur purus sit amet fermentum. Mauris sed odio massa. Suspendisse 
                     in orci enim. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                </div>
             </li>
 
             <li class="question">
@@ -140,11 +142,13 @@
                         <path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="3" fill="none"/>
                     </svg>
             </div>
-                <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
-                    est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-                    Cras mattis consectetur purus sit amet fermentum. Mauris sed odio massa. Suspendisse 
-                    in orci enim. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-            </li>
+            <div class="answer">
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
+                est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
+                Cras mattis consectetur purus sit amet fermentum. Mauris sed odio massa. Suspendisse 
+                in orci enim. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            </div>
+                </li>
 
             <li class="question">
                 <div class="question-header">
@@ -153,10 +157,12 @@
                         <path d="M1 1l8 8 8-8" stroke="currentColor" stroke-width="3" fill="none"/>
                     </svg>
                 </div>
-                <p class ="answer">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
+                <div class="answer">
+                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, 
                     est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
                     Cras mattis consectetur purus sit amet fermentum. Mauris sed odio massa. Suspendisse 
                     in orci enim. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                </div>
             </li>
         </ul>
         <a href="#" class="faq-button">More Info</a>
@@ -168,11 +174,13 @@
             <h2 class="header-h2">Stay up-to-date with what we're doing</h2>
 
             <form class="contact-form" name="contact-form" onsubmit="return validateForm()">
-                <input type="email" id="email" name="user-email" placeholder="Introduce your e-mail address" >
+                <div class="email-error-container">
+                    <input type="email" id="email" name="user-email" placeholder="Introduce your e-mail address" >
+                    <img src="bookmark-landing-page/starter-code/images/icon-error.svg" alt="error sign">
+                    <p class="email-error">Please introduce a valid e-mail</p>
+                </div>
                 <button type="submit" class="contact-button">Contact Us</button>
             </form>
-            <p class="email-error"></p> 
-
         </div>
     </section>
 

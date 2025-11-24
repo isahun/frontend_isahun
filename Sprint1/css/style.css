@@ -39,11 +39,20 @@ header {
     height: 30px;
 }
 
+.navbar a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
 .menu-button {
     border: none;
     background-color: #ffffff;
     cursor: pointer;
 }
+
 
 /* hero */
 
@@ -56,9 +65,11 @@ header {
     margin-bottom: 100px;
 }
 
-.hero-image {
+.hero-image img {
     margin-bottom: 30px;
     width: 100%;
+    height: auto;
+    max-width: 600px;
 }
 
 .hero-text h1 {
@@ -67,7 +78,6 @@ header {
 
 .hero-text p {
     margin-bottom: 20px;
-    padding: 0 20px;
     line-height: 1.5;
 }
 
@@ -267,7 +277,7 @@ header {
 }
 
 .faq p {   
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     line-height: 30px;
 }
 
@@ -377,6 +387,7 @@ header {
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    margin: 0 auto;
 }
 
 /* Input + botó en columna */
@@ -389,6 +400,7 @@ header {
 
 .contact-form button {
     background-color: #ff6565;
+    width: 100%;
     color: #ffffff;
     padding: 15px;
     border: none;
@@ -398,32 +410,71 @@ header {
 }
 
 /* error message */
-
 .email-error {
+    display: none;
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
     color: white;
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-style: italic;
     text-align: left;
-    align-self: left;
+
 }
+.email-error-container {
+    position: relative;
+    padding: 2px 2px 25px 2px;
+    border-radius: 5px;
+}
+
+.email-error.error {
+    display: block;
+}
+
+.email-error-container.error {
+    background: #ff6565;
+}
+
+.email-error-container input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.email-error-container img {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 20px;
+    display: none;
+}
+
+.email-error-container.error img {
+    display: block;
+}
+
 
 /* footer */
 footer {
     background-color: #303869;
-    padding: 50px 30px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 footer .logo-invert path {
-    stroke: white; 
+    stroke: none; 
     fill: white;
 }
 
 .footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
     list-style-type: none;
-    margin: 20px 0;
+    margin: 15px 0;
 }
-
 
 .footer-links a {
     color: #ffffff;
@@ -432,6 +483,14 @@ footer .logo-invert path {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
 }
 
 

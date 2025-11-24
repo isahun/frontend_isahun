@@ -41,22 +41,21 @@ for (let i = 0; i < buttons.length; i++) {
 
 function validateForm() {
     const userEmail = document.forms["contact-form"]["user-email"].value;
+    const container = document.querySelector(".email-error-container");
     const error = document.querySelector(".email-error"); /* aqui hem d posar un punt pk fem getelementbyclassname */
 
-    if (userEmail == "") {
-        error.innerHTML = '<img src="bookmark-landing-page/starter-code/images/icon-error.svg" alt="error" style="width:16px;height:16px;"> Has d\'escriure un e-mail.';
+    if (!userEmail) {
+        container.classList.add("error");
+        error.classList.add("error");
         return false;
     } else if (!userEmail.includes("@")) {
-        error.innerHTML = '<img src="bookmark-landing-page/starter-code/images/icon-error.svg" alt="error" style="width:16px;height:16px;"> Introdueix un e-mail vàlid.';
+        container.classList.add("error")
+        error.classList.add("error");
         return false;
     }
-    error.innerHTML = "Formulari enviat amb èxit!"
+    container.classList.remove("error")
+    error.innerHTML = "Your info was successfully sent!"
     return true;
 }
 
-const emailInput = document.getElementById("email");
-const errorMessage = document.querySelector(".email-error");
 
-emailInput.addEventListener("focus", function() {
-    errorMessage.innerHTML = ""; // neteja missatge quan es clica dins el input
-});
