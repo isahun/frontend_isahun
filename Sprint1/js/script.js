@@ -24,7 +24,7 @@ const buttons = document.getElementsByClassName("question"); /* retorna una colÂ
 
 for (let i = 0; i < buttons.length; i++) {
     const header = buttons[i].querySelector(".question-header"); /* el query selector accepta selectors css complets, i busca dins de cada boto la classe question-header, treu el primer element */
-    
+
     header.addEventListener("click", function() {        
         buttons[i].classList.toggle("active");
         
