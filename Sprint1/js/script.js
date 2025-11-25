@@ -59,3 +59,26 @@ function validateForm() {
 }
 
 
+/* navbar menú desplegable*/
+
+const buttonMenu = document.querySelector('.menu-button');
+const navMenu = document.querySelector('.nav-menu'); 
+const logo = document.querySelector('.bookmark-logo');
+const body = document.body;
+
+
+buttonMenu.addEventListener("click", () => {
+    buttonMenu.classList.toggle("active");
+    logo.classList.toggle("active");
+    body.classList.toggle("menu-active");
+
+
+    if (navMenu.style.display === "flex") {
+        navMenu.style.display = "none";
+
+    } else {
+        navMenu.style.display = "flex";
+    }
+});
+
+

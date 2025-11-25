@@ -27,30 +27,79 @@ p {
 header {
     background-color: #ffffff;
     padding: 20px; /* ok per mobils */
+    position: relative;
+    z-index: 1000; /*header x sobre d tot */
 }
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 25px;
 }
 
-.navbar .logo {
-    height: 30px;
+/* LOGO X SOBRE */
+.logo {
+    position: relative;
+    z-index: 20;
 }
 
-.navbar a {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
+/*botó menú */
 .menu-button {
+    background: none;
     border: none;
-    background-color: #ffffff;
     cursor: pointer;
+    z-index: 21;
+}
+.nav-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: #252b46f2;
+    padding: 60px;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 19;
+    list-style-type: none;
+}
+
+.menu-button.active .nav-menu {
+    display: flex;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 1.5rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px 30px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    letter-spacing: 1.5rem;
+}
+/* active states */
+
+body.menu-active .nav-menu{
+    display: flex;
+}
+
+body.menu-active .menu-burger {
+    display: none;
+}
+
+body.menu-active .menu-exit {
+    display: block;
 }
 
 /* hero */
