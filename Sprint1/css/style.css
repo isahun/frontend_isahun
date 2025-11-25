@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-/*  Global styles */
+/* --------Global styles-------- */
 
 :root {
     font-family: Verdana, sans-serif;
@@ -20,9 +20,14 @@ body {
 
 p {
     color: #959895;
+    max-width: 600px;
 }
 
-/* header i navbar */
+img {
+    max-width: 300px;
+}
+
+/* --------header i navbar-------- */
 
 header {
     background-color: #ffffff;
@@ -136,7 +141,7 @@ header {
     margin-top: 15px;
 }
 
-/* hero */
+/* ------------ hero ------------*/
 
 .hero {
     display: flex;
@@ -152,6 +157,20 @@ header {
     width: 100%;
     height: auto;
     max-width: 600px;
+    z-index: 1; /* sempre davant de la forma*/
+    position: relative;
+}
+
+.hero-bg-shape {
+    position: absolute;
+    max-width: 900px;
+    width: 50%;
+    height: 30%; 
+    background: #2c3be0;
+    border-radius: 50px;
+    top: 30%;
+    left: 50%;
+
 }
 
 .hero-text h1 {
@@ -188,7 +207,7 @@ header {
     box-shadow: 0px 5px 15px #6564644d;
 }
 
-/* FEATURES SECTION */
+/* --------FEATURES -------- */
 
 .features {
     display: flex;
@@ -196,6 +215,15 @@ header {
     justify-content: center;
     text-align: center;
     padding: 40px 20px;
+}
+
+.features-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .features h2 {
@@ -224,7 +252,10 @@ header {
 }
 
 .tabs .btn-line {
-    margin: 0 40px;
+    max-width: 600px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 .tabs .btn-line:first-child {
@@ -256,7 +287,6 @@ header {
 
 .tab-content img {
     width: 100%;
-    max-width: 300px;
     margin: 20px 0;
 }
 
@@ -269,7 +299,7 @@ header {
     line-height: 1.5rem;
 }
 
-/* Download section */
+/* --------Download Cards-------- */
 
 .download { /* afecta la seccio download sencera */
     display: flex;
@@ -337,7 +367,7 @@ header {
     box-shadow: 0px 5px 15px #6564644d;
 }
 
-/* FAQ section */
+/* --------FAQ section-------- */
 
 .faq {
     width: 100%;
@@ -361,6 +391,7 @@ header {
 .faq p {   
     margin-bottom: 40px;
     line-height: 30px;
+    max-width: 600px; /*es correcte posar aixo al mvl version?*/
 }
 
 .questions { /* contenedor de las preguntas */
@@ -437,7 +468,7 @@ header {
     text-decoration: none;
 }
 
-/* contact section */
+/* --------contact section --------*/
 .contact {
     background-color: #5368df;
     padding: 100px 30px;
@@ -536,8 +567,7 @@ header {
     display: block;
 }
 
-
-/* footer */
+/* --------footer-------- */
 footer {
     background-color: #303869;
     padding: 40px 20px;
