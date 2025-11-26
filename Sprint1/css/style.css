@@ -492,7 +492,6 @@ header {
 }
 
 /* FORM en columna*/
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -608,7 +607,7 @@ footer .logo-invert path {
     body {
         outline: 5px solid red; 
     }
-    
+
     .hero {
     display: flex;
     flex-direction: row;
