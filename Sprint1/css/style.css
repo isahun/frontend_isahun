@@ -42,6 +42,10 @@ header {
     padding: 1.5rem 1.2rem;
 }
 
+.nav-links-desktop {
+    display: none;
+}
+
 .menu-btn,
 .close-btn {
     border: none;
@@ -63,7 +67,7 @@ header {
     flex-direction: column;
     background: #252b46f2;
     opacity: 90%;
-    padding: 2.2rem 1.5rem;
+    padding: 1.6rem 1.2rem;
     z-index: 999;
 }
 
@@ -130,56 +134,61 @@ header {
     border-color: #ffffff;
     font-weight: bold;
     background: transparent;
-}
-
-.login-btn button {
     color: #ffffff;
-    font-size: 18px;
-    font-weight: normal;
-    letter-spacing: 0.2rem;
+    font-size: 18px;    letter-spacing: 0.2rem;
     margin-top: 15px;
 }
 
 /* ------------ hero ------------*/
-
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
     padding: 40px 20px;
     margin-bottom: 100px;
 }
 
-.hero-image img {
-    margin-bottom: 30px;
+.hero-images {
     width: 100%;
     height: auto;
-    max-width: 600px;
+}
+
+.hero-image img {
+    margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
     z-index: 1; /* sempre davant de la forma*/
     position: relative;
 }
 
 .hero-bg-shape {
     position: absolute;
-    width: 120%;
-    max-width: 100%;
-    height: 40%; 
+    /*width: 60%;
+    height: 25%; */
+    aspect-ratio: 1/1;
     background: #4d5ae4;
-    border-radius: 0 0 0 180px;
+    border-radius: 180px 0 0 180px;
     top: 25%;
     left: 40%;
     z-index: -1;
 }
 
 .hero-text h1 {
-    margin-top: 30px;
+   
     margin-bottom: 20px;
 }
 
 .hero-text p {
     margin-bottom: 20px;
     line-height: 1.5;
+}
+
+.hero-txt-btn {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .hero-buttons {
@@ -405,10 +414,6 @@ header {
     list-style-type: none;
 }
 
-.question h3:hover {
-    color: #2c3be0;
-}
-
 /* botó h3+arrow per a cada pregunta */
 .question-header {
     display: flex;
@@ -604,6 +609,89 @@ footer .logo-invert path {
     gap: 40px;
 }
 
+/*===== DESKTOP ======*/
 @media (min-width: 1024px) {
 
+    body {
+        padding: 3rem 4rem;
+    }
+
+    img {
+        max-width: 500px;
+    }
+    /* DKTP heading */
+    .navbar-main {
+    justify-content: space-between;
+    }
+
+    .nav-links-desktop {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .nav-links-desktop a {
+        text-decoration: none;
+        color: black;
+        letter-spacing: 0.2rem;
+    }
+
+    .nav-links-desktop a:hover {
+        cursor: pointer;
+        color: #ff6565
+    }
+
+    .nav-links-desktop .login-btn {
+        width: 100%;
+        text-decoration: none;
+        border: 1px solid #ff6565;
+        border-radius: 5px;
+        font-weight: bold;
+        background: #ff6565;
+        color: #ffffff;
+        font-size: 18px;    
+        letter-spacing: 0.2rem;
+        padding: 0.8rem 2rem;
+        box-shadow: 0px 5px 15px #6564644d;
+    }
+
+    .login-btn:hover {
+        background: #ffffff;
+        color: #ff6565;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    /*======= HERO SECTION =====*/
+
+    .hero {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .hero-images {
+        justify-content: right;
+        margin-left: auto;
+    }
+
+   .hero-images img {
+    place-content: center;
+    margin-top: 40px;
+   }
+
+    .hero-txt-btn {
+        text-align: left;
+        place-items: start;
+    }
+
+    /*---FAQS---*/
+    .question h3:hover {
+    color: #2c3be0;
+    }
 }
