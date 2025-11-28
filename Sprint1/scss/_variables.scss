@@ -1,0 +1,20 @@
+/* Colors, fonts, mides*/
+
+// Colors
+$color-white: #ffffff; //backgrounds, textos, botons
+$color-black: #000000; //textos generals
+$color-gray: #959895; //textos secundaris, paràgrafs
+$color-primary: #4d5ae4; //fons blobs
+$color-secondary: #5368df; //botons, formulari, FAQ
+$color-accent: #ff6565; //hover, download btns, form submit
+$color-navbar-bg: rgba(37, 43, 70, 0.95); //fons menú navbar 
+
+// Fonts
+$font-main: Verdana, sans-serif; //global, mateixa font per tot el body
+
+// Ombra
+$shadow-card: 0px 5px 15px #6564644d; //cards, botons, elements amb relleu
+
+// Espaiats
+$padding-base: 1.5rem;
+$margin-base: 1.5rem;
