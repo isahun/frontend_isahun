@@ -153,6 +153,7 @@ header {
     flex-direction: column;
     width: 100%;
     height: auto;
+    position: relative;
 }
 
 .hero-image img {
@@ -165,12 +166,12 @@ header {
 
 .hero-bg-shape {
     position: absolute;
-    width: 60%;
-    height: 25%; 
+    bottom: 10%;
+    right: -20%;
+    width: 80%;
+    height: 60%; 
     background: #4d5ae4;
-    border-radius: 180px 0 0 180px;
-    top: 25%;
-    left: 40%;
+    border-radius: 300px 0 0 300px;
     z-index: -1;
 }
 
@@ -195,7 +196,7 @@ header {
     gap: 1rem;
 }
 
-.hero-buttons a {
+.hero-buttons button {
     text-decoration: none;
     padding: 1rem 1.5rem;
     border-radius: 5px;
@@ -609,9 +610,6 @@ footer .logo-invert path {
 /*===== DESKTOP ======*/
 @media (min-width: 1024px) {
 
-    img {
-        max-width: 500px;
-    }
     /* DKTP heading */
     .navbar-main {
         padding: 2rem 8rem;
@@ -670,22 +668,47 @@ footer .logo-invert path {
     .hero {
         display: flex;
         flex-direction: row-reverse;
+        align-items: center;
         padding: 2rem 8rem;
+        gap: 4rem;
     }
 
     .hero-images {
-        justify-content: right;
-        margin-left: auto;
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
     }
 
-    .hero-text {
-        width: 80%;
+    .hero-image img {
+        flex: 1;
+    }
+
+    .hero-bg-shape {
+        position: absolute;
+        bottom: 8%;
+        right: -50%;
+        width: 105%;
+        height: 70%;
+        background: #4d5ae4;
+        border: 400px 0 0 400px;
+        z-index: -1;
     }
 
     .hero-txt-btn {
+        flex: 1;
         text-align: left;
-        place-items: start;
+        align-items: flex-start;
     }
+    
+    .hero-text {
+        width: 90%;
+    }
+
+    .hero-buttons button {
+        cursor: pointer;
+    }
+
     .chrome-btn:hover {
         background: #ffffff;
         border: 3px solid #2c3be0;
@@ -695,6 +718,7 @@ footer .logo-invert path {
     .firefox-btn:hover {
         border: 3px solid #252b46f2;
     }
+
     /*=======FEATURES =======*/
 
     .features {
