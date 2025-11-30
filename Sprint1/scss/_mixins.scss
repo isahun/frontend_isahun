@@ -3,33 +3,33 @@
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: $padding-x;
-  padding-right: $padding-x;
+  padding: $padding-y $padding-x;
 }
 
 @mixin section-container {
-  padding: $padding-vertical $padding-horizontal;
+  padding: $padding-y $padding-x;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 
-@mixin button(
-  $background, 
+@mixin button($bg-color, 
   $padding-x, 
   $padding-y, 
   $border, 
-  $color, 
+  $color,
+  $radius: $radius-s, 
   $shadow: 
   $shadow-card
   ) {
-  background-color: $bg;
+  background-color: $bg-color;
   padding: $padding-y $padding-x; 
   border: 3px solid $border;
   color: $color;
-  border-radius: $radius-s;
+  border-radius: $radius;
   font-weight: bold;
   cursor: pointer;
   box-shadow: $shadow;
@@ -47,7 +47,7 @@
   $radius: $radius-m,
   $shadow: $shadow-card
 ) {
-  background-color: $background;
+  background-color: $bg;
   padding: $padding;
   border-radius: $radius;
   box-shadow: $shadow;
@@ -59,11 +59,11 @@
   flex-wrap: wrap;
 }
 
-@mixin flex-center($direction: row) {
+@mixin flex($direction: row, $align: center, $justify: center) {
   display: flex;
   flex-direction: $direction;
-  align-items: center;
-  justify-content: center;
+  align-items: $align;
+  justify-content: $justify;
 }
 
 @mixin flex-between($direction: row) {

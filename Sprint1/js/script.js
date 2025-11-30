@@ -31,7 +31,7 @@ for (let i = 0; i < buttons.length; i++) {
         const arrow = this.querySelector(".arrow"); /* this fa referencia al element clicat */
         if (this.parentElement.classList.contains("active")) {
             arrow.style.transform = "rotate(180deg)"; // gira la fletxa cap avall
-            arrow.style.color = "orange"; 
+            arrow.style.color = "#ff6565"; 
         } else {
             arrow.style.transform = "rotate(0deg)"; // torna la fletxa a la posició original
             arrow.style.color = "#5267DF";

@@ -1,15 +1,15 @@
 /* _components.scss */
 
 /* ---------- Botons ---------- */
-.button-chrome {
+.chrome-btn {
     @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white);
 }
 
-.button-firefox {
-    @include button($color-white, $padding-x, $padding-y, $color-white, $color-dark-gray);
+.firefox-btn {
+    @include button($color-white, $padding-x, $padding-y, $color-dark-gray, $color-dark-gray);
 }
 
-.button-info {
+.info-btn {
     @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white);
 }
 
@@ -62,7 +62,7 @@
 }
 
 .faq-button {
-    @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white);
+    @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white, $radius-s);
 }
 
 /* ---------- Inputs Formulari ---------- */
@@ -73,14 +73,14 @@
     border-radius: $radius-s;
     box-sizing: border-box;
 
-&:focus {
-    outline: 2px solid $color-primary;
-    }
+    &:focus {
+        outline: 2px solid $color-primary;
+        }
 }
 
 .input-error {
     border: 2px solid $color-accent;
-    background-color: lighten($color-accent, 40%);
+    background-color: $color-accent;
     color: $color-white;
     font-size: $font-xs;
     font-style: italic;

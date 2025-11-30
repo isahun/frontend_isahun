@@ -34,7 +34,8 @@ header {
     height: 100vh;
     display: none; // hidden per defecte
     flex-direction: column;
-    background: rgba(37, 43, 70, 0.95); // opacitat amb rgba
+    background: #303869; 
+    opacity: 90%;
     z-index: 999;
     }
 
@@ -98,7 +99,7 @@ header {
     color: $color-white;
     font-size: $font-btn;
     letter-spacing: 0.2rem;
-    margin-top: 0.9375rem;
+    margin-top: 1rem;
     }
 
     // Footer
@@ -112,8 +113,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: $gap-md;
-    list-style: none;
+    gap: 1rem;
+    list-style-type: none;
     margin: $gap-sm 0;
     }
 
