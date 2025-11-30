@@ -1,3 +1,12 @@
+@mixin container($max-width: 1200px) { //per features download faq, etc, per no repetir padding i margin
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding-x;
+  padding-right: $padding-x;
+}
+
 @mixin section-container {
   padding: $padding-vertical $padding-horizontal;
   margin-left: auto;
@@ -7,3 +16,65 @@
   text-align: center;
 }
 
+@mixin button(
+  $background, 
+  $padding-x, 
+  $padding-y, 
+  $border, 
+  $color, 
+  $shadow: 
+  $shadow-card
+  ) {
+  background-color: $bg;
+  padding: $padding-y $padding-x; 
+  border: 3px solid $border;
+  color: $color;
+  border-radius: $radius-s;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: $shadow;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-white;
+    color: $border;
+  }
+}
+
+@mixin card(
+  $bg: $color-white,
+  $padding: $padding-cards,
+  $radius: $radius-m,
+  $shadow: $shadow-card
+) {
+  background-color: $background;
+  padding: $padding;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}

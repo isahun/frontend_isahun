@@ -1,0 +1,135 @@
+// _layout.scss
+
+// Header
+header {
+    background-color: $color-white;
+    width: 100%;
+    }
+
+    .navbar-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding-y $padding-x; // usa variables
+    }
+
+    .nav-links-desktop {
+    display: none;
+    }
+
+    .menu-btn,
+    .close-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    }
+
+    /* Menu activat fullscreen */
+    .navbar-menu-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none; // hidden per defecte
+    flex-direction: column;
+    background: rgba(37, 43, 70, 0.95); // opacitat amb rgba
+    z-index: 999;
+    }
+
+    .navbar.menu-open .navbar-menu-active {
+    display: flex;
+    }
+
+    .navbar-active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .menu-active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $padding-y $padding-x;
+    list-style: none;
+    font-size: $font-base;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+    }
+
+    .menu-active a {
+    color: $color-white;
+    text-decoration: none;
+    }
+
+    .nav-menu div {
+    width: 100%;
+    padding: $padding-y $padding-x;
+    text-align: center;
+    }
+
+    .btn-line {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: $padding-y;
+    }
+
+    .close-btn {
+    display: none;
+    }
+
+    .menu-open .close-btn {
+    display: block;
+    }
+
+    .menu-open .menu-btn {
+    display: none;
+    }
+
+    .nav-menu .login-btn {
+    width: 100%;
+    text-decoration: none;
+    padding: 0.9375rem 0; // 15px en rem
+    border-radius: $radius-s;
+    border-color: $color-white;
+    font-weight: bold;
+    background: transparent;
+    color: $color-white;
+    font-size: $font-btn;
+    letter-spacing: 0.2rem;
+    margin-top: 0.9375rem;
+    }
+
+    // Footer
+    footer {
+    background-color: $color-gray-blue;
+    padding: 2.5rem $padding-x; // 40px en rem
+    text-align: center;
+    }
+
+    .footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $gap-md;
+    list-style: none;
+    margin: $gap-sm 0;
+    }
+
+    .footer-links a {
+    color: $color-white;
+    text-decoration: none;
+    margin: 0 0.625rem; // 10px en rem
+    font-size: 0.875rem; // 14px en rem
+    text-transform: uppercase;
+    letter-spacing: 0.125rem; // 2px en rem
+    }
+
+    .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.25rem; // 20px en rem
+    gap: 2.5rem; // 40px en rem
+    }
