@@ -5,24 +5,22 @@ $color-white: #f7f7f7; //backgrounds, textos, botons
 $color-black: #171616; //textos generals
 $color-light-gray: #959895; //textos secundaris, paràgrafs, border
 $color-dark-gray: #454444; //ombres, boto firefox, tab content
-$color-gray-blue: #303869; //footer, menu nav mobil
+$color-gray-blue: #252b46f2; //footer, menu nav mobil
 $color-primary: #4d5ae4; //fons blobs, botons, formulari, FAQ
 $color-accent: #ff6565; //hover, download btns, form submit error
 
 // Fonts
-$font-main: Verdana, sans-serif; //global, mateixa font per tot el body
-$font-xs: 0.7rem;        // error msg
-$font-sm: 0.9rem;        // h3 FAQ
-$font-base: 1rem;        // text normal / tab buttons
-$font-lg: 1.2rem;        // paràgrafs destacats
-$font-xl: 1.5rem;        // h2 seccions
-$font-xxl: 2.25rem;      // h1 hero desktop
-$font-btn: 1.0625rem;    // 17px buttons desktop
+$fontfam-main: Verdana, sans-serif; //global, mateixa font per tot el body
+$font-error: 0.7rem;        // error msg
+$size-h1: 2.2rem;
+$size-h2: 1.8rem;
+$size-h3: 1.4rem;
+$size-h4: 1.15rem; //download cards title
+$size-h5: 1.1rem; //faqs tab title
+$size-p: 1rem; 
 
-//Line Height
-$line-xs: 1.2;           // textos petits
-$line-sm: 1.5;           // paràgrafs normals
-$line-lg: 2;             // títols hero / separacions grans
+//Espai entre línies (line height)
+$line-height: 1.5;          
 
 // Ombra
 $shadow-card: 0px 5px 15px rgba($color-dark-gray, 0.3); //cards, botons, elements amb relleu
@@ -30,21 +28,21 @@ $shadow-card: 0px 5px 15px rgba($color-dark-gray, 0.3); //cards, botons, element
 // Espaiats
 $padding-x: 1.2rem;
 $padding-y: 1.5rem;
-$padding-cards: 1.25rem;
-$margin-base: 1.5rem;
+$padding-card: 1.25rem;
+$margin-standard: 3rem;
+$gap-xs: 0.6rem;
+$gap-footer1: 1rem;
+$gap-footer2: 2.5rem;
+$gap-mbl-standard: 1.5rem;
+$gap-dkt-standard: 4rem;
 
-$gap-xs: 0.5rem;
-$gap-sm: 1rem;
-$gap-md: 1.2rem;
-$gap-lg: 1.5rem;
-$gap-xl: 3rem;
-
-$radius-s: 5px;
-$radius-m: 10px;
+//vores arrodonides
+$radius-button: 5px;
+$radius-card: 10px;
 $radius-blobr-dkp: 400px 0 0 400px; //blob q surt d la dreta
 $radius-blobl-dkp: 0 400px 400px 0;
 $radius-blobr-mbl: 300px 0 0 300px;
-$radius-bl-mbl: 300px 0 0 300px;
+$radius-blobl-mbl: 300px 0 0 300px;
 
 
 

@@ -1,136 +1,91 @@
 // _layout.scss
 
 // Header
+/* --------header i navbar-------- */
+
 header {
-    background-color: $color-white;
+    background-color: #ffffff;
     width: 100%;
-    }
+    
+}
 
-    .navbar-main {
+//contenidor
+.navbar-main {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: $padding-y $padding-x; // usa variables
-    }
+    padding: 1.5rem 1.2rem;
+}
 
-    .nav-links-desktop {
+//enllaços ocults
+.nav-links-desktop {
     display: none;
-    }
+}
 
-    .menu-btn,
-    .close-btn {
-    border: none;
-    background: none;
-    cursor: pointer;
-    }
-
-    /* Menu activat fullscreen */
-    .navbar-menu-active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none; // hidden per defecte
-    flex-direction: column;
-    background: #303869; 
-    opacity: 90%;
-    z-index: 999;
-    }
-
-    .navbar.menu-open .navbar-menu-active {
-    display: flex;
-    }
-
-    .navbar-active {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    }
-
-    .menu-active ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: $padding-y $padding-x;
-    list-style: none;
-    font-size: $font-base;
-    font-weight: normal;
-    letter-spacing: 0.2rem;
-    }
-
-    .menu-active a {
-    color: $color-white;
-    text-decoration: none;
-    }
-
-    .nav-menu div {
+/* ===== HERO general ===== */
+.hero {
+    text-align: center;
     width: 100%;
     padding: $padding-y $padding-x;
-    text-align: center;
-    }
+    margin-bottom: 4rem;
+    align-items: stretch;
+}
 
-    .btn-line {
-    border-top: 1px solid rgba(255,255,255,0.5);
-    padding-top: $padding-y;
-    }
-
-    .close-btn {
-    display: none;
-    }
-
-    .menu-open .close-btn {
-    display: block;
-    }
-
-    .menu-open .menu-btn {
-    display: none;
-    }
-
-    .nav-menu .login-btn {
+/* Contenidor d’imatges dins del hero */
+.hero-images {
+    @include flex-center();
+    position: relative;
     width: 100%;
-    text-decoration: none;
-    padding: 0.9375rem 0; // 15px en rem
-    border-radius: $radius-s;
-    border-color: $color-white;
-    font-weight: bold;
-    background: transparent;
-    color: $color-white;
-    font-size: $font-btn;
-    letter-spacing: 0.2rem;
-    margin-top: 1rem;
-    }
+}
 
-    // Footer
-    footer {
-    background-color: $color-gray-blue;
-    padding: 2.5rem $padding-x; // 40px en rem
-    text-align: center;
-    }
+/* Contenidor de text + botons */
+.hero-txt-btn {
+    @include flex-center(column);
+    gap: 1.5rem;
+}
 
-    .footer-links {
+/* =====FEATURES=====*/
+.features {
+  @include section-container(); // padding + centrat + flex-col
+    margin-bottom: 3rem;
+}
+
+.tabs {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    list-style-type: none;
-    margin: $gap-sm 0;
-    }
+    margin-bottom: 1.5rem;
+}
 
-    .footer-links a {
-    color: $color-white;
-    text-decoration: none;
-    margin: 0 0.625rem; // 10px en rem
-    font-size: 0.875rem; // 14px en rem
-    text-transform: uppercase;
-    letter-spacing: 0.125rem; // 2px en rem
-    }
+// Footer
+footer {
+background-color: $color-gray-blue;
+padding: 2.5rem $padding-x; // 40px en rem
+text-align: center;
+}
 
-    .social-media {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 1.25rem; // 20px en rem
-    gap: 2.5rem; // 40px en rem
-    }
+.footer-links {
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 1rem;
+list-style-type: none;
+margin: $gap-footer1 0;
+}
+
+.footer-links a {
+color: $color-white;
+text-decoration: none;
+margin: 0 0.625rem; // 10px en rem
+font-size: 0.875rem; // 14px en rem
+text-transform: uppercase;
+letter-spacing: 0.125rem; // 2px en rem
+}
+
+.social-media {
+display: flex;
+flex-direction: row;
+justify-content: center;
+padding: 1.25rem; // 20px en rem
+gap: $gap-footer2; // 40px en rem
+}

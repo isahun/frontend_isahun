@@ -1,34 +1,159 @@
 /* _components.scss */
 
-/* ---------- Botons ---------- */
-.chrome-btn {
-    @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white);
+/* ===== NAVBAR MÒBIL ===== */
+.menu-btn,
+.close-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
-.firefox-btn {
-    @include button($color-white, $padding-x, $padding-y, $color-dark-gray, $color-dark-gray);
+//menu active
+.navbar-menu-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw; /* o 100 vw, tot l'ample*/
+    height: 100vh; /*tot l'alt*/
+
+    display: none; /*hidden x defecte */
+    flex-direction: column;
+    background: $color-gray-blue;
+    opacity: 90%;
+    z-index: 999;
+}
+
+.menu-open {
+    .close-btn {
+        display: block;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .navbar-menu-active {
+        display: flex;
+    }
+}
+
+/* capçalera dins d menu actiu */
+.navbar-active {
+    @include flex-between(row);
+    padding: $padding-y 2rem; //potser cal treure-ho
+}
+
+/*menu interior desplegat */
+.menu-active ul {
+    @include flex-center(column);
+    padding: $padding-y $padding-x;
+    list-style-type: none;
+    font-size: $size-h5;
+    font-weight: normal;
+    letter-spacing: 0.2rem;
+}
+
+.menu-active a {
+    color: $color-white;
+    text-decoration: none;
+}
+
+/* divs dels items del menu*/
+.nav-menu div {
+    width: 100%;
+    padding: $padding-y $padding-x;
+    text-align: center;
+}
+
+.btn-line {
+    border-top: 1px solid $color-light-gray;
+    padding-top: 1.5rem;
+}
+
+/*login botó*/
+.nav-menu .login-btn {
+    width: 100%;
+    text-decoration: none;
+    padding: 15px 0;
+    border-radius: 5px;
+    border-color: #ffffff;
+    font-weight: bold;
+    background: transparent;
+    color: #ffffff;
+    font-size: 18px;    
+    letter-spacing: 0.2rem;
+    margin-top: 1rem;
+}
+
+/* ===== Components HERO ===== */
+
+/* Hero image individual */
+.hero-image img {
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* Forma de fons del hero */
+.hero-bg-shape {
+    position: absolute;
+    bottom: 5%;
+    right: -5%;
+    width: 75%;
+    height: 60%;
+    aspect-ratio: 2/1;
+    background: #4d5ae4;
+    border-radius: 300px 0 0 300px;
+    z-index: -1;
+}
+
+/* Contenidor text + botons del hero */
+.hero-txt-btn {
+    @include section-container();
+    gap: 1.5rem;
+}
+
+/* Text dins del hero */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.hero-buttons {
+  @include flex-center(row);  // centrat per defecte
+    gap: 1.5rem;
+
+    button {
+        /* Botons reutilitzables amb mixin */
+        &.chrome-btn {
+        @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
+        box-shadow: $shadow-card;
+        }
+
+    &.firefox-btn {
+        @include button($color-white, 2rem, 1rem, $color-white, $color-dark-gray);
+        box-shadow: $shadow-card;
+    }
+    }
 }
 
 .info-btn {
     @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white);
 }
 
-/* ---------- Cards Descàrrega ---------- */
-.card-chrome {
-    @include card($color-white);
-}
 
-.card-firefox {
-    @include card($color-white);
-}
 
-.card-opera {
-    @include card($color-white);
-}
+/* ===== FEATURES components =====*/
+
 
 /* ---------- Tabs ---------- */
-.tab-btn {
-    font-size: $font-base;
+.tab {
+    font-size: $size-h5;
     border: none;
     background: none;
     cursor: pointer;
@@ -50,6 +175,19 @@
     }
 }
 
+/* ---------- Cards Descàrrega ---------- */
+.card-chrome {
+    @include card($color-white);
+}
+
+.card-firefox {
+    @include card($color-white);
+}
+
+.card-opera {
+    @include card($color-white);
+}
+
 /* ---------- FAQ ---------- */
 .arrow {
     width: 20px;
@@ -62,15 +200,15 @@
 }
 
 .faq-button {
-    @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white, $radius-s);
+    @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white, $radius-button);
 }
 
 /* ---------- Inputs Formulari ---------- */
-.input-field {
+#email {
     width: 100%;
     padding: $padding-y;
     border: none;
-    border-radius: $radius-s;
+    border-radius: $radius-button;
     box-sizing: border-box;
 
     &:focus {
@@ -78,66 +216,32 @@
         }
 }
 
-.input-error {
+.email-error-container {
     border: 2px solid $color-accent;
     background-color: $color-accent;
     color: $color-white;
-    font-size: $font-xs;
+    font-size: $font-error;        // error msg
+
     font-style: italic;
     position: relative;
     padding-right: 2.5rem; // espai per icona error
 }
 
-.input-error-icon {
+.email-error-container img {
     position: absolute;
-    right: $padding-x;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.25rem; // 20px
+    right: 1rem;
+    top: 1rem;
+    width: 1.25rem;
     display: block;
 }
 
-/* ---------- Navbar Mobile ---------- */
-.menu-btn,
-.close-btn {
-    border: none;
-    background: none;
-    cursor: pointer;
-}
 
-.navbar-menu-active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    flex-direction: column;
-    background: rgba(37, 43, 70, 0.95);
-    z-index: 999;
-}
-
-.menu-open {
-.close-btn {
-    display: block;
-}
-
-.menu-btn {
-    display: none;
-}
-
-.navbar-menu-active {
-    display: flex;
-}
-}
 
 /* ---------- Social Media Icons ---------- */
-.social-icon {
+.social-media {
+    @include flex-center();
     width: 2.5rem;
     height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 
     &:hover path {
