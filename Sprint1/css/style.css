@@ -13,6 +13,10 @@
     color: black;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: #ffffff;
     line-height: 1.5;
@@ -74,6 +78,7 @@ header {
 /*quan s'obre menu, es mostra*/
 .navbar.menu-open .navbar-menu-active {
     display: flex;
+    padding: 1.5rem 1.2rem
 }
 
 /* capçalera dins d menu actiu */
@@ -145,7 +150,7 @@ header {
     align-items: stretch;
     text-align: center;
     padding: 1.5rem 1.2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     width: 100%;
 }
 
@@ -237,7 +242,7 @@ header {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    gap: 1.3rem;
+    gap: 1rem;
     line-height: 1.5;
 }
 
@@ -322,7 +327,7 @@ header {
     display: flex;
     flex-direction: column;
     margin-top: 3rem;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 1.8rem;
     line-height: 1.5rem;
 }
@@ -351,7 +356,7 @@ header {
 .download-txt {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
     line-height: 1.5rem;
 }
@@ -361,7 +366,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
-    gap: 20px;
+    gap: 1rem;
 }
 
 .card-chrome, .card-firefox, .card-opera {
@@ -381,7 +386,7 @@ header {
     margin-bottom: 25px;
 }
 
-.card-chrome h3, .card-firefox h3, .card-opera h3 {
+.card-chrome h4, .card-firefox h4, .card-opera h4 {
     margin-bottom: 1px;
 }
 
@@ -393,7 +398,7 @@ header {
 .cardbutton {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 1rem;
     margin-top: 20px;
     text-decoration: none;
     background-color: #5368df;
@@ -421,14 +426,14 @@ header {
     margin-bottom: 30px;
 }
 
-.faq h3 {
+.faq h5 {
     font-size: 0.9rem;
     font-weight: normal;
 }
 
 .faq p {   
     margin-bottom: 40px;
-    line-height: 30px;
+    line-height: 1.5rem;
     max-width: 600px; /*es correcte posar aixo al mvl version?*/
 }
 
@@ -443,7 +448,7 @@ header {
     list-style-type: none;
 }
 
-/* botó h3+arrow per a cada pregunta */
+/* botó h5+arrow per a cada pregunta */
 .question-header {
     display: flex;
     align-items: center;
@@ -453,7 +458,7 @@ header {
     cursor: pointer;
 }
 
-.question h3 {
+.question h5 {
     flex: 1; /* perque el text ocupi tot l'espai possible */
     text-align: left;
     margin-right: 10px; /* perque no estigui enganxat a la fletxa */
@@ -890,7 +895,7 @@ footer .logo-invert path {
     }
 
     /*---FAQS---*/
-    .question h3:hover {
+    .question h5:hover {
     color: #ff6565;
     }
 
