@@ -1,54 +1,44 @@
-// _layout.scss
-
-// Header
-/* --------header i navbar-------- */
+/* =====header i navbar===== */
 
 header {
     background-color: #ffffff;
     width: 100%;
-    
-}
 
-//contenidor
-.navbar-main {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 1.2rem;
-}
+    //contenidor
+    .navbar-main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem 1.2rem;
 
-//enllaços ocults
-.nav-links-desktop {
-    display: none;
+    //enllaços ocults
+    .nav-links-desktop {
+        display: none;
+    }
+}
 }
 
 /* ===== HERO general ===== */
 .hero {
-    text-align: center;
-    width: 100%;
-    padding: $padding-y $padding-x;
-    margin-bottom: 4rem;
-    align-items: stretch;
-}
+@include section-container(column);
+    /* Contenidor d’imatges dins del hero */
+    .hero-images {
+        @include flex-center();
+        position: relative;
+        width: 100%;
+    }
 
-/* Contenidor d’imatges dins del hero */
-.hero-images {
-    @include flex-center();
-    position: relative;
-    width: 100%;
-}
-
-/* Contenidor de text + botons */
-.hero-txt-btn {
-    @include flex-center(column);
-    gap: 1.5rem;
+    /* Contenidor de text + botons */
+    .hero-txt-btn {
+        @include flex-center(column);
+        gap: 1.5rem;
+    }
 }
 
 /* =====FEATURES=====*/
 .features {
-  @include section-container(); // padding + centrat + flex-col
-    margin-bottom: 3rem;
+    @include section-container(column);
 }
 
 .tabs {
@@ -57,35 +47,90 @@ header {
     margin-bottom: 1.5rem;
 }
 
-// Footer
+/* ===== DOWNLOAD CARDS ===== */
+.download {
+    @include flex-center(column);
+    padding: 1.5rem 1.2rem; 
+
+    .download-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+        line-height: 1.5rem;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+/* ===== FAQ ===== */
+.faq {
+    @include section-container(column); // padding + centrat + flex-col
+    margin-bottom: $margin-standard*2;
+    align-items: center; //per evitar q el botó s'estiri
+
+    .questions {
+        width: 100%;
+        max-width: 600px; // correcte per mobile first
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        list-style-type: none;
+        margin: auto;
+    }
+}
+
+/* ===== CONTACT ===== */
+
+.contact {
+  background-color: $color-primary; // #5368df
+    padding: 6.25rem 1.8rem;
+    @include flex-center(column);
+    text-align: center;
+    margin: 0 auto;
+
+    .header-p {
+    @include flex-center(column);
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: $gap-mbl-standard;
+    letter-spacing: 0.3rem;
+    }
+
+    .header-h2 {
+    color: $color-white;
+    font-weight: bold;
+    margin-bottom: $gap-mbl-standard;
+}
+
+  /* FORM */
+    .contact-form {
+    @include flex-center(column);
+    gap: $gap-xs;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    }
+}
+
+/* ===== FOOTER ===== */
 footer {
-background-color: $color-gray-blue;
-padding: 2.5rem $padding-x; // 40px en rem
-text-align: center;
-}
+    background-color: $color-gray-blue;
+    padding: 2.5rem $padding-x; // 40px en rem
+    text-align: center;
 
-.footer-links {
-display: flex;
-flex-direction: column;
-justify-content: center;
-gap: 1rem;
-list-style-type: none;
-margin: $gap-footer1 0;
-}
-
-.footer-links a {
-color: $color-white;
-text-decoration: none;
-margin: 0 0.625rem; // 10px en rem
-font-size: 0.875rem; // 14px en rem
-text-transform: uppercase;
-letter-spacing: 0.125rem; // 2px en rem
-}
-
-.social-media {
-display: flex;
-flex-direction: row;
-justify-content: center;
-padding: 1.25rem; // 20px en rem
-gap: $gap-footer2; // 40px en rem
+        .logo-links {
+        @include flex-center(column);
+        gap: 2rem;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
 }

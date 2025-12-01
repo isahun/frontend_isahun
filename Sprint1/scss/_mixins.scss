@@ -1,17 +1,14 @@
-@mixin container($max-width: 1200px) { //per features download faq, etc, per no repetir padding i margin
-  width: 100%;
-  max-width: $max-width;
-  margin-left: auto;
-  margin-right: auto;
-  padding: $padding-y $padding-x;
-}
 
-@mixin section-container {
+
+@mixin section-container ($direction:column) {
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: $margin-standard;
   padding: $padding-y $padding-x;
   display: flex;
-  flex-direction: column;
+  flex-direction: $direction;
   text-align: center;
-  align-items: center;
+  line-height: $line-height;
 }
 
 @mixin button($bg-color, 
@@ -48,6 +45,7 @@
   flex-direction: $direction;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 @mixin flex-between($direction: row) {
@@ -57,8 +55,21 @@
   justify-content: space-between;
 }
 
-@mixin desktop {
-  @media (min-width: 1024px) {
-    @content;
-  }
+@mixin desktop-container($direction: row, $padding-x: 8rem, $padding-y: 2rem, $gap: 2rem) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-y $padding-x;
+  gap: $gap;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin desktop-flex-center($direction: row, $align: center, $justify: center, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
 }

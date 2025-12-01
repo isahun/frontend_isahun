@@ -86,7 +86,7 @@
     margin-top: 1rem;
 }
 
-/* ===== Components HERO ===== */
+/* ===== HERO components ===== */
 
 /* Hero image individual */
 .hero-image img {
@@ -111,59 +111,79 @@
 
 /* Contenidor text + botons del hero */
 .hero-txt-btn {
-    @include section-container();
-    gap: 1.5rem;
-}
-
-/* Text dins del hero */
-.hero-text {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.5rem;
-}
+    text-align: center;
+    align-items: center;
+    gap: $gap-mbl-standard;
 
-.hero-buttons {
-  @include flex-center(row);  // centrat per defecte
-    gap: 1.5rem;
+    /* Text dins del hero */
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+        line-height: $line-height;
 
-    button {
-        /* Botons reutilitzables amb mixin */
-        &.chrome-btn {
-        @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
-        box-shadow: $shadow-card;
+        &.h1 {
+            line-height: $line-height;
         }
-
-    &.firefox-btn {
-        @include button($color-white, 2rem, 1rem, $color-white, $color-dark-gray);
-        box-shadow: $shadow-card;
     }
+    /* botons dins del hero*/
+    .hero-buttons {
+    @include flex-center(row);  // centrat per defecte
+        gap: 1.5rem;
+
+        button {
+            /* Botons reutilitzables amb mixin */
+            &.chrome-btn {
+            @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
+            box-shadow: $shadow-card;
+            }
+
+        &.firefox-btn {
+            @include button($color-white, 2rem, 1rem, $color-white, $color-dark-gray);
+            box-shadow: $shadow-card;
+        }
+        }
     }
 }
-
-.info-btn {
-    @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white);
-}
-
-
 
 /* ===== FEATURES components =====*/
 
+/* text d la secció */
+.features-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: $gap-mbl-standard;
+    line-height: $line-height;
+}
 
-/* ---------- Tabs ---------- */
+/* divs de cada tab x fer border fix */
+.tabs {
+    border-bottom: 1px solid $color-light-gray;
+
+    &:first-child {
+    border-top: 1px solid $color-light-gray;
+    }
+}
+
+/* botons tab */
 .tab {
-    font-size: $size-h5;
-    border: none;
     background: none;
+    border: none;
+    padding: $padding-card;
     cursor: pointer;
+    font-size: $size-h5;
+
 
     &.active {
         border-bottom: 3px solid $color-accent;
     }
 }
 
-/* ---------- Tab content ---------- */
+/* text d cada tab */
 .tab-content {
     display: none;
     flex-direction: column;
@@ -171,80 +191,290 @@
     text-align: center;
 
     &.active {
-    display: flex;
+        display: flex;
     }
 }
 
-/* ---------- Cards Descàrrega ---------- */
-.card-chrome {
-    @include card($color-white);
+/* container d img d cada tab */
+.tab-imgs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    position: relative;
 }
 
-.card-firefox {
-    @include card($color-white);
+.tab-img {
+    position: relative;
 }
 
+.tab-img img {
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* blob left margin */
+.features-bg-shape {
+    position: absolute;
+    bottom: -5%;
+    left: -20%;
+    width: 98%;
+    height: 60%;
+    background: $color-primary;
+    border-radius: $radius-blobl-mbl;
+    z-index: -1;
+}
+
+/* txt dins del tab */
+.text-tab {
+    display: flex;
+    flex-direction: column;
+    margin-top: $margin-standard;
+    gap: $gap-mbl-standard;
+    margin-bottom: 1.8rem;
+    line-height: $line-height;
+}
+
+/* botó more info*/
+.info-btn {
+    @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
+}
+
+/* ===== DOWNLOAD components ===== */
+
+/* Card genèrica */
+.card-chrome,
+.card-firefox,
 .card-opera {
-    @include card($color-white);
+  @include card(); // utilitzem el mixin card amb padding, border-radius, box-shadow
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
-/* ---------- FAQ ---------- */
-.arrow {
-    width: 20px;
-    transition: transform 0.3s ease;
-    color: $color-primary;
+.cards img.logo {
+    margin-bottom: 1.5rem;
+}
 
-    &.active {
+.card-chrome h3,
+.card-firefox h3,
+.card-opera h3 {
+    margin-bottom: 0.3rem;
+}
+
+.card-chrome p,
+.card-firefox p,
+.card-opera p {
+    margin-bottom: 1.8rem;
+    color: #959895;
+}
+
+/* Botó de la card */
+.cardbutton {
+    @include button($color-primary, 1.25rem, 0.75rem, $color-primary, $color-white);
+    display: flex;
+    flex-direction: row;
+    gap: $gap-xs;
+    margin-top: 1.25rem;
+    text-decoration: none;
+}
+
+/* ===== FAQ Components ===== */
+
+/* Títols i text */
+.faq h2 {
+    margin-bottom: $gap-mbl-standard;
+}
+
+.faq h5 {
+    font-weight: bold;
+}
+
+.questions p {
+    margin-bottom: $gap-s;
+    line-height: $line-height;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Pregunta individual */
+.question {
+    list-style-type: none;
+
+    /* Capçalera de cada pregunta (h3 + arrow) */
+    .question-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid #7a7777;
+        cursor: pointer;
+    }
+
+    .question h5 {
+        flex: 1; 
+        text-align: left;
+        margin-right: 0.6rem;
+        overflow-wrap: anywhere;
+    }
+
+    /* Fletxa animada */
+    .arrow {
+        width: 20px;
+        transition: transform 0.3s ease;
+        color: $color-primary;
+    }
+
+    .question.active .answer {
+        display: block;
+        margin-bottom: 1.25rem;
+    }
+
+    .question.active .question-header {
+        border: none;
+    }
+
+    .question-header.active .arrow path {
+        stroke: currentColor;
         transform: rotate(180deg);
     }
 }
+/* Resposta */
+.answer {
+    display: none;
+    text-align: left;
+    margin-top: 1rem;
+    color: #7a7777;
+    line-height: 1.5rem;
+}
 
+/* Botó FAQ reutilitzable amb mixin */
 .faq-button {
-    @include button($color-primary, $padding-x, $padding-y, $color-primary, $color-white, $radius-button);
+    @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
+    gap: $gap-xs;
+    margin-top: 1.25rem;
+    text-decoration: none;
 }
 
-/* ---------- Inputs Formulari ---------- */
-#email {
+/* ===== CONTACT components ===== */
+
+/* INPUT NORMAL */
+.contact-form input {
     width: 100%;
-    padding: $padding-y;
+    padding: 0.9rem;
     border: none;
-    border-radius: $radius-button;
-    box-sizing: border-box;
-
-    &:focus {
-        outline: 2px solid $color-primary;
-        }
+    border-radius: 5px;
+    font-size: 0.9rem;
 }
 
+/* BUTTON */
+.contact-form button {
+    @include button(
+        $bg-color: $color-accent,        // #ff6565
+        $padding-x: 1rem,
+        $padding-y: 1rem,
+        $border-color: $color-accent,
+        $color: $color-white
+    );
+    width: 100%;
+}
+
+/* ERROR CONTAINER */
 .email-error-container {
-    border: 2px solid $color-accent;
-    background-color: $color-accent;
-    color: $color-white;
-    font-size: $font-error;        // error msg
-
-    font-style: italic;
     position: relative;
-    padding-right: 2.5rem; // espai per icona error
-}
+    padding: 0 0 1.5rem 0;
+    border-radius: 5px;
+    width: 100%;
 
-.email-error-container img {
+    input {
+    width: 99%;
+    height: 99%;
+    padding: 0.9rem;
+    margin-top: 0.2rem;
+    border: none;
+    border-radius: 5px;
+    }
+
+  /* ICONA */
+    img {
     position: absolute;
     right: 1rem;
     top: 1rem;
     width: 1.25rem;
+    display: none;
+    }
+}
+
+/* ESTATS DE L’ERROR */
+.email-error-container.error {
+    background: $color-accent;
+
+    img {
+    display: block;
+    }
+}
+
+/* MISSATGE D’ERROR */
+.email-error {
+    display: none;
+    position: absolute;
+    bottom: 0.3rem;
+    left: 0.6rem;
+    color: $color-white;
+    font-size: 0.7rem;
+    font-style: italic;
+}
+
+.email-error.error {
     display: block;
 }
 
+/* ===== FOOTER components ===== */
+
+/* Logo invertit */
+.footer-logo {
+    svg.logo-invert path {
+        fill: white;
+        stroke: none;
+    }
+}
+
+/* Links del menú */
+.footer-links {
+    @include flex-center(column);
+    list-style: none;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: .875rem;
+        text-transform: uppercase;
+        letter-spacing: .125rem;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
 
 
-/* ---------- Social Media Icons ---------- */
+/* Xarxes socials */
 .social-media {
-    @include flex-center();
+    @include flex-center(row);
+    padding: 1.25rem 0;
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
-
-    &:hover path {
-        fill: $color-accent;
-    }
 }
+}
+
+
+

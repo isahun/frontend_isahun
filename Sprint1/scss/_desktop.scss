@@ -1,0 +1,235 @@
+/*===== DESKTOP ======*/
+@media (min-width: 1024px) {
+    body {
+        overflow-x: hidden;
+        font-family: $fontfam-main;
+    }
+
+    h1 { font-size: $size-h1; }
+    h2 { font-size: $size-h2; }
+    h3 { font-size: $size-h3; }
+    h4 { font-size: $size-h4; }
+    h5 { font-size: $size-h5; }
+    p { font-size: $size-p; line-height: $line-height; }
+    button, a { font-size: 1.063rem; }
+
+    /* ===== HEADER / NAVBAR ===== */
+    .navbar-main {
+        @include desktop-container(column);
+        justify-content: space-between;
+
+        .nav-links-desktop {
+            display: flex;
+            gap: $gap-m;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: $color-black;
+                letter-spacing: 0.2rem;
+
+                &:hover { color: $color-accent; }
+            }
+
+            .login-btn {
+                width: auto;
+                border: 1px solid $color-accent;
+                border-radius: $radius-button;
+                font-weight: bold;
+                background: $color-accent;
+                color: $color-white;
+                font-size: 1.125rem;
+                letter-spacing: 0.2rem;
+                padding: 0.8rem 2rem;
+                box-shadow: $shadow-card;
+
+                &:hover {
+                    background: $color-white;
+                    color: $color-accent;
+                }
+            }
+        }
+
+        .navbar-menu, .menu-btn { display: none; }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+        @include desktop-container();
+        flex-direction: row-reverse;
+        gap: $gap-dkt-standard;
+
+        .hero-images {
+            @include desktop-flex-center();
+            flex: 1;
+
+            img { max-width: 100%; height: auto; z-index: 1; }
+            .hero-bg-shape {
+                position: absolute;
+                bottom: 8%;
+                right: -30%;
+                width: 95%;
+                height: 60%;
+                background: $color-primary;
+                border-radius: $radius-blobr-dkp;
+                z-index: -1;
+            }
+        }
+
+        .hero-txt-btn {
+            flex: 1;
+            text-align: left;
+            align-items: flex-start;
+
+            .hero-text { width: 90%; }
+        }
+
+        .hero-buttons button { cursor: pointer; }
+        .chrome-btn:hover {
+            background: $color-white;
+            border: 3px solid darken($color-primary, 10%);
+            color: $color-primary;
+        }
+        .firefox-btn:hover { border: 3px solid $color-gray-blue; }
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+        @include desktop-container(column);
+        gap: $gap-dkt-standard;
+
+        .features-text {margin: 0 auto; }
+
+        .tab-imgs {
+            @include desktop-flex-center();
+            flex: 1;
+            justify-content: flex-end;
+
+            img { flex: 1; }
+
+            .features-bg-shape {
+                position: absolute;
+                bottom: -10%;
+                left: -50%;
+                width: 125%;
+                height: 80%;
+                background: $color-primary;
+                border-radius: $radius-blobl-dkp;
+                z-index: -1;
+            }
+        }
+
+        .tabs { flex-direction: row; }
+        .tab-content {
+            flex-direction: row;
+            gap: $gap-dkt-standard;
+            justify-content: space-evenly;
+            margin: 0 auto;
+        }
+        .txt-btn { flex: 1; width: 40%; text-align: left; flex-direction: column; }
+
+        .info-btn {
+            border: 3px solid $color-primary;
+            cursor: pointer;
+            &:hover {
+                border: 3px solid $color-primary;
+                background: $color-white;
+                color: $color-primary;
+            }
+        }
+    }
+
+    /* ===== DOWNLOAD CARDS ===== */
+    .download {
+        @include desktop-container(column);
+        gap: $gap-dkt-standard;
+
+        .download-txt { width: 60%; }
+        .cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: $gap-xs;
+        }
+
+        .card-firefox { margin-top: $gap-dkt-standard; }
+        .card-opera { margin-top: $gap-dkt-standard*2; }
+
+        .cardbutton {
+            cursor: pointer;
+            &:hover {
+                border: 3px solid $color-primary;
+                background: $color-white;
+                color: $color-primary;
+            }
+        }
+    }
+
+    /* ===== FAQ ===== */
+    .faq {
+        @include desktop-container(column);
+        align-items: center;
+
+        .questions { 
+            flex-direction: column;
+            max-width: 600px; 
+            margin: 0 auto; }
+
+        .faq-button {
+            @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
+            &:hover {
+                border: 3px solid $color-primary;
+                background: $color-white;
+                color: $color-primary;
+            }
+        }
+    }
+
+    /* ===== CONTACT ===== */
+    .contact {
+        @include desktop-container();
+        flex-direction: row;
+        justify-content: center;
+        gap: $gap-dkt-standard;
+
+        .contact-form {
+            @include desktop-flex-center();
+            flex-direction: row;
+            gap: $gap-xs;
+            max-width: 500px;
+
+            input { flex: 2; }
+            button {
+                flex: 1;
+                height: auto;
+                border: 2px solid $color-accent;
+                cursor: pointer;
+                &:hover {
+                    background: $color-white;
+                    color: $color-accent;
+                    border: 2px solid $color-accent;
+                }
+            }
+        }
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+        @include desktop-container();
+        padding: 1rem 8rem;
+
+        .logo-links {
+            @include desktop-flex-center();
+            flex-direction: row;
+            gap: $gap-dkt-standard;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .footer-links { flex-direction: row; }
+        .footer-links a:hover { color: $color-accent; }
+
+        .social-media { margin-left: auto; }
+        .social-media path:hover { fill: $color-accent; }
+    }
+}

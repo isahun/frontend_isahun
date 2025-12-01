@@ -3,7 +3,7 @@
 // Colors
 $color-white: #f7f7f7; //backgrounds, textos, botons
 $color-black: #171616; //textos generals
-$color-light-gray: #959895; //textos secundaris, paràgrafs, border
+$color-light-gray: #cfcfcf; //textos secundaris, paràgrafs, border
 $color-dark-gray: #454444; //ombres, boto firefox, tab content
 $color-gray-blue: #252b46f2; //footer, menu nav mobil
 $color-primary: #4d5ae4; //fons blobs, botons, formulari, FAQ
@@ -29,20 +29,23 @@ $shadow-card: 0px 5px 15px rgba($color-dark-gray, 0.3); //cards, botons, element
 $padding-x: 1.2rem;
 $padding-y: 1.5rem;
 $padding-card: 1.25rem;
+
 $margin-standard: 3rem;
+
 $gap-xs: 0.6rem;
-$gap-footer1: 1rem;
-$gap-footer2: 2.5rem;
+$gap-s: 1rem;
+$gap-m: 2.5rem;
 $gap-mbl-standard: 1.5rem;
 $gap-dkt-standard: 4rem;
 
 //vores arrodonides
 $radius-button: 5px;
 $radius-card: 10px;
+
 $radius-blobr-dkp: 400px 0 0 400px; //blob q surt d la dreta
 $radius-blobl-dkp: 0 400px 400px 0;
 $radius-blobr-mbl: 300px 0 0 300px;
-$radius-blobl-mbl: 300px 0 0 300px;
+$radius-blobl-mbl: 0 300px 300px 0;
 
 
 
