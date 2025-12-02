@@ -64,14 +64,17 @@ function validateForm() {
 const btnMenu = document.querySelector(".menu-btn");
 const btnClose = document.querySelector(".close-btn"); 
 const navbar = document.querySelector(".navbar");
+const body = document.body;
 
 
 btnMenu.addEventListener("click", () => {
     navbar.classList.add("menu-open");
+    body.classList.add("no-scroll");
 });
 
 btnClose.addEventListener("click", () => {
     navbar.classList.remove("menu-open");
+    body.classList.remove("no-scroll");
 });
 
 

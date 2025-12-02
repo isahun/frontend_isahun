@@ -1,94 +1,136 @@
 /* _components.scss */
 
 /* ===== NAVBAR MÒBIL ===== */
-
-.navbar .nav-menu {
-    display: none;
+.nav-menu {
+    display: none; // hidden per defecte
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $color-gray-blue;
+    opacity: 0.9;
+    z-index: 999;
+    align-items: center;
+    padding: 4rem;    
 }
 
-.menu-btn,
-.close-btn {
+.menu-btn {
+    display: block;
+    position: absolute;
+    top: $padding-y;
+    right: $padding-x;
+    z-index: 1000;
     border: none;
     background: none;
     cursor: pointer;
 }
 
-//menu active
-.navbar.menu-open .nav-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100vw; /* o 100 vw, tot l'ample*/
-    height: 100vh; /*tot l'alt*/
-
-    display: flex; /*hidden x defecte */
-    flex-direction: column;
-    background: $color-gray-blue;
-    opacity: 90%;
-    z-index: 999;
+.close-btn {
+    display: none; // hidden per defecte
+    position: absolute;
+    top: $padding-y;
+    right: $padding-x;
+    z-index: 1000;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
-.menu-open {
-    .logo-svg {
-        .logo-letters path {
-        fill: $color-white;
-        }
-
-        .logo-circle path {
-            fill: $color-white;
-        }
-    }
-
-    .close-btn {
-        display: flex;
-    }
-
+.navbar.menu-open {
     .menu-btn {
         display: none;
     }
 
-    .nav-menu ul {
-        padding: $padding-y $padding-x;
-        list-style-type: none;
-        font-size: $size-h5;
-        font-weight: normal;
-        letter-spacing: 0.2rem;
+    .close-btn {
+        display: block;
+    }
+
+    .logo-svg {
+        position: relative;
+        z-index: 1001;
+        .logo-letters,
+        circle {
+            fill: $color-white; // logo blanc quan el menu està obert
+        }
+        .inner-bookmark {
+            fill: $color-gray-blue;
+            opacity: 0.9;
+        }
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 8rem;
+
+        #features {
+            border-top: 1px solid $color-white;
+            border-bottom: 1px solid $color-white;
+        }
+
+        #pricing, 
+        #contact {
+            border-bottom: 1px solid $color-white;
+        }
+
+        li {
+            width: 95%;
+            text-align: center;
+            padding: $padding-y $padding-x;
+            list-style: none;
+
+        
+            a {
+                color: $color-white;
+                font-size: $size-h5;
+                font-weight: normal;
+                letter-spacing: 0.2rem;
+                text-decoration: none;
+            }
+
+        .login-btn {
+            width: 90%;
+            padding: 15px 0;
+            border-radius: $radius-button;
+            border: 3px solid $color-white;
+            font-weight: bold;
+            background: transparent;
+            color: $color-white;
+            font-size: $size-p;
+            letter-spacing: 0.2rem;
+            margin-top: 1rem;
+        }
+
+        .social-media-h {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        padding-top: 2rem;
+        justify-content: center;
+
+            a {
+                display: flex;
+                width: 2.5rem;
+                height: 2.5rem;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        }
     }
 }
 
-/*menu interior desplegat */
-.menu-active a {
-    color: $color-white;
-    text-decoration: none;
-}
-
-/* divs dels items del menu*/
-.nav-menu div {
-    width: 100%;
-    padding: $padding-y $padding-x;
-    text-align: center;
-}
-
-.btn-line {
-    border-top: 1px solid $color-light-gray;
-    padding-top: 1.5rem;
-}
-
-/*login botó*/
-.nav-menu .login-btn {
-    width: 100%;
-    text-decoration: none;
-    padding: 15px 0;
-    border-radius: 5px;
-    border-color: #ffffff;
-    font-weight: bold;
-    background: transparent;
-    color: #ffffff;
-    font-size: 18px;    
-    letter-spacing: 0.2rem;
-    margin-top: 1rem;
-}
+    body.no-scroll {
+        overflow: hidden;
+        height: 100vh;
+    }
 
 /* ===== HERO components ===== */
 

@@ -1,20 +1,14 @@
 /* =====header i navbar===== */
-
 header {
-    background-color: #ffffff;
-    width: 100%;
-
-    //contenidor
-    .navbar {
-        @include flex-between(row);
-        padding: 1.5rem 1.2rem;
-
-    //menu mbl actiu
-    .navbar.menu-open .nav-menu {
-        @include flex-center(column);
-    }
+    width: 100%;  // ocupa tot l’ample
 }
+
+.navbar {
+    @include flex-between(row); // distribució general
+    padding: $padding-y $padding-x;
+    position: relative;  // necessari per als botons absolutes del menú mòbil
 }
+
 
 /* ===== HERO general ===== */
 .hero {
@@ -84,7 +78,6 @@ header {
 }
 
 /* ===== CONTACT ===== */
-
 .contact {
   background-color: $color-primary; // #5368df
     padding: 6.25rem 1.8rem;
