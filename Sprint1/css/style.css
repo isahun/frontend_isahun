@@ -4,15 +4,19 @@ header {
   background-color: #ffffff;
   width: 100%;
 }
-header .navbar-main {
+header .navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1.2rem;
 }
-header .navbar-main .nav-links-desktop {
-  display: none;
+header .navbar .navbar.menu-open .nav-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* ===== HERO general ===== */
@@ -177,6 +181,10 @@ footer .logo-links {
 
 /* _components.scss */
 /* ===== NAVBAR MÒBIL ===== */
+.navbar .nav-menu {
+  display: none;
+}
+
 .menu-btn,
 .close-btn {
   border: none;
@@ -184,45 +192,32 @@ footer .logo-links {
   cursor: pointer;
 }
 
-.navbar-menu-active {
+.navbar.menu-open .nav-menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw; /* o 100 vw, tot l'ample*/
   height: 100vh; /*tot l'alt*/
-  display: none; /*hidden x defecte */
+  display: flex; /*hidden x defecte */
   flex-direction: column;
   background: rgba(37, 43, 70, 0.9490196078);
   opacity: 90%;
   z-index: 999;
 }
 
+.menu-open .logo-svg .logo-letters path {
+  fill: #f7f7f7;
+}
+.menu-open .logo-svg .logo-circle path {
+  fill: #f7f7f7;
+}
 .menu-open .close-btn {
-  display: block;
+  display: flex;
 }
 .menu-open .menu-btn {
   display: none;
 }
-.menu-open .navbar-menu-active {
-  display: flex;
-}
-
-/* capçalera dins d menu actiu */
-.navbar-active {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
-}
-
-/*menu interior desplegat */
-.menu-active ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.menu-open .nav-menu ul {
   padding: 1.5rem 1.2rem;
   list-style-type: none;
   font-size: 1.1rem;
@@ -230,6 +225,7 @@ footer .logo-links {
   letter-spacing: 0.2rem;
 }
 
+/*menu interior desplegat */
 .menu-active a {
   color: #f7f7f7;
   text-decoration: none;
@@ -588,7 +584,7 @@ footer .logo-links {
   padding: 0.9rem;
   border: none;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* BUTTON */
@@ -615,7 +611,7 @@ footer .logo-links {
 .email-error-container input {
   width: 99%;
   height: 99%;
-  padding: 0.9rem;
+  padding: 0 0.9rem;
   margin-top: 0.2rem;
   border: none;
   border-radius: 5px;
@@ -703,20 +699,8 @@ footer .logo-links {
     overflow-x: hidden;
     font-family: Verdana, sans-serif;
   }
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1.4rem;
-  }
-  h4 {
-    font-size: 1.15rem;
-  }
-  h5 {
-    font-size: 1.1rem;
+  html {
+    font-size: 18px;
   }
   p {
     font-size: 1rem;
@@ -818,7 +802,7 @@ footer .logo-links {
   }
   .hero .chrome-btn:hover {
     background: #f7f7f7;
-    border: 3px solid rgb(33.4536585366, 49.5609756098, 220.5463414634);
+    border: 3px solid rgb(50.5170731707, 65.4512195122, 223.9829268293);
     color: #4d5ae4;
   }
   .hero .firefox-btn:hover {

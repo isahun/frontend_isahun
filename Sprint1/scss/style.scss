@@ -2,7 +2,6 @@
 @import 'mixins';
 @import 'layout';
 @import 'components';
-@import 'sections';
 @import 'desktop';
 
 * {
@@ -15,5 +14,4 @@ body {
     font-family: $fontfam-main;
     color: #171616;
     overflow-x: hidden;
-
 }

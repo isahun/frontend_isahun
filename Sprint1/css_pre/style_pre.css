@@ -35,8 +35,9 @@ header {
     
 }
 
-.navbar-main {
+.navbar {
     display: flex;
+    display: row;
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 1.2rem;

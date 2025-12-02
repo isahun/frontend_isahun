@@ -1,6 +1,11 @@
 /* _components.scss */
 
 /* ===== NAVBAR MÒBIL ===== */
+
+.navbar .nav-menu {
+    display: none;
+}
+
 .menu-btn,
 .close-btn {
     border: none;
@@ -9,7 +14,7 @@
 }
 
 //menu active
-.navbar-menu-active {
+.navbar.menu-open .nav-menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -17,7 +22,7 @@
     width: 100vw; /* o 100 vw, tot l'ample*/
     height: 100vh; /*tot l'alt*/
 
-    display: none; /*hidden x defecte */
+    display: flex; /*hidden x defecte */
     flex-direction: column;
     background: $color-gray-blue;
     opacity: 90%;
@@ -25,35 +30,34 @@
 }
 
 .menu-open {
+    .logo-svg {
+        .logo-letters path {
+        fill: $color-white;
+        }
+
+        .logo-circle path {
+            fill: $color-white;
+        }
+    }
+
     .close-btn {
-        display: block;
+        display: flex;
     }
 
     .menu-btn {
         display: none;
     }
 
-    .navbar-menu-active {
-        display: flex;
+    .nav-menu ul {
+        padding: $padding-y $padding-x;
+        list-style-type: none;
+        font-size: $size-h5;
+        font-weight: normal;
+        letter-spacing: 0.2rem;
     }
 }
 
-/* capçalera dins d menu actiu */
-.navbar-active {
-    @include flex-between(row);
-    padding: $padding-y 2rem; //potser cal treure-ho
-}
-
 /*menu interior desplegat */
-.menu-active ul {
-    @include flex-center(column);
-    padding: $padding-y $padding-x;
-    list-style-type: none;
-    font-size: $size-h5;
-    font-weight: normal;
-    letter-spacing: 0.2rem;
-}
-
 .menu-active a {
     color: $color-white;
     text-decoration: none;
@@ -131,7 +135,7 @@
     }
     /* botons dins del hero*/
     .hero-buttons {
-    @include flex-center(row);  // centrat per defecte
+        @include flex-center(row);  // centrat per defecte
         gap: 1.5rem;
 
         button {
@@ -371,7 +375,7 @@
     padding: 0.9rem;
     border: none;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: $size-p;
 }
 
 /* BUTTON */
@@ -396,7 +400,7 @@
     input {
     width: 99%;
     height: 99%;
-    padding: 0.9rem;
+    padding: 0 0.9rem;
     margin-top: 0.2rem;
     border: none;
     border-radius: 5px;
@@ -428,7 +432,7 @@
     bottom: 0.3rem;
     left: 0.6rem;
     color: $color-white;
-    font-size: 0.7rem;
+    font-size: $font-error;
     font-style: italic;
 }
 

@@ -5,16 +5,13 @@ header {
     width: 100%;
 
     //contenidor
-    .navbar-main {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+    .navbar {
+        @include flex-between(row);
         padding: 1.5rem 1.2rem;
 
-    //enllaços ocults
-    .nav-links-desktop {
-        display: none;
+    //menu mbl actiu
+    .navbar.menu-open .nav-menu {
+        @include flex-center(column);
     }
 }
 }

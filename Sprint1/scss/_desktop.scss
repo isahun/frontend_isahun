@@ -1,16 +1,16 @@
 /*===== DESKTOP ======*/
+@use "sass:color";
+
 @media (min-width: 1024px) {
     body {
         overflow-x: hidden;
         font-family: $fontfam-main;
     }
 
-    h1 { font-size: $size-h1; }
-    h2 { font-size: $size-h2; }
-    h3 { font-size: $size-h3; }
-    h4 { font-size: $size-h4; }
-    h5 { font-size: $size-h5; }
+    html { font-size: 18px }
+
     p { font-size: $size-p; line-height: $line-height; }
+    
     button, a { font-size: 1.063rem; }
 
     /* ===== HEADER / NAVBAR ===== */
@@ -87,7 +87,7 @@
         .hero-buttons button { cursor: pointer; }
         .chrome-btn:hover {
             background: $color-white;
-            border: 3px solid darken($color-primary, 10%);
+            border: 3px solid color.scale($color-primary, $lightness: -10%);
             color: $color-primary;
         }
         .firefox-btn:hover { border: 3px solid $color-gray-blue; }
@@ -233,3 +233,5 @@
         .social-media path:hover { fill: $color-accent; }
     }
 }
+
+
