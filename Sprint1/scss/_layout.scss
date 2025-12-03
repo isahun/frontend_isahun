@@ -42,6 +42,8 @@ header {
 
     .tabs-content {
         @include flex-center(column);
+            position: relative;
+
     }
     
 }
@@ -82,7 +84,6 @@ header {
         max-width: 600px; // correcte per mobile first
         display: flex;
         flex-direction: column;
-        text-align: left;
         list-style-type: none;
         margin: auto;
     }
@@ -90,34 +91,28 @@ header {
 
 /* ===== CONTACT ===== */
 .contact {
-  background-color: $color-primary; // #5368df
+    background-color: $color-primary; // #5368df
     padding: 6.25rem 1.8rem;
     @include flex-center(column);
-    text-align: center;
     margin: 0 auto;
 
-    .header-p {
-    @include flex-center(column);
-    font-weight: normal;
-    text-transform: uppercase;
-    color: $color-white;
-    margin-bottom: $gap-mbl-standard;
-    letter-spacing: 0.3rem;
+    .header-contact {
+        margin: 0 auto;
     }
-
-    .header-h2 {
-    color: $color-white;
-    font-weight: bold;
-    margin-bottom: $gap-mbl-standard;
-}
-
-  /* FORM */
+    
+    /* FORM */
     .contact-form {
     @include flex-center(column);
     gap: $gap-xs;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    }
+
+    .email-error-container {
+        width: 100%;
+        position: relative;
+        
     }
 }
 
@@ -127,11 +122,9 @@ footer {
     padding: 2.5rem $padding-x; // 40px en rem
     text-align: center;
 
-        .logo-links {
-        @include flex-center(column);
-        gap: 2rem;
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-    }
+    @include flex-center(column);
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }

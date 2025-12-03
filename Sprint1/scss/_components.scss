@@ -229,6 +229,19 @@
 }
 }
 
+.tabs-content {
+    .features-bg-shape {
+    position: absolute;
+    bottom: 250px;
+    left: -50px;
+    width: 80%;
+    height: 250px;
+    background: $color-primary;
+    border-radius: $radius-blobl-mbl;
+    z-index: -1;
+    }
+}
+
 /* text d cada tab */
 .tab-content {
     display: none;
@@ -243,32 +256,13 @@
 
 /* container d img d cada tab */
 .tab-imgs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    position: relative;
     margin-bottom: 3rem;
 
-    .tab-imgs img {
+    img {
         margin-bottom: 1.5rem;
         max-width: 80%;
         height: auto;
-        position: relative;
         z-index: 1;
-    }
-
-    /* blob left margin */
-    .features-bg-shape {
-        position: absolute;
-        bottom: -5%;
-        left: -20%;
-        width: 90%;
-        height: 60%;
-        background: $color-primary;
-        border-radius: $radius-blobl-mbl;
-        z-index: -1;
     }
 }
 
@@ -284,6 +278,7 @@
     @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
     margin: 2rem 0;
 }
+
 
 /* ===== DOWNLOAD components ===== */
 
@@ -350,28 +345,20 @@
 /* Pregunta individual */
 .question {
     list-style-type: none;
+    text-align: left;
 
     /* Capçalera de cada pregunta (h3 + arrow) */
     .question-header {
         display: flex;
+        background: none;
         align-items: center;
         justify-content: space-between;
+        font-size: $size-p;
         padding: 1.25rem 0;
         cursor: pointer;
         width: 100%;
         border: none;
         border-bottom: 1px solid $color-light-gray;
-    }
-/*
-    .question-header button {
-        background: $color-white;
-    }
-
-    .question h5 {
-        flex: 1; 
-        text-align: left;
-        margin-right: 0.6rem;
-        overflow-wrap: anywhere;
     }
 
     /* Fletxa animada */
@@ -387,46 +374,64 @@
     margin-top: 1rem;
     color: $color-dark-gray;
     line-height: 1.5rem;
+    }
 }
-}
-    .question.active .answer {
+    
+.question.active {
+    .answer {
         display: block;
         margin-bottom: 1.25rem;
     }
 
-    .question.active .question-header {
-        border: none;
-    }
+    .question-header {
+            border: none;
+        }
 
     .question-header.active .arrow path {
-        stroke: currentColor;
-        transform: rotate(180deg);
-    }
-
+            stroke: currentColor;
+            transform: rotate(180deg);
+        }
+}
 
 /* Botó FAQ reutilitzable amb mixin */
 .faq-button {
     @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
-    gap: $gap-xs;
-    margin-top: 1.25rem;
+    margin-top: 2rem;
     text-decoration: none;
 }
 
 /* ===== CONTACT components ===== */
+.header-contact {
+
+    p {
+    @include flex-center(column);
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: $gap-mbl-standard;
+    letter-spacing: 0.3rem;
+    }
+
+    h2 {
+        color: $color-white;
+        font-weight: bold;
+        margin-bottom: $gap-mbl-standard;
+    }
+}
 
 /* INPUT NORMAL */
-.contact-form input {
+.contact-form {
+    input {
     width: 100%;
-    padding: 0.9rem;
+    padding: 1rem;
     border: none;
     border-radius: 5px;
     font-size: $size-p;
 }
 
-/* BUTTON */
-.contact-form button {
+    button {
     @include button(
-        $bg-color: $color-accent,        // #ff6565
+        $bg-color: $color-accent,       
         $padding-x: 1rem,
         $padding-y: 1rem,
         $border-color: $color-accent,
@@ -434,22 +439,13 @@
     );
     width: 100%;
 }
+}
 
-/* ERROR CONTAINER */
 .email-error-container {
     position: relative;
-    padding: 0 0 1.5rem 0;
+    padding: 0.1rem 0.1rem 1.5rem 0.1rem;
     border-radius: 5px;
     width: 100%;
-
-    input {
-    width: 99%;
-    height: 99%;
-    padding: 0 0.9rem;
-    margin-top: 0.2rem;
-    border: none;
-    border-radius: 5px;
-    }
 
   /* ICONA */
     img {
@@ -481,7 +477,7 @@
     font-style: italic;
 }
 
-.email-error.error {
+.error {
     display: block;
 }
 
@@ -496,11 +492,12 @@
 }
 
 /* Links del menú */
-.footer-links {
+.footer-links ul {
     @include flex-center(column);
     list-style: none;
-    gap: 1rem;
     margin: 1rem 0;
+    list-style-type: none;
+    gap: $gap-mbl-standard;
 
     a {
         color: white;
@@ -508,22 +505,24 @@
         font-size: .875rem;
         text-transform: uppercase;
         letter-spacing: .125rem;
-
-        &:hover {
-            opacity: .7;
-        }
     }
-
+}
 
 /* Xarxes socials */
 .social-media {
+    align-items: center;
+
+    ul {
     @include flex-center(row);
     padding: 1.25rem 0;
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
+    gap: $gap-mbl-standard;
+    list-style-type: none;
+    }
 }
-}
+
 
 
 
