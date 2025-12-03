@@ -20,6 +20,7 @@ for (let i = 0; i < tabs.length; i++) {
 
 }
 
+
 const buttons = document.getElementsByClassName("question"); /* retorna una col·lecció d'elements amb la classe question */
 
 for (let i = 0; i < buttons.length; i++) {

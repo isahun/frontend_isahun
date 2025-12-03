@@ -23,16 +23,18 @@ header {
   flex-direction: column;
   text-align: center;
   line-height: 1.5;
+  margin-bottom: 6rem;
   /* Contenidor d’imatges dins del hero */
 }
 .hero .hero-images {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   width: 100%;
+  margin-bottom: 3rem;
 }
 .hero {
   /* Contenidor de text + botons */
@@ -56,12 +58,19 @@ header {
   flex-direction: column;
   text-align: center;
   line-height: 1.5;
+  margin-bottom: 6rem;
 }
-
-.tabs {
+.features .tabs {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
+}
+.features .tabs-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 /* ===== DOWNLOAD CARDS ===== */
@@ -71,7 +80,11 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
+  line-height: 1.5;
   padding: 1.5rem 1.2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 6rem;
 }
 .download .download-txt {
   display: flex;
@@ -85,7 +98,6 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: 3rem;
 }
 
 /* ===== FAQ ===== */
@@ -217,6 +229,7 @@ footer .logo-links {
 }
 .navbar.menu-open .close-btn {
   display: block;
+  padding-right: 1rem;
 }
 .navbar.menu-open .logo-svg {
   position: relative;
@@ -294,8 +307,7 @@ body.no-scroll {
 
 /* ===== HERO components ===== */
 /* Hero image individual */
-.hero-image img {
-  margin-bottom: 1.5rem;
+.hero-images img {
   max-width: 100%;
   height: auto;
   z-index: 1;
@@ -305,7 +317,7 @@ body.no-scroll {
 .hero-bg-shape {
   position: absolute;
   bottom: 5%;
-  right: -5%;
+  right: -20%;
   width: 75%;
   height: 60%;
   aspect-ratio: 2/1;
@@ -383,22 +395,24 @@ body.no-scroll {
 }
 
 /* divs de cada tab x fer border fix */
-.tabs {
+.tabs li {
   border-bottom: 1px solid #cfcfcf;
+  list-style: none;
 }
-.tabs:first-child {
+.tabs li:first-child {
   border-top: 1px solid #cfcfcf;
 }
-
-/* botons tab */
-.tab {
+.tabs li {
+  /* botons tab */
+}
+.tabs li .tab {
   background: none;
   border: none;
   padding: 1.25rem;
   cursor: pointer;
   font-size: 1.1rem;
 }
-.tab.active {
+.tabs li .tab.active {
   border-bottom: 3px solid #ff6565;
 }
 
@@ -417,29 +431,27 @@ body.no-scroll {
 .tab-imgs {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: auto;
   position: relative;
+  margin-bottom: 3rem;
 }
-
-.tab-img {
-  position: relative;
-}
-
-.tab-img img {
+.tab-imgs .tab-imgs img {
   margin-bottom: 1.5rem;
   max-width: 80%;
   height: auto;
   position: relative;
   z-index: 1;
 }
-
-/* blob left margin */
-.features-bg-shape {
+.tab-imgs {
+  /* blob left margin */
+}
+.tab-imgs .features-bg-shape {
   position: absolute;
   bottom: -5%;
   left: -20%;
-  width: 98%;
+  width: 90%;
   height: 60%;
   background: #4d5ae4;
   border-radius: 0 300px 300px 0;
@@ -447,16 +459,17 @@ body.no-scroll {
 }
 
 /* txt dins del tab */
-.text-tab {
+.txt-btn {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   margin-top: 3rem;
-  gap: 1.5rem;
   margin-bottom: 1.8rem;
   line-height: 1.5;
 }
 
-/* botó more info*/
 .info-btn {
   background-color: #4d5ae4;
   padding: 1rem 2rem;
@@ -467,6 +480,7 @@ body.no-scroll {
   cursor: pointer;
   box-shadow: 0px 5px 15px rgba(69, 68, 68, 0.3);
   text-decoration: none;
+  margin: 2rem 0;
 }
 
 /* ===== DOWNLOAD components ===== */
@@ -492,6 +506,7 @@ body.no-scroll {
   text-align: center;
   width: 100%;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .cards img.logo {
@@ -557,42 +572,51 @@ body.no-scroll {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 0;
-  border-bottom: 1px solid #7a7777;
   cursor: pointer;
-}
-.question .question h5 {
-  flex: 1;
-  text-align: left;
-  margin-right: 0.6rem;
-  overflow-wrap: anywhere;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
 }
 .question {
-  /* Fletxa animada */
+  /*
+      .question-header button {
+          background: $color-white;
+      }
+
+      .question h5 {
+          flex: 1; 
+          text-align: left;
+          margin-right: 0.6rem;
+          overflow-wrap: anywhere;
+      }
+
+      /* Fletxa animada */
 }
 .question .arrow {
   width: 20px;
   transition: transform 0.3s ease;
   color: #4d5ae4;
 }
-.question .question.active .answer {
-  display: block;
-  margin-bottom: 1.25rem;
-}
-.question .question.active .question-header {
-  border: none;
-}
-.question .question-header.active .arrow path {
-  stroke: currentColor;
-  transform: rotate(180deg);
-}
-
-/* Resposta */
-.answer {
+.question .answer {
   display: none;
   text-align: left;
   margin-top: 1rem;
-  color: #7a7777;
+  color: #454444;
   line-height: 1.5rem;
+}
+
+.question.active .answer {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.question.active .question-header {
+  border: none;
+}
+
+.question-header.active .arrow path {
+  stroke: currentColor;
+  transform: rotate(180deg);
 }
 
 /* Botó FAQ reutilitzable amb mixin */

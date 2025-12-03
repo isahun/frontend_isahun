@@ -45,6 +45,7 @@
 
     .close-btn {
         display: block;
+        padding-right: 1rem;
     }
 
     .logo-svg {
@@ -135,8 +136,7 @@
 /* ===== HERO components ===== */
 
 /* Hero image individual */
-.hero-image img {
-    margin-bottom: 1.5rem;
+.hero-images img {
     max-width: 100%;
     height: auto;
     z-index: 1;
@@ -146,7 +146,7 @@
 .hero-bg-shape {
     position: absolute;
     bottom: 5%;
-    right: -5%;
+    right: -20%;
     width: 75%;
     height: 60%;
     aspect-ratio: 2/1;
@@ -207,13 +207,13 @@
 }
 
 /* divs de cada tab x fer border fix */
-.tabs {
+.tabs li {
     border-bottom: 1px solid $color-light-gray;
+    list-style: none;
 
     &:first-child {
     border-top: 1px solid $color-light-gray;
     }
-}
 
 /* botons tab */
 .tab {
@@ -223,10 +223,10 @@
     cursor: pointer;
     font-size: $size-h5;
 
-
     &.active {
         border-bottom: 3px solid $color-accent;
     }
+}
 }
 
 /* text d cada tab */
@@ -245,48 +245,44 @@
 .tab-imgs {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: auto;
     position: relative;
-}
+    margin-bottom: 3rem;
 
-.tab-img {
-    position: relative;
-}
+    .tab-imgs img {
+        margin-bottom: 1.5rem;
+        max-width: 80%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
 
-.tab-img img {
-    margin-bottom: 1.5rem;
-    max-width: 80%;
-    height: auto;
-    position: relative;
-    z-index: 1;
-}
-
-/* blob left margin */
-.features-bg-shape {
-    position: absolute;
-    bottom: -5%;
-    left: -20%;
-    width: 98%;
-    height: 60%;
-    background: $color-primary;
-    border-radius: $radius-blobl-mbl;
-    z-index: -1;
+    /* blob left margin */
+    .features-bg-shape {
+        position: absolute;
+        bottom: -5%;
+        left: -20%;
+        width: 90%;
+        height: 60%;
+        background: $color-primary;
+        border-radius: $radius-blobl-mbl;
+        z-index: -1;
+    }
 }
 
 /* txt dins del tab */
-.text-tab {
-    display: flex;
-    flex-direction: column;
+.txt-btn {
+    @include flex-center(column);
     margin-top: $margin-standard;
-    gap: $gap-mbl-standard;
     margin-bottom: 1.8rem;
     line-height: $line-height;
 }
 
-/* botó more info*/
 .info-btn {
     @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
+    margin: 2rem 0;
 }
 
 /* ===== DOWNLOAD components ===== */
@@ -302,6 +298,7 @@
     text-align: center;
     width: 100%;
     flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .cards img.logo {
@@ -360,8 +357,14 @@
         align-items: center;
         justify-content: space-between;
         padding: 1.25rem 0;
-        border-bottom: 1px solid #7a7777;
         cursor: pointer;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $color-light-gray;
+    }
+/*
+    .question-header button {
+        background: $color-white;
     }
 
     .question h5 {
@@ -378,6 +381,14 @@
         color: $color-primary;
     }
 
+    .answer {
+    display: none;
+    text-align: left;
+    margin-top: 1rem;
+    color: $color-dark-gray;
+    line-height: 1.5rem;
+}
+}
     .question.active .answer {
         display: block;
         margin-bottom: 1.25rem;
@@ -391,15 +402,7 @@
         stroke: currentColor;
         transform: rotate(180deg);
     }
-}
-/* Resposta */
-.answer {
-    display: none;
-    text-align: left;
-    margin-top: 1rem;
-    color: #7a7777;
-    line-height: 1.5rem;
-}
+
 
 /* Botó FAQ reutilitzable amb mixin */
 .faq-button {
