@@ -15,11 +15,12 @@
 
     /* ===== HEADER / NAVBAR ===== */
     .navbar-main {
-        @include desktop-container(column);
+        @include desktop-container();
         justify-content: space-between;
 
-        .nav-links-desktop {
+        .navbar-menu {
             display: flex;
+            flex-direction: row;
             gap: $gap-m;
             align-items: center;
 
@@ -98,14 +99,23 @@
         @include desktop-container(column);
         gap: $gap-dkt-standard;
 
-        .features-text {margin: 0 auto; }
+        .features-text {
+            margin: 0 auto; 
+        }
 
         .tab-imgs {
-            @include desktop-flex-center();
-            flex: 1;
-            justify-content: flex-end;
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            img { flex: 1; }
+            img { 
+            position: absolute;
+            max-width: 80%;
+            max-height: 80%;
+            }
 
             .features-bg-shape {
                 position: absolute;
@@ -120,13 +130,18 @@
         }
 
         .tabs { flex-direction: row; }
+
         .tab-content {
+            display: flex;
             flex-direction: row;
             gap: $gap-dkt-standard;
-            justify-content: space-evenly;
+            justify-content: space-between;
             margin: 0 auto;
         }
-        .txt-btn { flex: 1; width: 40%; text-align: left; flex-direction: column; }
+
+        .txt-btn { 
+            flex: 1; width: 40%; text-align: left; flex-direction: column; 
+        }
 
         .info-btn {
             border: 3px solid $color-primary;
@@ -173,7 +188,11 @@
         .questions { 
             flex-direction: column;
             max-width: 600px; 
-            margin: 0 auto; }
+            margin: 0 auto; 
+        
+        .question h5:hover {
+            color: $color-accent;
+        }}
 
         .faq-button {
             @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
@@ -187,23 +206,36 @@
 
     /* ===== CONTACT ===== */
     .contact {
-        @include desktop-container();
-        flex-direction: row;
-        justify-content: center;
-        gap: $gap-dkt-standard;
+        @include desktop-container($direction: column, $padding-x: 8rem, $padding-y: 2rem, $gap: 2rem);
 
         .contact-form {
-            @include desktop-flex-center();
+            @include desktop-flex-center(row, center, center);
+            display: flex;
             flex-direction: row;
-            gap: $gap-xs;
-            max-width: 500px;
+            gap: 1rem;
+        
+            .email-error-container { 
+            flex: 2; 
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
 
-            input { flex: 2; }
-            button {
+            input {
                 flex: 1;
-                height: auto;
-                border: 2px solid $color-accent;
+                height: 3rem;
+            }
+
+            button {
+                display: flex;
+                flex: 1;
+                align-self: flex-start;
+                height: 3.2rem;
                 cursor: pointer;
+                text-align: center;
+                justify-content: center; //horitzontal
+                align-items: center; //vertical
+                
                 &:hover {
                     background: $color-white;
                     color: $color-accent;
@@ -217,16 +249,21 @@
     footer {
         @include desktop-container();
         padding: 1rem 8rem;
+        display: flex;
+        flex-direction: row;
 
         .logo-links {
-            @include desktop-flex-center();
+            display: flex;
             flex-direction: row;
             gap: $gap-dkt-standard;
-            max-width: 900px;
-            margin: 0 auto;
+            justify-content: center;
         }
 
-        .footer-links { flex-direction: row; }
+        .footer-links ul { 
+            display: flex; 
+            flex-direction: row; 
+        }
+
         .footer-links a:hover { color: $color-accent; }
 
         .social-media { margin-left: auto; }

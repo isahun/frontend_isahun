@@ -229,24 +229,10 @@
 }
 }
 
-.tabs-content {
-    .features-bg-shape {
-    position: absolute;
-    bottom: 250px;
-    left: -50px;
-    width: 80%;
-    height: 250px;
-    background: $color-primary;
-    border-radius: $radius-blobl-mbl;
-    z-index: -1;
-    }
-}
-
 /* text d cada tab */
 .tab-content {
     display: none;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 
     &.active {
@@ -256,29 +242,43 @@
 
 /* container d img d cada tab */
 .tab-imgs {
-    margin-bottom: 3rem;
+    position: relative;
+    margin-bottom: 2rem;
 
     img {
-        margin-bottom: 1.5rem;
         max-width: 80%;
         height: auto;
         z-index: 1;
+    }
+
+    .features-bg-shape {
+    position: absolute;
+    bottom: -10px;
+    left: 0%;
+    transform: translateX(-20%);
+    width: 100%;
+    height: 260px;
+    background: $color-primary;
+    border-radius: $radius-blobl-mbl;
+    z-index: -1;
     }
 }
 
 /* txt dins del tab */
 .txt-btn {
     @include flex-center(column);
-    margin-top: $margin-standard;
     margin-bottom: 1.8rem;
     line-height: $line-height;
+
+    h3 {
+        margin-bottom: 1rem;
+    }
 }
 
 .info-btn {
     @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
     margin: 2rem 0;
 }
-
 
 /* ===== DOWNLOAD components ===== */
 

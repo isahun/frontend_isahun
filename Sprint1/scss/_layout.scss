@@ -41,11 +41,11 @@ header {
     }
 
     .tabs-content {
-        @include flex-center(column);
-            position: relative;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
 }
 
 /* ===== DOWNLOAD CARDS ===== */
@@ -125,6 +125,5 @@ footer {
     @include flex-center(column);
     gap: 2rem;
     width: 100%;
-    max-width: 900px;
     margin: 0 auto;
 }
