@@ -14,15 +14,28 @@
     button, a { font-size: 1.063rem; }
 
     /* ===== HEADER / NAVBAR ===== */
-    .navbar-main {
+    .navbar {
         @include desktop-container();
-        justify-content: space-between;
-
-        .navbar-menu {
             display: flex;
             flex-direction: row;
-            gap: $gap-m;
             align-items: center;
+            justify-content: space-between;
+
+        .nav-menu {
+            display: flex;
+            flex-direction: row;
+            position: static;
+            height: auto;
+            width: auto;
+            background: none;
+            gap: $gap-m;
+            justify-content: flex-end;
+            align-items: center;
+            
+
+            li {
+                list-style-type: none;
+            }
 
             a {
                 text-decoration: none;
@@ -30,6 +43,10 @@
                 letter-spacing: 0.2rem;
 
                 &:hover { color: $color-accent; }
+            }
+
+            .social-media-h {
+                display: none;
             }
 
             .login-btn {
@@ -50,8 +67,9 @@
                 }
             }
         }
-
-        .navbar-menu, .menu-btn { display: none; }
+                .menu-btn, .close-btn {
+            display: none;
+        }
     }
 
     /* ===== HERO ===== */
@@ -83,64 +101,114 @@
             align-items: flex-start;
 
             .hero-text { width: 90%; }
-        }
 
-        .hero-buttons button { cursor: pointer; }
-        .chrome-btn:hover {
-            background: $color-white;
-            border: 3px solid color.scale($color-primary, $lightness: -10%);
-            color: $color-primary;
+            .hero-buttons button { 
+                cursor: pointer; 
+            }
+
+            .chrome-btn:hover {
+                background: $color-white;
+                border: 3px solid color.scale($color-primary, $lightness: -10%);
+                color: $color-primary;
+            }
+
+            .firefox-btn:hover { border: 3px solid $color-gray-blue; }
         }
-        .firefox-btn:hover { border: 3px solid $color-gray-blue; }
     }
 
     /* ===== FEATURES ===== */
     .features {
         @include desktop-container(column);
-        gap: $gap-dkt-standard;
+        width: 100%;
+        margin: 0 auto;
 
         .features-text {
-            margin: 0 auto; 
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .tabs { 
+            flex-direction: row; 
+            width: 100%;
+            justify-content: center;
+
+            li {
+                flex: 1;
+                text-align: center;
+            
+                :hover {
+                color: $color-accent;
+                }
+            }
+
+            .btn-line:first-child {
+                border-top: none;
+            }
+        }
+
+        .tab-content { /* IMPORTANT, reset del layout d mobil*/
+            display: none;
+            flex-direction: row;
+            gap: $gap-dkt-standard;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /*MOSTREM EL Q TOCA*/
+        .tab-content.active {
+            display: flex;
         }
 
         .tab-imgs {
+            flex: 1;
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 100%;
+            max-width: 500px;
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            img { 
-            position: absolute;
-            max-width: 80%;
-            max-height: 80%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                z-index: 1;
             }
 
             .features-bg-shape {
                 position: absolute;
-                bottom: -10%;
-                left: -50%;
-                width: 125%;
-                height: 80%;
+                bottom: 40px;
+                left: -30%;
+                width: 500px;
+                height: 200px;
                 background: $color-primary;
                 border-radius: $radius-blobl-dkp;
                 z-index: -1;
             }
         }
 
-        .tabs { flex-direction: row; }
-
-        .tab-content {
+        .text-btn {
+            flex: 1;
             display: flex;
-            flex-direction: row;
-            gap: $gap-dkt-standard;
-            justify-content: space-between;
-            margin: 0 auto;
-        }
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
 
-        .txt-btn { 
-            flex: 1; width: 40%; text-align: left; flex-direction: column; 
+            h3 {
+                margin-bottom: 1rem;
+            }
+
+            .info-btn {
+                display: flex;
+                width: 35%;
+                height: 20%;
+                justify-content: center;
+
+            }
         }
 
         .info-btn {
@@ -157,9 +225,13 @@
     /* ===== DOWNLOAD CARDS ===== */
     .download {
         @include desktop-container(column);
-        gap: $gap-dkt-standard;
+        gap: 0;
 
-        .download-txt { width: 60%; }
+        .download-txt { 
+            width: 60%; 
+            margin-bottom: 2rem;
+        }
+
         .cards {
             display: flex;
             flex-direction: row;
@@ -172,6 +244,7 @@
 
         .cardbutton {
             cursor: pointer;
+            
             &:hover {
                 border: 3px solid $color-primary;
                 background: $color-white;
@@ -184,6 +257,11 @@
     .faq {
         @include desktop-container(column);
         align-items: center;
+        margin-bottom: 6rem;
+
+        .faq-txt {
+            max-width: 60%;
+        }
 
         .questions { 
             flex-direction: column;
@@ -207,18 +285,23 @@
     /* ===== CONTACT ===== */
     .contact {
         @include desktop-container($direction: column, $padding-x: 8rem, $padding-y: 2rem, $gap: 2rem);
-
+        p {
+            font-size: 0.8rem;
+        }
         .contact-form {
             @include desktop-flex-center(row, center, center);
             display: flex;
             flex-direction: row;
             gap: 1rem;
+            width: 100%;
+            max-width: 800px;
         
             .email-error-container { 
             flex: 2; 
-            padding: 0;
+            padding: 0.1rem 0.1rem 1.5rem 0.1rem;
             display: flex;
             flex-direction: column;
+            position: relative;
         }
 
             input {

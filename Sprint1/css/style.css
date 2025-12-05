@@ -739,7 +739,7 @@ body.no-scroll {
     font-size: 1.063rem;
   }
   /* ===== HEADER / NAVBAR ===== */
-  .navbar-main {
+  .navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -748,23 +748,37 @@ body.no-scroll {
     gap: 2rem;
     width: 100%;
     margin: 0 auto;
-    justify-content: space-between;
-  }
-  .navbar-main .navbar-menu {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .nav-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
     gap: 2.5rem;
+    justify-content: flex-end;
     align-items: center;
   }
-  .navbar-main .navbar-menu a {
+  .navbar .nav-menu li {
+    list-style-type: none;
+  }
+  .navbar .nav-menu a {
     text-decoration: none;
     color: #171616;
     letter-spacing: 0.2rem;
   }
-  .navbar-main .navbar-menu a:hover {
+  .navbar .nav-menu a:hover {
     color: #ff6565;
   }
-  .navbar-main .navbar-menu .login-btn {
+  .navbar .nav-menu .social-media-h {
+    display: none;
+  }
+  .navbar .nav-menu .login-btn {
     width: auto;
     border: 1px solid #ff6565;
     border-radius: 5px;
@@ -776,11 +790,11 @@ body.no-scroll {
     padding: 0.8rem 2rem;
     box-shadow: 0px 5px 15px rgba(69, 68, 68, 0.3);
   }
-  .navbar-main .navbar-menu .login-btn:hover {
+  .navbar .nav-menu .login-btn:hover {
     background: #f7f7f7;
     color: #ff6565;
   }
-  .navbar-main .navbar-menu, .navbar-main .menu-btn {
+  .navbar .menu-btn, .navbar .close-btn {
     display: none;
   }
   /* ===== HERO ===== */
@@ -826,15 +840,15 @@ body.no-scroll {
   .hero .hero-txt-btn .hero-text {
     width: 90%;
   }
-  .hero .hero-buttons button {
+  .hero .hero-txt-btn .hero-buttons button {
     cursor: pointer;
   }
-  .hero .chrome-btn:hover {
+  .hero .hero-txt-btn .chrome-btn:hover {
     background: #f7f7f7;
     border: 3px solid rgb(50.5170731707, 65.4512195122, 223.9829268293);
     color: #4d5ae4;
   }
-  .hero .firefox-btn:hover {
+  .hero .hero-txt-btn .firefox-btn:hover {
     border: 3px solid rgba(37, 43, 70, 0.9490196078);
   }
   /* ===== FEATURES ===== */
@@ -847,49 +861,85 @@ body.no-scroll {
     gap: 2rem;
     width: 100%;
     margin: 0 auto;
-    gap: 4rem;
+    width: 100%;
+    margin: 0 auto;
   }
   .features .features-text {
     margin: 0 auto;
+    width: 60%;
+  }
+  .features .tabs {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  .features .tabs li {
+    flex: 1;
+    text-align: center;
+  }
+  .features .tabs li :hover {
+    color: #ff6565;
+  }
+  .features .tabs .btn-line:first-child {
+    border-top: none;
+  }
+  .features .tab-content { /* IMPORTANT, reset del layout d mobil*/
+    display: none;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .features {
+    /*MOSTREM EL Q TOCA*/
+  }
+  .features .tab-content.active {
+    display: flex;
   }
   .features .tab-imgs {
+    flex: 1;
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .features .tab-imgs img {
-    position: absolute;
-    max-width: 80%;
-    max-height: 80%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
   }
   .features .tab-imgs .features-bg-shape {
     position: absolute;
-    bottom: -10%;
-    left: -50%;
-    width: 125%;
-    height: 80%;
+    bottom: 40px;
+    left: -30%;
+    width: 500px;
+    height: 200px;
     background: #4d5ae4;
     border-radius: 0 400px 400px 0;
     z-index: -1;
   }
-  .features .tabs {
-    flex-direction: row;
-  }
-  .features .tab-content {
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
-  .features .txt-btn {
+  .features .text-btn {
     flex: 1;
-    width: 40%;
-    text-align: left;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  .features .text-btn h3 {
+    margin-bottom: 1rem;
+  }
+  .features .text-btn .info-btn {
+    display: flex;
+    width: 35%;
+    height: 20%;
+    justify-content: center;
   }
   .features .info-btn {
     border: 3px solid #4d5ae4;
@@ -910,10 +960,11 @@ body.no-scroll {
     gap: 2rem;
     width: 100%;
     margin: 0 auto;
-    gap: 4rem;
+    gap: 0;
   }
   .download .download-txt {
     width: 60%;
+    margin-bottom: 2rem;
   }
   .download .cards {
     display: flex;
@@ -946,6 +997,10 @@ body.no-scroll {
     width: 100%;
     margin: 0 auto;
     align-items: center;
+    margin-bottom: 6rem;
+  }
+  .faq .faq-txt {
+    max-width: 60%;
   }
   .faq .questions {
     flex-direction: column;
@@ -982,6 +1037,9 @@ body.no-scroll {
     width: 100%;
     margin: 0 auto;
   }
+  .contact p {
+    font-size: 0.8rem;
+  }
   .contact .contact-form {
     display: flex;
     flex-direction: row;
@@ -990,12 +1048,15 @@ body.no-scroll {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    width: 100%;
+    max-width: 800px;
   }
   .contact .contact-form .email-error-container {
     flex: 2;
-    padding: 0;
+    padding: 0.1rem 0.1rem 1.5rem 0.1rem;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
   .contact .contact-form input {
     flex: 1;

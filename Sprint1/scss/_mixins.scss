@@ -54,7 +54,7 @@
   justify-content: space-between;
 }
 
-@mixin desktop-container($direction: row, $padding-x: 8rem, $padding-y: 2rem, $gap: 2rem) {
+@mixin desktop-container($direction: row, $padding-y: 2rem, $padding-x: 8rem, $gap: 2rem) {
   display: flex;
   flex-direction: $direction;
   align-items: center;
