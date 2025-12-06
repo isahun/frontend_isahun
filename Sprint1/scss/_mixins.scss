@@ -1,8 +1,8 @@
 
-@mixin section-container($padding-y, $padding-x) {
+@mixin section-container() {
   width: 100%;
   margin: 0 auto;
-  padding: $padding-y $padding-x;
+  padding: $padding-section $padding-section;
 }
 
 @mixin button($bg-color, 
@@ -68,6 +68,4 @@
   align-items: center;
   padding: $padding-y $padding-x;
   margin: 0 auto;
-  
-  
 }

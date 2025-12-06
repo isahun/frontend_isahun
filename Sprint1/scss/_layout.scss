@@ -4,14 +4,14 @@ header {
 }
 
 .navbar {
-    @include section-container($padding-y, $padding-x);
+    @include section-container();
     @include flex(row, center, space-between); // distribució general
     position: relative;  // necessari per als botons absolutes del menú mòbil
 }
 
 /* ===== HERO general ===== */
 .hero {
-@include section-container($padding-y, $padding-x);
+@include section-container();
     margin-bottom: 5rem;
     
     /* Contenidor d’imatges dins del hero */
@@ -31,7 +31,7 @@ header {
 
 /* =====FEATURES=====*/
 .features {
-    @include section-container($padding-y, $padding-x);
+    @include section-container();
     margin-bottom: 6rem;
 
     .tabs {
@@ -46,7 +46,7 @@ header {
 
 /* ===== DOWNLOAD CARDS ===== */
 .download {
-    @include section-container($padding-y, $padding-x);
+    @include section-container();
     @include flex(column);
     gap: 2.5rem;
     margin-bottom: 6rem;
@@ -64,7 +64,7 @@ header {
 
 /* ===== FAQ ===== */
 .faq {
-    @include section-container(2rem, 3rem); // padding + centrat + flex-col
+    @include section-container(); // padding + centrat + flex-col
     @include flex (column, center, center);
     margin-bottom: $margin-standard*2;
     width: 100%;
@@ -107,9 +107,9 @@ header {
 /* ===== FOOTER ===== */
 footer {
     background-color: $color-gray-blue;
-    padding: 2.5rem $padding-x; // 40px en rem
+    padding: 2.5rem $padding-section; // 40px en rem
     text-align: center;
-    @include section-container($padding-y, $padding-x);
+    @include section-container();
     @include flex(column);
     gap: 2rem;
 }
