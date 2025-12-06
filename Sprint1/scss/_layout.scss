@@ -19,24 +19,23 @@ header {
         @include flex(column);
         position: relative;
         width: 100%;
-        margin-bottom: 3rem;
+        margin-bottom: $space-xl;
     }
 
     /* Contenidor de text + botons */
     .hero-txt-btn {
         @include flex(column);
-        gap: 1.5rem;
+        gap: $space-m;
     }
 }
 
 /* =====FEATURES=====*/
 .features {
     @include section-container();
-    margin-bottom: 6rem;
 
     .tabs {
         @include flex(column);
-        margin-bottom: 2.5rem;
+        margin-bottom: $space-l;
     }
 
     .tabs-content {
@@ -48,17 +47,17 @@ header {
 .download {
     @include section-container();
     @include flex(column);
-    gap: 2.5rem;
-    margin-bottom: 6rem;
+    gap: $space-l;
+    margin-bottom: $space-3xl;
 
     .download-txt {
         @include flex(column);
-        gap: 1.5rem;
+        gap: $space-m;
     }
 
     .cards {
         @include flex(column);
-        gap: 1.5rem;
+        gap: $space-m;
     }
 }
 
@@ -66,12 +65,12 @@ header {
 .faq {
     @include section-container(); // padding + centrat + flex-col
     @include flex (column, center, center);
-    margin-bottom: $margin-standard*2;
+    margin-bottom: $space-xl*2;
     width: 100%;
     
     .questions {
         @include flex(column);
-        max-width: 600px; // correcte per mobile first
+        max-width: $max-content; // correcte per mobile first
         margin: 0 auto;
         width: 100%;
     }
@@ -80,7 +79,7 @@ header {
 /* ===== CONTACT ===== */
 .contact {
     background: $color-primary; // #5368df
-    padding: 6.25rem 1.8rem;
+    padding: $space-3xl $space-m;
     @include flex(column);
 
     .header-contact {
@@ -91,9 +90,9 @@ header {
     /* FORM */
     .contact-form {
     @include flex(column);
-    gap: $gap-xs;
+    gap: $space-xs;
     width: 100%;
-    max-width: 500px;
+    max-width: $max-form;
     margin: 0 auto;
     }
 
@@ -107,9 +106,9 @@ header {
 /* ===== FOOTER ===== */
 footer {
     background-color: $color-gray-blue;
-    padding: 2.5rem $padding-section; // 40px en rem
+    padding: $space-l; // 40px en rem
     text-align: center;
     @include section-container();
     @include flex(column);
-    gap: 2rem;
+    gap: $space-m2;
 }

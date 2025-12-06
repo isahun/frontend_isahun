@@ -2,7 +2,8 @@
 
 /* ===== NAVBAR MÒBIL ===== */
 .nav-menu {
-    @include flex(column, center, center);
+    align-items: center;
+    justify-content: center;
     display: none; // hidden per defecte
     position: fixed;
     top: 0;
@@ -12,23 +13,23 @@
     background: $color-gray-blue;
     opacity: 0.9;
     z-index: 999;
-    padding: 4rem;    
+    padding: $space-xxl;    
 }
 
 .menu-btn,
 .close-btn {
     position: absolute;
     top: 3.2rem;
-    right: 3.2rem;
     z-index: 1000;
     border: none;
     background: none;
     cursor: pointer;
 }
 
+.menu-btn { right: $space-xl; }
 .close-btn {
     display: none;
-}
+    right: 3.85rem;}
 
 .navbar.menu-open {
     .menu-btn {
@@ -57,7 +58,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 8rem;
+        padding-top: $space-xl;
 
 
         #features {
@@ -73,7 +74,7 @@
         li {
             width: 95%;
             text-align: center;
-            padding: 1.8rem 1.8rem;
+            padding: $space-m;
             list-style: none;
 
         
@@ -87,7 +88,7 @@
 
         .login-btn {
             width: 90%;
-            padding: 15px 0;
+            padding: 0.938rem 0;
             border-radius: $radius-button;
             border: 3px solid $color-white;
             font-weight: bold;
@@ -95,21 +96,21 @@
             color: $color-white;
             font-size: $size-p;
             letter-spacing: 0.2rem;
-            margin-top: 1rem;
+            margin-top: $space-s;
 
         }
 
         .social-media-h {
             display: flex;
             flex-direction: row;
-            gap: 1.5rem;
-            padding-top: 2rem;
+            gap: $space-m;
+            padding-top: $space-m2;
             justify-content: center;
 
             a {
                 display: flex;
-                width: 2.5rem;
-                height: 2.5rem;
+                width: $space-l;
+                height: $space-l;
                 align-items: center;
                 justify-content: center;
                 
@@ -122,7 +123,6 @@
         }
     }
 }
-
     body.no-scroll {
         overflow: hidden;
         height: 100vh;
@@ -140,13 +140,13 @@
 /* Forma de fons del hero */
 .hero-bg-shape {
     position: absolute;
-    bottom: 5%;
-    right: -20%;
-    width: 75%;
-    height: 60%;
+    bottom: 10px;
+    right: -10%;
+    width: 300px;
+    height: 180px;
     aspect-ratio: 2/1;
     background: #4d5ae4;
-    border-radius: 300px 0 0 300px;
+    border-radius: $radius-blobr-mbl;
     z-index: -1;
 }
 
@@ -154,7 +154,7 @@
 .hero-txt-btn {
     @include flex(column, center, center);
     text-align: center;
-    gap: $gap-mbl-standard;
+    gap: $space-m;
 
     p {
         line-height: $line-height;
@@ -164,17 +164,17 @@
     /* botons dins del hero*/
     .hero-buttons {
         @include flex(row, center, center);  // centrat per defecte
-        gap: 1.5rem;
+        gap: $space-m;
 
         button {
             /* Botons reutilitzables amb mixin */
             &.chrome-btn {
-            @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
+            @include button($color-primary, $space-m2, $space-s, $color-primary, $color-white);
             box-shadow: $shadow-card;
             }
 
         &.firefox-btn {
-            @include button($color-white, 2rem, 1rem, $color-white, $color-dark-gray);
+            @include button($color-white, $space-m2, $space-s, $color-white, $color-dark-gray);
             box-shadow: $shadow-card;
         }
         }
@@ -186,8 +186,8 @@
 /* text d la secció */
 .features-text {
     @include flex(column);
-    margin-bottom: 2.5rem;
-    gap: $gap-mbl-standard;
+    margin-bottom: $space-l;
+    gap: $space-m;
     line-height: $line-height;
     text-align: center;
 }
@@ -209,7 +209,7 @@
     .tab {
         background: none;
         border: none;
-        padding: $padding-card;
+        padding: $padding-card-y;
         cursor: pointer;
         font-size: $size-h5;
 
@@ -233,7 +233,7 @@
 /* container d img d cada tab */
 .tab-imgs {
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: $space-m2;
 
     img {
         max-width: 80%;
@@ -244,10 +244,9 @@
     .features-bg-shape {
         position: absolute;
         bottom: -10px;
-        left: 0%;
-        transform: translateX(-20%);
-        width: 100%;
-        height: 260px;
+        left: -10%;
+        width: 300px;
+        height: 120px;
         background: $color-primary;
         border-radius: $radius-blobl-mbl;
         z-index: -1;
@@ -256,17 +255,17 @@
 
 /* txt dins del tab */
 .text-btn {
-    margin-bottom: 1.8rem;
+    margin-bottom: $space-m;
     line-height: $line-height;
 
     h3 {
-        margin-bottom: 1rem;
+        margin-bottom: $space-s;
     }
 }
 
 .info-btn {
-    @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
-    margin: 2rem 0;
+    @include button($color-primary, $space-m2, $space-s, $color-primary, $color-white);
+    margin: $space-m2 0;
 }
 
 /* ===== DOWNLOAD components ===== */
@@ -283,7 +282,6 @@
     @include card(); // utilitzem el mixin card amb padding, border-radius, box-shadow
     @include flex(column, center, center);  
     text-align: center;
-    width: 100%;
     flex-wrap: wrap;
     margin: 0 auto;
 }
@@ -301,17 +299,17 @@
 .card-chrome p,
 .card-firefox p,
 .card-opera p {
-    margin-bottom: 1.8rem;
+    margin-bottom: $space-m;
     color: #959895;
 }
 
 /* Botó de la card */
 .cardbutton {
-    @include button($color-primary, 1.25rem, 0.75rem, $color-primary, $color-white);
+    @include button($color-primary, $padding-card-x, $padding-card-y, $color-primary, $color-white);
     display: flex;
     flex-direction: row;
-    gap: $gap-xs;
-    margin-top: 1.25rem;
+    gap: $space-xs;
+    margin-top: $space-s;
     text-decoration: none;
 }
 
@@ -320,11 +318,11 @@
 .faq-txt {
     text-align: center;
     line-height: $line-height;
-    margin-bottom: 2.5rem;
+    margin-bottom: $space-l;
 }
 /* Títols i text */
 .faq h2 {
-    margin-bottom: $gap-mbl-standard;
+    margin-bottom: $space-m;
 }
 
 .faq h5 {
@@ -332,9 +330,9 @@
 }
 
 .questions p {
-    margin-bottom: $gap-s;
+    margin-bottom: $space-s;
     line-height: $line-height;
-    max-width: 600px;
+    max-width: $max-content;
     margin-left: auto;
     margin-right: auto;
 }
@@ -351,11 +349,11 @@
         align-items: center;
         justify-content: space-between;
         font-size: $size-p;
-        padding: 1.25rem 0;
+        padding: $padding-card-y 0;
         cursor: pointer;
-        width: 100%;
         border: none;
         border-bottom: 1px solid $color-light-gray;
+        width: 100%;
     }
 
     /* Fletxa animada */
@@ -368,9 +366,9 @@
     .answer {
     display: none;
     text-align: left;
-    margin-top: 1rem;
+    margin-top: $space-s;
     color: $color-mid-gray;
-    line-height: 1.5rem;
+    line-height: $line-height;
     }
 }
     
@@ -392,8 +390,8 @@
 
 /* Botó FAQ reutilitzable amb mixin */
 .faq-button {
-    @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
-    margin-top: 2rem;
+    @include button($color-primary, $space-m2, $space-s, $color-primary, $color-white);
+    margin-top: $space-m2;
     text-decoration: none;
 }
 
@@ -405,32 +403,32 @@
     font-weight: normal;
     text-transform: uppercase;
     color: $color-white;
-    margin-bottom: $gap-mbl-standard;
+    margin-bottom: $space-m;
     letter-spacing: 0.3rem;
     }
 
     h2 {
         color: $color-white;
         font-weight: bold;
-        margin-bottom: $gap-mbl-standard;
+        margin-bottom: $space-m;
     }
 }
 
 /* INPUT NORMAL */
 .contact-form {
     @include flex(column);
-    gap: $gap-xs;
+    gap: $space-xs;
 
     input {
         width: 100%;
-        padding: 1rem;
+        padding: $space-s;
         border: none;
-        border-radius: 5px;
+        border-radius: $radius-button;
         font-size: $size-p;
 }
 
     button {
-    @include button($color-accent, 1rem, 1rem, $color-accent, $color-white);
+    @include button($color-accent, $space-s, $space-s, $color-accent, $color-white);
     width: 100%;
     }
 }
@@ -468,9 +466,9 @@
 .footer-links ul {
     @include flex(column);
     list-style: none;
-    margin: 1rem 0;
+    margin: $space-s 0;
     list-style-type: none;
-    gap: $gap-mbl-standard;
+    gap: $space-m;
 
     a {
         color: white;
@@ -487,11 +485,11 @@
 
     ul {
     @include flex(row);
-    padding: 1.25rem 0;
-    width: 2.5rem;
-    height: 2.5rem;
+    padding: $padding-card-y 0;
+    width: $space-l;
+    height: $space-l;
     cursor: pointer;
-    gap: $gap-mbl-standard;
+    gap: $space-m;
     list-style-type: none;
     }
 }

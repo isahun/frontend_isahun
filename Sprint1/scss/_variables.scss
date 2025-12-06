@@ -24,27 +24,27 @@ $size-h5: 1.1rem; //faqs tab title
 $size-p: 1rem; 
 
 //Espai entre línies (line height)
-$line-height: 1.6rem;          
+$line-height: 1.6;          
 
 // Ombra
 $shadow-card: 0px 5px 15px rgba($color-dark-gray, 0.3); //cards, botons, elements amb relleu
 
 // Espaiats
-$padding-card: 1.25rem;
-$padding-section: 2.5rem;
-$padding-mobile-x: 1.8rem;
-$padding-section-xl: 6.25rem;
+$padding-card-y: 1.25rem;
+$padding-card-x: 0.8rem;
 
-$margin-standard: 3rem;
-$margin-l: 4rem;
-$margin-xl: 6rem; //desktop
-
-$gap-xs: 0.6rem;
-$gap-s: 1rem;
-$gap-mbl-standard: 1.8rem;
-$gap-m: 2rem;
-$gap-l: 2.5rem;
-$gap-dkt-standard: 4rem; //desktop-standard
+$space-xs: 0.6rem;
+$space-s: 1rem; //$gap-s: 1rem;
+$space-m: 1.8rem; //$gap-mbl-standard: 1.8rem; $padding-mobile: 1.8rem;
+$space-m2: 2rem;
+$space-l: 2.5rem; //$gap-l: 2.5rem; , $padding-section: 2.5rem;
+$space-xl: 3rem;
+$space-xxl: 4rem; //$gap-dkt-standard: 4rem; //desktop-standard
+$space-3xl: 6rem; //$padding-section-xl: 6.25rem; , ex space-xxl, 
+//max width
+$max-content: 600px;
+$max-form: 500px;
+$max-card: 350px;
 
 //vores arrodonides
 $radius-button: 5px;
