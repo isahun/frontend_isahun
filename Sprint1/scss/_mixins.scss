@@ -1,13 +1,8 @@
 
-@mixin section-container ($direction:column) {
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-bottom: $margin-standard;
+@mixin section-container($padding-y, $padding-x) {
+  width: 100%;
+  margin: 0 auto;
   padding: $padding-y $padding-x;
-  display: flex;
-  flex-direction: $direction;
-  text-align: center;
-  line-height: $line-height;
 }
 
 @mixin button($bg-color, 
@@ -33,41 +28,46 @@
   padding: $padding-card;
   border-radius: $radius-card;
   box-shadow: $shadow-card;
-  @include flex-center(column);
+  @include flex(column);
   text-align: center;
   width: 100%;
   flex-wrap: wrap;
 }
 
-@mixin flex-center($direction: row) {
-  display: flex;
-  flex-direction: $direction;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+@mixin error-container {
+  position: relative;
+  padding: 0 .1rem 1.5rem .1rem;
+  border-radius: 5px;
+  width: 100%;
+
+  img {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 1.25rem;
+    display: none;
+  }
+
+  &.error {
+    background: $color-accent;
+
+    img { display: block; }
+  }
 }
 
-@mixin flex-between($direction: row) {
+@mixin flex($direction: row, $align: center, $justify: center) {
   display: flex;
   flex-direction: $direction;
-  align-items: center;
-  justify-content: space-between;
+  align-items: $align;
+  justify-content: $justify;
 }
 
 @mixin desktop-container($direction: row, $padding-y: 2rem, $padding-x: 8rem, $gap: 2rem) {
   display: flex;
   flex-direction: $direction;
   align-items: center;
-  justify-content: space-between;
   padding: $padding-y $padding-x;
-  gap: $gap;
-  width: 100%;
   margin: 0 auto;
-}
-
-@mixin desktop-flex-center($direction: row, $align: center, $justify: center) {
-  display: flex;
-  flex-direction: $direction;
-  align-items: $align;
-  justify-content: $justify;
+  
+  
 }

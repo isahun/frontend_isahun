@@ -5,25 +5,22 @@ header {
 }
 
 .navbar {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 1.2rem;
   position: relative;
 }
 
 /* ===== HERO general ===== */
 .hero {
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-bottom: 3rem;
-  padding: 1.5rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  line-height: 1.5;
-  margin-bottom: 6rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem;
+  margin-bottom: 5rem;
   /* Contenidor d’imatges dins del hero */
 }
 .hero .hero-images {
@@ -31,7 +28,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
@@ -44,96 +40,91 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 1.5rem;
 }
 
 /* =====FEATURES=====*/
 .features {
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-bottom: 3rem;
-  padding: 1.5rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  line-height: 1.5;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem;
   margin-bottom: 6rem;
 }
 .features .tabs {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
 }
 .features .tabs-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
 }
 
 /* ===== DOWNLOAD CARDS ===== */
 .download {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  line-height: 1.5;
-  padding: 1.5rem 1.2rem;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  gap: 2.5rem;
   margin-bottom: 6rem;
 }
 .download .download-txt {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
-  margin-bottom: 2rem;
-  line-height: 1.5rem;
 }
 .download .cards {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 /* ===== FAQ ===== */
 .faq {
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-bottom: 3rem;
-  padding: 1.5rem 1.2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  line-height: 1.5;
-  margin-bottom: 6rem;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+  width: 100%;
 }
 .faq .questions {
-  width: 100%;
-  max-width: 600px;
   display: flex;
   flex-direction: column;
-  list-style-type: none;
-  margin: auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* ===== CONTACT ===== */
 .contact {
-  background-color: #4d5ae4;
+  background: #4d5ae4;
   padding: 6.25rem 1.8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  margin: 0 auto;
 }
 .contact .header-contact {
   margin: 0 auto;
+  text-align: center;
 }
 .contact {
   /* FORM */
@@ -143,7 +134,6 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 0.6rem;
   width: 100%;
   max-width: 500px;
@@ -157,23 +147,26 @@ header {
 /* ===== FOOTER ===== */
 footer {
   background-color: rgba(37, 43, 70, 0.9490196078);
-  padding: 2.5rem 1.2rem;
+  padding: 2.5rem 2.5rem;
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 2rem;
-  width: 100%;
-  margin: 0 auto;
 }
 
 /* _components.scss */
 /* ===== NAVBAR MÒBIL ===== */
 .nav-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -182,15 +175,14 @@ footer {
   background: rgba(37, 43, 70, 0.9490196078);
   opacity: 0.9;
   z-index: 999;
-  align-items: center;
   padding: 4rem;
 }
 
-.menu-btn {
-  display: block;
+.menu-btn,
+.close-btn {
   position: absolute;
-  top: 1.5rem;
-  right: 1.2rem;
+  top: 2.5rem;
+  right: 2.5rem;
   z-index: 1000;
   border: none;
   background: none;
@@ -199,13 +191,6 @@ footer {
 
 .close-btn {
   display: none;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.2rem;
-  z-index: 1000;
-  border: none;
-  background: none;
-  cursor: pointer;
 }
 
 .navbar.menu-open .menu-btn {
@@ -244,7 +229,7 @@ footer {
 .navbar.menu-open .nav-menu li {
   width: 95%;
   text-align: center;
-  padding: 1.5rem 1.2rem;
+  padding: 2.5rem 2.5rem;
   list-style: none;
 }
 .navbar.menu-open .nav-menu li a {
@@ -265,6 +250,7 @@ footer {
   font-size: 1rem;
   letter-spacing: 0.2rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .navbar.menu-open .nav-menu li .social-media-h {
   display: flex;
@@ -292,7 +278,7 @@ body.no-scroll {
 /* ===== HERO components ===== */
 /* Hero image individual */
 .hero-images img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   z-index: 1;
 }
@@ -314,36 +300,28 @@ body.no-scroll {
 .hero-txt-btn {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
-  gap: 1.5rem;
-  /* Text dins del hero */
-}
-.hero-txt-btn .hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-.hero-txt-btn .hero-text.h1 {
-  line-height: 1.5;
-}
-.hero-txt-btn {
-  /* botons dins del hero*/
-}
-.hero-txt-btn .hero-buttons {
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 1.5rem;
 }
-.hero-txt-btn .hero-buttons button {
+.hero-txt-btn h1,
+.hero-txt-btn p {
+  line-height: 1.6;
+}
+
+/* botons dins del hero*/
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.hero-buttons button {
   /* Botons reutilitzables amb mixin */
 }
-.hero-txt-btn .hero-buttons button.chrome-btn {
+.hero-buttons button.chrome-btn {
   background-color: #4d5ae4;
   padding: 1rem 2rem;
   border: 3px solid #4d5ae4;
@@ -355,7 +333,7 @@ body.no-scroll {
   text-decoration: none;
   box-shadow: 0px 5px 15px rgba(69, 68, 68, 0.3);
 }
-.hero-txt-btn .hero-buttons button.firefox-btn {
+.hero-buttons button.firefox-btn {
   background-color: #f7f7f7;
   padding: 1rem 2rem;
   border: 3px solid #f7f7f7;
@@ -373,30 +351,35 @@ body.no-scroll {
 .features-text {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
   gap: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* divs de cada tab x fer border fix */
 .tabs li {
   border-bottom: 1px solid #cfcfcf;
   list-style: none;
+  width: 100%;
+  text-align: center;
 }
 .tabs li:first-child {
   border-top: 1px solid #cfcfcf;
 }
-.tabs li {
+.tabs {
   /* botons tab */
 }
-.tabs li .tab {
+.tabs .tab {
   background: none;
   border: none;
   padding: 1.25rem;
   cursor: pointer;
   font-size: 1.1rem;
 }
-.tabs li .tab.active {
+.tabs .tab.active {
   border-bottom: 3px solid #ff6565;
 }
 
@@ -433,16 +416,15 @@ body.no-scroll {
 }
 
 /* txt dins del tab */
-.txt-btn {
+.text-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   margin-bottom: 1.8rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
-.txt-btn h3 {
+.text-btn h3 {
   margin-bottom: 1rem;
 }
 
@@ -460,6 +442,11 @@ body.no-scroll {
 }
 
 /* ===== DOWNLOAD components ===== */
+.download-txt {
+  text-align: center;
+  line-height: 1.6;
+}
+
 /* Card genèrica */
 .card-chrome,
 .card-firefox,
@@ -473,12 +460,12 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
   text-align: center;
-  text-align: center;
   width: 100%;
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   width: 100%;
   flex-wrap: wrap;
@@ -521,6 +508,12 @@ body.no-scroll {
 }
 
 /* ===== FAQ Components ===== */
+.faq-txt {
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
 /* Títols i text */
 .faq h2 {
   margin-bottom: 1.5rem;
@@ -532,7 +525,7 @@ body.no-scroll {
 
 .questions p {
   margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -541,7 +534,7 @@ body.no-scroll {
 /* Pregunta individual */
 .question {
   list-style-type: none;
-  text-align: left;
+  width: 100%;
   /* Capçalera de cada pregunta (h3 + arrow) */
 }
 .question .question-header {
@@ -605,7 +598,6 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   font-weight: normal;
   text-transform: uppercase;
   color: #f7f7f7;
@@ -619,6 +611,13 @@ body.no-scroll {
 }
 
 /* INPUT NORMAL */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
 .contact-form input {
   width: 100%;
   padding: 1rem;
@@ -641,10 +640,9 @@ body.no-scroll {
 
 .email-error-container {
   position: relative;
-  padding: 0.1rem 0.1rem 1.5rem 0.1rem;
+  padding: 0 0.1rem 1.5rem 0.1rem;
   border-radius: 5px;
   width: 100%;
-  /* ICONA */
 }
 .email-error-container img {
   position: absolute;
@@ -653,8 +651,6 @@ body.no-scroll {
   width: 1.25rem;
   display: none;
 }
-
-/* ESTATS DE L’ERROR */
 .email-error-container.error {
   background: #ff6565;
 }
@@ -690,7 +686,6 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   list-style: none;
   margin: 1rem 0;
   list-style-type: none;
@@ -713,7 +708,6 @@ body.no-scroll {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 1.25rem 0;
   width: 2.5rem;
   height: 2.5rem;
@@ -733,7 +727,7 @@ body.no-scroll {
   }
   p {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   button, a {
     font-size: 1.063rem;
@@ -743,10 +737,7 @@ body.no-scroll {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 8rem;
-    gap: 2rem;
-    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -771,6 +762,7 @@ body.no-scroll {
     text-decoration: none;
     color: #171616;
     letter-spacing: 0.2rem;
+    font-size: 0.85rem;
   }
   .navbar .nav-menu a:hover {
     color: #ff6565;
@@ -785,9 +777,9 @@ body.no-scroll {
     font-weight: bold;
     background: #ff6565;
     color: #f7f7f7;
-    font-size: 1.125rem;
+    font-size: 0.85rem;
     letter-spacing: 0.2rem;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1.5rem;
     box-shadow: 0px 5px 15px rgba(69, 68, 68, 0.3);
   }
   .navbar .nav-menu .login-btn:hover {
@@ -802,13 +794,11 @@ body.no-scroll {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 8rem;
-    gap: 2rem;
-    width: 100%;
     margin: 0 auto;
     flex-direction: row-reverse;
     gap: 4rem;
+    align-items: flex-start;
   }
   .hero .hero-images {
     display: flex;
@@ -818,7 +808,7 @@ body.no-scroll {
     flex: 1;
   }
   .hero .hero-images img {
-    max-width: 100%;
+    max-width: 120%;
     height: auto;
     z-index: 1;
   }
@@ -841,7 +831,9 @@ body.no-scroll {
     width: 90%;
   }
   .hero .hero-txt-btn .hero-buttons button {
+    padding: 0.7rem 0.7rem;
     cursor: pointer;
+    line-height: 1.6;
   }
   .hero .hero-txt-btn .chrome-btn:hover {
     background: #f7f7f7;
@@ -856,16 +848,14 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 8rem;
-    gap: 2rem;
-    width: 100%;
     margin: 0 auto;
     width: 100%;
     margin: 0 auto;
+    text-align: center;
   }
   .features .features-text {
-    margin: 0 auto;
+    margin-bottom: 2rem;
     width: 60%;
   }
   .features .tabs {
@@ -903,7 +893,7 @@ body.no-scroll {
     flex: 1;
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: 400px;
     display: flex;
     align-items: center;
@@ -937,7 +927,7 @@ body.no-scroll {
   }
   .features .text-btn .info-btn {
     display: flex;
-    width: 35%;
+    width: 45%;
     height: 20%;
     justify-content: center;
   }
@@ -955,12 +945,10 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 8rem;
-    gap: 2rem;
-    width: 100%;
     margin: 0 auto;
-    gap: 0;
+    margin-bottom: 6rem;
+    text-align: center;
   }
   .download .download-txt {
     width: 60%;
@@ -991,21 +979,22 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 8rem;
-    gap: 2rem;
-    width: 100%;
     margin: 0 auto;
     align-items: center;
     margin-bottom: 6rem;
   }
   .faq .faq-txt {
     max-width: 60%;
+    margin-bottom: 2rem;
   }
   .faq .questions {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
+  }
+  .faq .questions .question-header {
+    font-size: 1.2rem;
   }
   .faq .questions .question h5:hover {
     color: #ff6565;
@@ -1031,11 +1020,9 @@ body.no-scroll {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 8rem;
-    gap: 2rem;
-    width: 100%;
     margin: 0 auto;
+    text-align: center;
   }
   .contact p {
     font-size: 0.8rem;
@@ -1082,14 +1069,13 @@ body.no-scroll {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem 8rem;
-    gap: 2rem;
-    width: 100%;
     margin: 0 auto;
     padding: 1rem 8rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
   footer .logo-links {
     display: flex;

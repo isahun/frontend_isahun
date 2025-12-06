@@ -31,7 +31,6 @@
             gap: $gap-m;
             justify-content: flex-end;
             align-items: center;
-            
 
             li {
                 list-style-type: none;
@@ -41,6 +40,7 @@
                 text-decoration: none;
                 color: $color-black;
                 letter-spacing: 0.2rem;
+                font-size: 0.85rem;
 
                 &:hover { color: $color-accent; }
             }
@@ -56,9 +56,9 @@
                 font-weight: bold;
                 background: $color-accent;
                 color: $color-white;
-                font-size: 1.125rem;
+                font-size: 0.85rem;
                 letter-spacing: 0.2rem;
-                padding: 0.8rem 2rem;
+                padding: 0.8rem 1.5rem;
                 box-shadow: $shadow-card;
 
                 &:hover {
@@ -77,12 +77,18 @@
         @include desktop-container();
         flex-direction: row-reverse;
         gap: $gap-dkt-standard;
+        align-items: flex-start;
 
         .hero-images {
-            @include desktop-flex-center();
+            @include flex(row);
             flex: 1;
 
-            img { max-width: 100%; height: auto; z-index: 1; }
+            img { 
+                max-width: 120%; 
+                height: auto; 
+                z-index: 1; 
+            }
+
             .hero-bg-shape {
                 position: absolute;
                 bottom: 8%;
@@ -100,10 +106,14 @@
             text-align: left;
             align-items: flex-start;
 
-            .hero-text { width: 90%; }
+            .hero-text { 
+                width: 90%; 
+            }
 
             .hero-buttons button { 
+                padding: 0.7rem 0.7rem;
                 cursor: pointer; 
+                line-height: $line-height;
             }
 
             .chrome-btn:hover {
@@ -121,9 +131,10 @@
         @include desktop-container(column);
         width: 100%;
         margin: 0 auto;
+        text-align: center;
 
         .features-text {
-            margin: 0 auto;
+            margin-bottom: 2rem;
             width: 60%;
         }
 
@@ -166,7 +177,7 @@
             flex: 1;
             position: relative;
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             height: 400px;
             display: flex;
             align-items: center;
@@ -204,7 +215,7 @@
 
             .info-btn {
                 display: flex;
-                width: 35%;
+                width: 45%;
                 height: 20%;
                 justify-content: center;
 
@@ -225,7 +236,8 @@
     /* ===== DOWNLOAD CARDS ===== */
     .download {
         @include desktop-container(column);
-        gap: 0;
+        margin-bottom: 6rem;
+        text-align: center;
 
         .download-txt { 
             width: 60%; 
@@ -261,16 +273,22 @@
 
         .faq-txt {
             max-width: 60%;
+            margin-bottom: 2rem;
         }
 
         .questions { 
             flex-direction: column;
             max-width: 600px; 
             margin: 0 auto; 
+            
+            .question-header {
+                font-size: 1.2rem;
+            }
         
         .question h5:hover {
             color: $color-accent;
-        }}
+        }
+    }
 
         .faq-button {
             @include button($color-primary, 2rem, 1rem, $color-primary, $color-white);
@@ -285,11 +303,13 @@
     /* ===== CONTACT ===== */
     .contact {
         @include desktop-container($direction: column, $padding-x: 8rem, $padding-y: 2rem, $gap: 2rem);
+        text-align: center;
+        
         p {
             font-size: 0.8rem;
         }
         .contact-form {
-            @include desktop-flex-center(row, center, center);
+            @include flex(row, center, center);
             display: flex;
             flex-direction: row;
             gap: 1rem;
@@ -334,6 +354,8 @@
         padding: 1rem 8rem;
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
 
         .logo-links {
             display: flex;

@@ -4,19 +4,19 @@ header {
 }
 
 .navbar {
-    @include flex-between(row); // distribució general
-    padding: $padding-y $padding-x;
+    @include section-container($padding-y, $padding-x);
+    @include flex(row, center, space-between); // distribució general
     position: relative;  // necessari per als botons absolutes del menú mòbil
 }
 
-
 /* ===== HERO general ===== */
 .hero {
-@include section-container(column);
-    margin-bottom: 6rem;
+@include section-container($padding-y, $padding-x);
+    margin-bottom: 5rem;
+    
     /* Contenidor d’imatges dins del hero */
     .hero-images {
-        @include flex-center(column);
+        @include flex(column);
         position: relative;
         width: 100%;
         margin-bottom: 3rem;
@@ -24,85 +24,73 @@ header {
 
     /* Contenidor de text + botons */
     .hero-txt-btn {
-        @include flex-center(column);
+        @include flex(column);
         gap: 1.5rem;
     }
 }
 
 /* =====FEATURES=====*/
 .features {
-    @include section-container(column);
+    @include section-container($padding-y, $padding-x);
     margin-bottom: 6rem;
 
     .tabs {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 1.5rem;
+        @include flex(column);
+        margin-bottom: 2.5rem;
     }
 
     .tabs-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        @include flex(column);
     }
 }
 
 /* ===== DOWNLOAD CARDS ===== */
 .download {
-    @include flex-center(column);
-    line-height: $line-height;
-    padding: 1.5rem 1.2rem;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    @include section-container($padding-y, $padding-x);
+    @include flex(column);
+    gap: 2.5rem;
     margin-bottom: 6rem;
 
     .download-txt {
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
         gap: 1.5rem;
-        margin-bottom: 2rem;
-        line-height: 1.5rem;
     }
 
     .cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+        @include flex(column);
+        gap: 1.5rem;
     }
 }
 
 /* ===== FAQ ===== */
 .faq {
-    @include section-container(column); // padding + centrat + flex-col
+    @include section-container(2rem, 3rem); // padding + centrat + flex-col
+    @include flex (column, center, center);
     margin-bottom: $margin-standard*2;
-    align-items: center; //per evitar q el botó s'estiri
-
+    width: 100%;
+    
     .questions {
-        width: 100%;
+        @include flex(column);
         max-width: 600px; // correcte per mobile first
-        display: flex;
-        flex-direction: column;
-        list-style-type: none;
-        margin: auto;
+        margin: 0 auto;
+        width: 100%;
     }
 }
 
 /* ===== CONTACT ===== */
 .contact {
-    background-color: $color-primary; // #5368df
+    background: $color-primary; // #5368df
     padding: 6.25rem 1.8rem;
-    @include flex-center(column);
-    margin: 0 auto;
+    @include flex(column);
 
     .header-contact {
         margin: 0 auto;
+        text-align: center;
     }
     
     /* FORM */
     .contact-form {
-    @include flex-center(column);
+    @include flex(column);
     gap: $gap-xs;
     width: 100%;
     max-width: 500px;
@@ -121,9 +109,7 @@ footer {
     background-color: $color-gray-blue;
     padding: 2.5rem $padding-x; // 40px en rem
     text-align: center;
-
-    @include flex-center(column);
+    @include section-container($padding-y, $padding-x);
+    @include flex(column);
     gap: 2rem;
-    width: 100%;
-    margin: 0 auto;
 }
