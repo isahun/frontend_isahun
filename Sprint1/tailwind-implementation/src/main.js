@@ -1,5 +1,28 @@
 import './styles/tailwind.css'
 
+/* navbar menú desplegable*/
+
+const btnMenu = document.querySelector(".menu-btn");
+const btnClose = document.querySelector(".close-btn"); 
+const navMenu = document.querySelector(".nav-menu");
+const body = document.body; //x bloquejar scroll
+
+btnMenu.addEventListener("click", () => {
+    navMenu.classList.remove("hidden"); //mostrar menu amagat x defecte
+    btnMenu.classList.add("hidden"); //amagar burger
+    btnClose.classList.remove("hidden"); //mostrar creu x tancar menu
+    body.classList.add("overflow-hidden"); //block scroll
+});
+
+btnClose.addEventListener("click", () => {
+    navMenu.classList.add("hidden"); //amaga menu amagat x defecte
+    btnMenu.classList.remove("hidden"); //mostra burger
+    btnClose.classList.add("hidden"); //amaga creu x tancar menu
+    body.classList.remove("overflow-hidden"); //allow scroll
+});
+
+/*features tabs */ 
+
 const tabs = document.querySelectorAll(".tab");
 const content = document.querySelectorAll(".tab-content");
 
@@ -59,20 +82,6 @@ function validateForm() {
 }
 
 
-/* navbar menú desplegable*/
-
-const btnMenu = document.querySelector(".menu-btn");
-const btnClose = document.querySelector(".close-btn"); 
-const navbar = document.querySelector(".navbar");
-
-
-btnMenu.addEventListener("click", () => {
-    navbar.classList.add("menu-open");
-});
-
-btnClose.addEventListener("click", () => {
-    navbar.classList.remove("menu-open");
-});
 
 
 

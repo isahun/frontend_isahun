@@ -4,101 +4,143 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tailwind-implementation</title>
-  <link rel="stylesheet" href="/src/styles/tailwind.css">
+  <link rel="stylesheet" href="src/styles/tailwind.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-                <h1 class="logo-svg"><a class="logo-svg" href="#"><svg width="148" height="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path class="logo-letters" d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#242A45" fill-rule="nonzero"/><g><circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/><path class="inner-bookmark" d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF"/></g></g></svg></a></h1>
+    <header class="bg-white lg:bg-transparent">
+    <nav class="navbar relative z-50 w-full flex items-center justify-between px-6 py-6 lg:px-32 lg:py-8">
+                <h1 class="logo-svg z-50"><a href="#"><svg width="148" height="25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path class="logo-letters" d="M37 6.299h5.227c.746 0 1.434.155 2.062.466.629.311 1.123.735 1.484 1.27s.542 1.12.542 1.754c0 .672-.165 1.254-.495 1.746-.33.491-.762.868-1.297 1.129v.15c.697.248 1.25.643 1.661 1.185.41.541.616 1.191.616 1.95 0 .735-.196 1.385-.588 1.951a3.817 3.817 0 0 1-1.587 1.307c-.665.305-1.403.457-2.212.457H37V6.299zm5.04 5.45c.548 0 .986-.152 1.316-.457.33-.305.495-.688.495-1.148 0-.448-.159-.824-.476-1.13-.318-.304-.738-.457-1.26-.457H39.52v3.192h2.52zm.28 5.619c.61 0 1.086-.159 1.428-.476.342-.317.513-.731.513-1.241 0-.51-.174-.927-.522-1.251-.349-.324-.847-.485-1.494-.485H39.52v3.453h2.8zm12.927 2.595c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.511-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.915-3.528a6.711 6.711 0 0 1 2.51-2.529C52.756 6.308 53.94 6 55.248 6c1.306 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.915 3.528a6.711 6.711 0 0 1-2.51 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.258-.578 4.177 4.177 0 0 0 1.615-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.615-1.624 4.52 4.52 0 0 0-2.258-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.605 1.624 4.47 4.47 0 0 0 2.25.578zm15.353 2.39c-1.307 0-2.492-.308-3.556-.924a6.711 6.711 0 0 1-2.51-2.53c-.61-1.07-.915-2.246-.915-3.528 0-1.281.305-2.457.914-3.528a6.711 6.711 0 0 1 2.511-2.529C68.108 6.308 69.294 6 70.6 6c1.307 0 2.492.308 3.556.924a6.711 6.711 0 0 1 2.51 2.53c.61 1.07.915 2.246.915 3.527 0 1.282-.305 2.458-.914 3.528a6.711 6.711 0 0 1-2.511 2.53c-1.064.616-2.25.924-3.556.924zm0-2.39a4.52 4.52 0 0 0 2.259-.578 4.177 4.177 0 0 0 1.614-1.624c.392-.697.588-1.494.588-2.39 0-.896-.196-1.692-.588-2.389a4.177 4.177 0 0 0-1.614-1.624 4.52 4.52 0 0 0-2.259-.579 4.47 4.47 0 0 0-2.25.579 4.195 4.195 0 0 0-1.605 1.624c-.392.697-.588 1.493-.588 2.39 0 .895.196 1.692.588 2.389a4.195 4.195 0 0 0 1.606 1.624 4.47 4.47 0 0 0 2.249.578zM79.83 6.3h2.52v5.73h.15l4.89-5.73h3.043v.149L85.6 11.973l5.338 7.542v.149h-3.08l-3.994-5.693-1.512 1.773v3.92h-2.52V6.299zM93.779 6h3.248l3.546 9.39h.15L104.268 6h3.267v13.365h-2.501v-6.589l.15-2.221h-.15l-3.398 8.81h-1.96l-3.416-8.81h-.149l.15 2.221v6.59h-2.483V6zm20.8 0h2.894l5.021 13.365h-2.781l-1.12-3.192h-5.115l-1.12 3.192h-2.781L114.579 6zm3.193 7.859l-1.176-3.36-.486-1.606h-.149l-.485 1.606-1.195 3.36h3.49zM124.553 6h4.872c.871 0 1.646.18 2.324.541.678.361 1.204.862 1.577 1.503.374.64.56 1.366.56 2.175 0 .858-.27 1.62-.812 2.286a4.617 4.617 0 0 1-2.044 1.447l-.018.13 3.584 5.134v.15h-2.894l-3.453-5.022h-1.176v5.021h-2.52V6zm4.853 6.03c.573 0 1.04-.175 1.4-.523.361-.349.542-.79.542-1.326 0-.51-.172-.945-.514-1.306-.342-.361-.806-.542-1.39-.542h-2.371v3.696h2.333zm7.23-6.03h2.52v5.73h.15l4.89-5.73h3.043v.15l-4.835 5.525 5.34 7.541v.15h-3.08l-3.996-5.694-1.512 1.773v3.92h-2.52V6z" fill="#242A45" fill-rule="nonzero"/><g><circle fill="#5267DF" cx="12.5" cy="12.5" r="12.5"/><path class="inner-bookmark" d="M9 9v10l3.54-3.44L16.078 19V9a2 2 0 0 0-2-2H11a2 2 0 0 0-2 2z" fill="#FFF"/></g></g></svg></a></h1>
                 
-                <button class="menu-btn">
+                <button class="menu-btn lg:hidden absolute top-8 right-6 z-50">
                     <img src="/icon-hamburger.svg" alt="Three parallel lines in vertical axis" >
                 </button>
                 
-                <button class="close-btn">
+                <button class="close-btn hidden absolute top-8 right-16 z-50">
                     <img src="/icon-close.svg" alt="A cross to exit the menu" > 
                 </button>   
 
-                <ul class="nav-menu">
-                    <li class="menu-options" id="features"><a href="#">FEATURES</a></li>
-                    <li class="menu-options" id="pricing"><a href="#">PRICING</a></li>
-                    <li class="menu-options" id="contact"><a href="#">CONTACT</a></li>
-                    <li class="menu-options" id="login"><button class="login-btn">LOGIN</button></li>
-                    <li class="social-media-h">
-                        <a id="fb" href="#"><img src="/icon-facebook.svg" alt="The Facebook logo"></a>
-                        <a id="tw" href="#"><img src="/icon-twitter.svg" alt="The Twitter logo"></a>
+                <ul class="nav-menu hidden flex-col items-center justify-center gap-6 p-16 fixed inset-0 bg-[#252b46f2] bg-opacity-90 lg:static lg:flex lg:flex-row lg:items-center lg:justify-end lg:gap-8 lg:w-auto lg:h-auto lg:bg-transparent">
+                    <li class="menu-options border-t border-b border-white lg:border-none w-full text-center py-4 lg:w-auto lg:py-0">
+                        <a href="#" class="text-white lg:text-black text-xl lg:text-sm font-normal tracking-wider hover:text-[#ff6565]">FEATURES</a>
+                    </li>
+                    <li class="menu-options border-b border-white lg:border-none w-full text-center py-4 lg:w-auto lg:py-0">
+                        <a href="#" class="text-white lg:text-black text-xl lg:text-sm font-normal tracking-wider hover:text-[#ff6565]">PRICING</a>
+                    </li>
+                    <li class="menu-options border-b border-white lg:border-none w-full text-center py-4 lg:w-auto lg:py-0">
+                        <a href="#" class="text-white lg:text-black text-xl lg:text-sm font-normal tracking-wider hover:text-[#ff6565]">CONTACT</a>
+                    </li>
+                    <li class="menu-options w-full text-center py-4 lg:w-auto lg:py-0">
+                        <button class="login-btn w-11/12 lg:w-auto py-3 border-3 border-white lg:border-[#ff6565] rounded-lg font-bold text-white lg:text-white lg:bg-[#ff6565] hover:bg-white hover:text-[#ff6565] tracking-wide">
+                        LOGIN
+                        </button>
+                    </li>
+                    <li class="social-media-h flex gap-8 pt-8 justify-center w-full lg:hidden">
+                        <a href="#" class="flex w-12 h-12 items-center justify-center">
+                            <img src="/icon-facebook.svg" alt="Facebook logo" class="max-w-full">
+                        </a>
+                        <a href="#" class="flex w-12 h-12 items-center justify-center">
+                            <img src="/icon-twitter.svg" alt="Twitter logo" class="max-w-full">
+                        </a>
                     </li>
                 </ul>
         </nav>
     </header>
-    <h1 class="text-center text-lg text-blue-400 mt-3">Hiiii</h1>
-    <section class="hero">
-        <figure class="hero-images">
-            <div class="hero-bg-shape"></div>
-            <img src="/illustration-hero.svg" alt="A digital drawing of a blank website displayed on PC screen">
+
+    <section class="hero flex flex-col lg:flex-row-reverse lg:items-start lg:gap-32 max-w-7xl mx-auto px-6 lg:px-32 mb-20">
+        <figure class="hero-images relative flex flex-col w-full mb-12 lg:flex-row flex-1">
+            <img class="w-full h-auto z-1 lg:max-w-[120%]" src="/illustration-hero.svg" alt="A digital drawing of a blank website displayed on PC screen">
+            <div class="hero-bg-shape absolute bottom-2 right-[-10%] w-[300px] h-[180px] lg:bottom-[8%] lg:right-[-30%] lg:w-[95%] lg:h-[60%] bg-[#4d5ae4] rounded-[45%_55%_60%_40%/40%_35%_65%_60%] -z-1">
         </figure>
 
-        <header class="hero-txt-btn">
-                <h1>A Simple Bookmark Manager</h1>
-                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-
-            <nav class="hero-buttons">
-                <button class="chrome-btn">Get it on Chrome</button>
-                <button class="firefox-btn">Get it on Firefox</button>
+        <header class="hero-txt-btn flex flex-col items-center text-center gap-6 lg:items-start lg:text-left flex-1">
+                <h1 class="text-3xl lg:text-5xl font-bold text-gray-900">
+                A Simple Bookmark Manager
+                </h1>
+                <p class="leading-relaxed text-gray-600 max-w-[90%] lg:max-w-[80%]">
+                A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
+                </p>
+                
+            <nav class="hero-buttons flex flex-row justify-center items-center gap-4">
+                <button class="chrome-btn bg-[#5267DF] text-white font-semibold px-6 py-3 rounded-lg shadow-lg border-2 border-[#5267DF] hover:bg-white hover:text-[#5267DF] hover:border-[#3f4fc8] transition">                
+                    Get it on Chrome 
+                </button>
+                <button class="firefox-btn bg-white text-gray-700 font-semibold px-6 py-3 rounded-lg shadow-lg border-2 border-white hover:border-[#626f8f] transition">
+                    Get it on Firefox
+                </button>
             </nav>
         </header>
     </section>
 
-    <section class="features">
-        <header class="features-text">
-            <h2>Features</h2>
+<section class="features max-w-5xl mx-auto px-4 py-16">
+    <header class="features-text flex flex-col text-center gap-4 mb-12 leading-relaxed">
+        <h2 class="text-3xl font-semibold">Features</h2>
             <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
         </header>
-        <ul class="tabs">
-            <li class="btn-line"><button class="tab active" id="bookmarking">Simple Bookmarking</button></li>
-            <li class="btn-line"><button class="tab" id="searching">Speedy Searching</button></li>
-            <li class="btn-line"><button class="tab" id="sharing">Easy Sharing</button></li>
+
+        <ul class="tabs flex flex-col mb-12 w-full">
+            <li class="border-t border-b border-gray-400 list-none text-center">
+                <button class="tab active py-4 text-lg border-b-4 border-red-500">
+                    Simple Bookmarking
+                </button>
+            </li>
+            <li class="border-b border-gray-400 list-none text-center">
+                <button class="tab py-4 text-lg">
+                    Speedy Searching
+                </button>
+            </li>
+            <li class="border-b border-gray-400 list-none text-center">
+                <button class="tab py-4 text-lg">
+                    Easy Sharing
+                </button>
+            </li>
         </ul>
         
-        <main class="tabs-content">
-            <article class="tab-content active" id="simple-bookmarking">
-                <figure class="tab-imgs">
-                    <div class="features-bg-shape"></div>
-                    <img src="/illustration-features-tab-1.svg" alt="A digital drawing of a person saving a website as a bookmark">
-                </figure>
-                <header class="text-btn">
-                    <h3>Bookmark in one click</h3>
-                    <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                    <button class="info-btn">More info</button>    
-                </header>
-            </article>
-
-            <article class="tab-content" id="speedy-searching">
-                <figure class="tab-imgs"> 
-                    <div class="features-bg-shape"></div>
-                    <img src="/illustration-features-tab-2.svg" alt="A digital drawing of a person searching for a website">
-                </figure>
-                <header class="text-btn">
-                    <h3>Intelligent search</h3>
-                    <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                    <button class="info-btn">More info</button>    
-                </header>    
-            </article>
+        <main class="tabs-content flex flex-col">
+            <article class="tab-content active flex flex-col text-center">
+                <figure class="tab-imgs relative mb-8 flex justify-center">
+                    <div class="features-bg-shape absolute -bottom-2 -left-10 w-72 h-32 bg-[#5267DF] rounded-bl-[80px] -z-10"></div>
+                    <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-1.svg" alt="">
+            </figure>
         
-            <article class="tab-content" id="easy-sharing">
-                <figure class="tab-imgs">
-                    <div class="features-bg-shape"></div>
-                    <img src="/illustration-features-tab-3.svg" alt="A digital drawing of a person sharing a website with another person">
-                </figure>
-                <header class="text-btn">
-                    <h3>Easy sharing</h3>
-                    <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-                    <button class="info-btn">More info</button>    
+            <header class="text-btn mb-6 leading-relaxed">
+                <h3 class="text-2xl font-semibold mb-3">Bookmark in one click</h3>
+                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                <button class="info-btn bg-[#5267DF] text-white py-3 px-6 rounded-md hover:bg-[#5267DF]">
+                    More Info
+                </button>
+            </header>
+        </article>
+
+        <article class="tab-content hidden flex-col text-center">
+            <figure class="tab-imgs relative mb-8 flex justify-center">
+                <div class="features-bg-shape absolute -bottom-2 -left-10 w-72 h-32 bg-[#5267DF] rounded-bl-[80px] -z-10"></div>
+                    <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-2.svg" alt="">
+            </figure>
+            
+            <header class="text-btn mb-6 leading-relaxed">
+                <h3 class="text-2xl font-semibold mb-3">Intelligent search</h3>
+                    <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                <button class="info-btn bg-[#5267DF] text-white py-3 px-6 rounded-md hover:bg-[#5267DF]">
+            </header>    
+        </article>
+        
+        <article class="tab-content hidden flex-col text-center">
+            <figure class="tab-imgs relative mb-8 flex justify-center">
+                <div class="features-bg-shape absolute -bottom-2 -left-10 w-72 h-32 bg-[#5267DF] rounded-bl-[80px] -z-10"></div>
+                    <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-3.svg" alt="">
+            </figure>
+
+            <header class="text-btn mb-6 leading-relaxed">
+                <h3 class="text-2xl font-semibold mb-3">Easy sharing</h3>
+                <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                <button class="info-btn bg-[#5267DF] text-white py-3 px-6 rounded-md hover:bg-blue-600">
+                        More info
+                    </button>    
                 </header>
             </article>
-        </main>
             
+        </main>
     </section>
 
     <section class="download">
@@ -241,7 +283,7 @@
             </nav>
     </footer>
 
-<script src="src/main.js"></script>
+<script type="module" src="/src/main.js"></script>
 
 </body>
 </html>
