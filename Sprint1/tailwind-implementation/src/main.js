@@ -1,7 +1,4 @@
-import './style.css'
-
-setupCounter(document.querySelector('#counter'))
-
+import './styles/tailwind.css'
 
 const tabs = document.querySelectorAll(".tab");
 const content = document.querySelectorAll(".tab-content");
