@@ -72,24 +72,24 @@
         </header>
     </section>
 
-<section class="features max-w-5xl mx-auto px-4 py-16">
-    <header class="features-text flex flex-col text-center gap-4 mb-12 leading-relaxed">
+<section class="features w-full mx-auto text-center px-6 lg:flex lg:flex-col lg:items-center lg:max-w-[1100px]">
+    <header class="features-text flex flex-col text-center gap-4 mb-12 leading-relaxed lg:max-w-3xl">
         <h2 class="text-3xl font-semibold">Features</h2>
             <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
         </header>
 
-        <ul class="tabs flex flex-col mb-12 w-full">
-            <li class="border-t border-b border-gray-400 list-none text-center">
+        <ul class="tabs flex flex-col mb-12 w-full justify-center lg:flex-row lg:w-full lg:gap-x-10 lg:items-center lg:border-b lg:border-gray-400">
+            <li class="border-t border-b border-gray-400 list-none text-center lg:border-none lg:border-t-0">
                 <button class="tab active py-4 text-lg border-b-4 border-red-500">
                     Simple Bookmarking
                 </button>
             </li>
-            <li class="border-b border-gray-400 list-none text-center">
+            <li class="border-b border-gray-400 list-none text-center lg:border-none">
                 <button class="tab py-4 text-lg">
                     Speedy Searching
                 </button>
             </li>
-            <li class="border-b border-gray-400 list-none text-center">
+            <li class="border-b border-gray-400 list-none text-center lg:border-none">
                 <button class="tab py-4 text-lg">
                     Easy Sharing
                 </button>
@@ -103,10 +103,10 @@
                     <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-1.svg" alt="">
             </figure>
         
-            <header class="text-btn mb-6 leading-relaxed">
+            <header class="text-btn mb-6 leading-relaxed lg:max-w-3xl">
                 <h3 class="text-2xl font-semibold mb-3">Bookmark in one click</h3>
                 <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                <button class="info-btn bg-[#5267DF] text-white py-3 px-6 rounded-md hover:bg-[#5267DF]">
+                <button class="info-btn border-2 bg-[#5267DF] text-white mt-6 py-3 px-6 rounded-md lg:hover:bg-white lg:border-2 lg:hover:border-[#5267DF] lg:hover:text-[#5267DF]">
                     More Info
                 </button>
             </header>
@@ -143,35 +143,39 @@
         </main>
     </section>
 
-    <section class="download">
-        <header class="download-txt">
-            <h2>Download the extension</h2>
+    <section class="download w-full mx-auto flex flex-col gap-12 mb-32 px-6 text-center">
+        <header class="download-txt flex flex-col gap-4 leading-relaxed">
+            <h2 class="text-3xl font-semibold">Download the extension</h2>
             <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
         </header>
 
-        <main class="cards">
-            <article class="card-chrome">
-                <img src="/logo-chrome.svg" alt="The Google Chrome logo" class="logo">
-                <h4>Add to Chrome</h4>
-                <p>Minimum version 62</p>
-                <img src="/bg-dots.svg" alt="A pattern of small grey dots">
-                <button class="cardbutton">Add & Install Extension</button>
+        <main class="cards flex flex-col gap-8 md:flex-row md:justify-evenly md:gap-4 md:max-w-[1100px] md:mx-auto">
+            <article class="card-chrome bg-white shadow-xl rounded-xl p-8 flex flex-col items-center text-center w-full md:w-[30%]">
+                <img src="/logo-chrome.svg" class="logo mb-6" alt="The Google Chrome logo" class="logo">
+                <h4 class="text-xl font-semibold mb-1">Add to Chrome</h4>
+                <p class="text-gray-400 mb-6">Minimum version 62</p>
+                <img src="/bg-dots.svg" class="mb-6" alt="A pattern of small grey dots">
+                <button class="cardbutton bg-[#5267DF] text-white border-4 border-[#5267DF] py-3 px-6 rounded-md hover:bg-white hover:text-[#5267DF] transition">
+                    Add & Install Extension
+                </button>
             </article>
 
-            <article class="card-firefox">
-                <img src="/logo-firefox.svg" alt="The Mozilla Firefox logo" class="logo">
-                <h4>Add to Firefox</h4>
-                <p>Minimum version 55</p>
-                <img src="/bg-dots.svg" alt="A pattern of small grey dots">
-                <button href="#" class="cardbutton">Add & Install Extension</button>
+            <article class="card-firefox bg-white shadow-xl rounded-xl p-8 flex flex-col items-center text-center w-full md:w-[30%] md:mt-16">
+                <img src="/logo-firefox.svg" class="logo mb-6" alt="The Mozilla Firefox logo" class="logo">
+                <h4 class="text-xl font-semibold mb-1">Add to Firefox</h4>
+                <p class="text-gray-400 mb-6">Minimum version 55</p>
+                <img src="/bg-dots.svg" class="mb-6" alt="A pattern of small grey dots">
+                <button class="cardbutton bg-[#5267DF] text-white border-4 border-[#5267DF] py-3 px-6 rounded-md hover:bg-white hover:text-[#5267DF] transition">
+                    Add & Install Extension</button>
             </article>
             
-            <article class="card-opera">
-                <img src="/logo-opera.svg" alt="The Opera logo" class="logo">
-                <h4>Add to Opera</h4>
-                <p>Minimum version 46</p>
-                <img src="/bg-dots.svg" alt="A pattern of small grey dots">
-                <button class="cardbutton">Add & Install Extension</button>
+            <article class="card-opera bg-white shadow-xl rounded-xl p-8 flex flex-col items-center text-center w-full md:w-[30%] md:mt-16">
+                <img src="/logo-opera.svg" class="logo mb-6" alt="The Opera logo" class="logo">
+                <h4 class="text-xl font-semibold mb-1">Add to Opera</h4>
+                <p class="text-gray-400 mb-6">Minimum version 46</p>
+                <img src="/bg-dots.svg" class="mb-6" alt="A pattern of small grey dots">
+                <button class="cardbutton bg-[#5267DF] text-white border-4 border-[#5267DF] py-3 px-6 rounded-md hover:bg-white hover:text-[#5267DF] transition">
+                    Add & Install Extension</button>
             </article>
         </main>
     </section>
