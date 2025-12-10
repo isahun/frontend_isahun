@@ -43,3 +43,6 @@ out/
 # Vite
 vite.config.js # només si no vols versionar la config, opcional
 *.local
+
+#VS workspace
+*.code-workspace/
