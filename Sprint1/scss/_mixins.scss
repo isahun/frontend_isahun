@@ -1,3 +1,6 @@
+// scss/_mixins.scss
+@use "sass:map";
+@use "variables" as *;
 
 @mixin section-container() {
   width: 100%;
@@ -69,3 +72,22 @@
   padding: $padding-y $padding-x;
   margin: 0 auto;
 }
+
+// Mixin per blobs responsius
+@mixin responsive-blob($radius-mobile, $radius-desktop, $width-mobile, $width-desktop, $position: (bottom: 0, right: 0)) {
+  position: absolute;
+  bottom: map.get($position, bottom);
+  right: map.get($position, right);
+  width: $width-mobile;
+  height: auto;
+  aspect-ratio: 2/1;
+  background-color: $color-primary;
+  border-radius: $radius-mobile;
+  z-index: -1;
+
+  @media (min-width: 768px) {
+    width: $width-desktop;
+    border-radius: $radius-desktop;
+  }
+}
+

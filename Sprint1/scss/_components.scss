@@ -1,5 +1,40 @@
 /* _components.scss */
 
+@use "mixins" as *;
+@use "variables" as *;
+
+/* ===== TYPOGRAPHY RESPONSIVE ===== */
+
+h1 {
+    font-size: $size-h1; // min 2rem, grows with 5% viewport, max 3rem
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: $size-h2;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: $size-h3;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: $size-h4;
+    line-height: 1.35;
+}
+
+h5 {
+    font-size: $size-h5;
+    line-height: 1.4;
+}
+
+p {
+    font-size: $size-p;
+    line-height: $line-height;
+}
+
 /* ===== NAVBAR MÒBIL ===== */
 .nav-menu {
     align-items: center;
@@ -132,22 +167,16 @@
 
 /* Hero image individual */
 .hero-images img {
-    width: 100%;
+    max-width: 800px;
+    width: 110%;
+    align-self: center;
     height: auto;
     z-index: 1;
 }
 
 /* Forma de fons del hero */
 .hero-bg-shape {
-    position: absolute;
-    bottom: 10px;
-    right: -10%;
-    width: 300px;
-    height: 180px;
-    aspect-ratio: 2/1;
-    background: #4d5ae4;
-    border-radius: $radius-blobr-mbl;
-    z-index: -1;
+    @include responsive-blob($radius-blobr-mbl, $radius-blobr-dkp, 80%, 40%, (bottom: 10%, right: -10%));
 }
 
 /* Contenidor text + botons del hero */

@@ -1,17 +1,15 @@
 /*===== DESKTOP ======*/
 @use "sass:color";
+@use "mixins" as *;
+@use "variables" as *;
 
 @media (min-width: 1024px) {
     body {
         overflow-x: hidden;
         font-family: $fontfam-main;
     }
-
-    html { font-size: 18px }
-
-    p { font-size: $size-p; line-height: $line-height; }
     
-    button, a { font-size: 1.063rem; }
+    button, a { font-size: $size-p; }
 
     /* ===== HEADER / NAVBAR ===== */
     .navbar {
@@ -79,7 +77,8 @@
             flex: 1;
 
             img { 
-                max-width: 120%; 
+                max-width: 800px; 
+                width: 130%;
                 height: auto; 
                 z-index: 1; 
             }
@@ -87,9 +86,9 @@
             .hero-bg-shape {
                 position: absolute;
                 bottom: 8%;
-                right: -30%;
-                width: 95%;
-                height: 60%;
+                right: 0%;
+                width: 55%;
+                height: auto;
                 background: $color-primary;
                 border-radius: $radius-blobr-dkp;
                 z-index: -1;
@@ -167,6 +166,8 @@
         /*MOSTREM EL Q TOCA*/
         .tab-content.active {
             display: flex;
+            flex-direction: row;
+            align-items: flex-start;
         }
 
         .tab-imgs {
@@ -178,8 +179,9 @@
             @include flex(row, center, center);
 
             img {
-                width: 100%;
-                height: 100%;
+                width: 110%;
+                max-width: $max-content;
+                height: auto;
                 object-fit: contain;
                 z-index: 1;
             }

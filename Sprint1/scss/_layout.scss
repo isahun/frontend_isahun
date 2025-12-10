@@ -1,3 +1,6 @@
+@use "mixins" as *;
+@use "variables" as *;
+
 /* =====header i navbar===== */
 header {
     width: 100%;  // ocupa tot l’ample
@@ -17,9 +20,9 @@ header {
     /* Contenidor d’imatges dins del hero */
     .hero-images {
         @include flex(column);
-        position: relative;
-        width: 100%;
         margin-bottom: $space-xl;
+        position: relative;
+
     }
 
     /* Contenidor de text + botons */
