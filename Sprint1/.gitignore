@@ -8,6 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+bookmar-landing-page
+css
 dist
 dist-ssr
 *.local
@@ -15,6 +17,7 @@ dist-ssr
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
+frontend_isahun_workspace_16112025.code-workspace
 .idea
 .DS_Store
 *.suo
