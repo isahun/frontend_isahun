@@ -37,7 +37,7 @@ src/styles/tailwind.css
 *.bak
 *~
 
-frontend_isahun_workspace_16112025
+frontend_isahun_workspace_16112025.code-workspace
 
 # Optional: package-lock if you want to ignore
 # package-lock.json
