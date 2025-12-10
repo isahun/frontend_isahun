@@ -31,28 +31,41 @@ for (let i = 0; i < tabs.length; i++) {
 
         /*treiem active de totes les tabs (nomes botons)*/ 
         for (let j = 0; j < tabs.length; j++) {
-            tabs[j].classList.remove("active");
+            tabs[j].classList.remove("active","border-b-4","border-red-500");
 
         /*treiem active de totes les tabs amb contingut*/ 
-            content[j].classList.remove("active");
+            content[j].classList.add("hidden");
         }
         /*afegim active a la tab clicada (nomes botons)*/
-        tabs[i].classList.add("active");
-        content[i].classList.add("active");
+        tabs[i].classList.add("active","border-b-4","border-red-500");
+        content[i].classList.remove("hidden");
     });
 
 }
 
-const buttons = document.getElementsByClassName("question"); /* retorna una col·lecció d'elements amb la classe question */
+const question = document.querySelectorAll(".question"); /* retorna una col·lecció d'elements amb la classe question */
+const answer = document.querySelectorAll(".answer");
 
-for (let i = 0; i < buttons.length; i++) {
-    const header = buttons[i].querySelector(".question-header"); /* el query selector accepta selectors css complets, i busca dins de cada boto la classe question-header, treu el primer element */
+for (let i = 0; i < question.length; i++) {
+    const header = question[i].querySelector(".question-header"); /* el query selector accepta selectors css complets, i busca dins de cada boto la classe question-header, treu el primer element */
 
     header.addEventListener("click", function() {        
-        buttons[i].classList.toggle("active");
-        
+        for (let j = 0; j < question.length; j++) {
+            if (j !== i) {
+                question[j].classList.remove("active");
+                answer[j].classList.add("hidden");
+
+                const arrows = question[j].querySelector(".arrow"); /* per fer q les fletxes d les altres preguntes tornin a 0 quan les anem tancant*/ 
+                arrows.style.transform = "rotate(0deg)";
+                arrows.style.color = "#5267DF";
+            }
+        }
+
+        question[i].classList.toggle("active");
+        answer[i].classList.toggle("hidden");
+
         const arrow = this.querySelector(".arrow"); /* this fa referencia al element clicat */
-        if (this.parentElement.classList.contains("active")) {
+        if (question[i].classList.contains("active")) {
             arrow.style.transform = "rotate(180deg)"; // gira la fletxa cap avall
             arrow.style.color = "orange"; 
         } else {
