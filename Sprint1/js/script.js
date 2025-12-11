@@ -44,15 +44,11 @@ function validateForm() {
     const container = document.querySelector(".email-error-container");
     const error = document.querySelector(".email-error"); /* aqui hem d posar un punt pk fem getelementbyclassname */
 
-    if (!userEmail) {
+    if (!userEmail || (!(userEmail.includes("@")))) {
         container.classList.add("error");
         error.classList.add("error");
         return false;
-    } else if (!userEmail.includes("@")) {
-        container.classList.add("error")
-        error.classList.add("error");
-        return false;
-    }
+    } 
     container.classList.remove("error")
     error.innerHTML = "Your info was successfully sent!"
     return true;
