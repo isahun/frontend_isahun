@@ -176,7 +176,7 @@ p {
 
 /* Forma de fons del hero */
 .hero-bg-shape {
-    @include responsive-blob($radius-blobr-mbl, $radius-blobr-dkp, 80%, 40%, (bottom: 10%, right: -10%));
+    @include responsive-blob($radius-blobr-mbl, $radius-blobr-dkp, 95%, 75%, (bottom: -5rem, right: -4rem));
 }
 
 /* Contenidor text + botons del hero */
@@ -355,7 +355,8 @@ p {
 }
 
 .faq h5 {
-    font-weight: bold;
+    font-weight: normal;
+
 }
 
 .questions p {
