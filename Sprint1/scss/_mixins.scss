@@ -79,7 +79,7 @@
   bottom: map.get($position, bottom);
   right: map.get($position, right);
   width: $width-mobile;
-  height: clamp(180px, 25vw, 260px);
+  height: clamp(180px, 20vw, 260px);
 
   background-color: $color-primary;
   border-radius: $radius-mobile;
@@ -87,7 +87,7 @@
 
   @media (min-width: 768px) {
     width: $width-desktop;
-    height: clamp(240px, 20vw, 320px);
+    height: clamp(240px, 25vw, 320px);
     border-radius: $radius-desktop;
   }
 }

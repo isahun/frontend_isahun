@@ -82,17 +82,6 @@
                 height: auto; 
                 z-index: 1; 
             }
-
-            .hero-bg-shape {
-                position: absolute;
-                bottom: 8%;
-                right: 0%;
-                width: 55%;
-                height: auto;
-                background: $color-primary;
-                border-radius: $radius-blobr-dkp;
-                z-index: -1;
-            }
         }
 
         .hero-txt-btn {
