@@ -50,7 +50,6 @@ header {
     display: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 1.2rem;
 }
 
 .nav-links-desktop {
@@ -550,11 +549,11 @@ header {
 .contact-form input {
     width: 100%;
     padding: 15px;
-    border: none;
+    border: 2px solid #ffffff;
     border-radius: 5px;
 }
 
-.contact-form button {
+.contact-button {
     background-color: #ff6565;
     width: 100%;
     color: #ffffff;
@@ -665,7 +664,6 @@ footer .logo-invert path {
 
     .navbar-main h1 {
         align-items: left;
-        padding-right: 2rem;
     }
 
     .nav-links-desktop {
@@ -889,7 +887,7 @@ footer .logo-invert path {
     }
 
     /*---FAQS---*/
-    .question h3:hover {
+    .question h5:hover {
     color: #ff6565;
     }
 
@@ -904,19 +902,19 @@ footer .logo-invert path {
     .contact-form {
         flex-direction: row;
     }
-
+    .contact-form input {
+        border: 2px solid #ffffff;
+    }
     .contact-form .email-error-container {
         flex: 2;
     }
-    .contact-form button {
+    .contact-button {
         flex: 1;
-        height: auto;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
+        height: 3rem;
         border: 2px solid #ff6565;
     }
 
-    .contact-form button:hover {
+    .contact-button:hover {
         border: 2px solid #ff6565;
         color: #ff6565;
         background: #ffffff;
@@ -925,9 +923,9 @@ footer .logo-invert path {
     /*====FOOTER======*/
 
     footer {
-    padding: 0.5rem 8rem;
-
+    padding: 2rem 8rem;
     }
+
     .footer-links {
         flex-direction: row;
     }
