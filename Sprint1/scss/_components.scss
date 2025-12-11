@@ -5,40 +5,18 @@
 
 /* ===== TYPOGRAPHY RESPONSIVE ===== */
 
-h1 {
-    font-size: $size-h1; // min 2rem, grows with 5% viewport, max 3rem
-    line-height: 1.2;
-}
-
-h2 {
-    font-size: $size-h2;
-    line-height: 1.25;
-}
-
-h3 {
-    font-size: $size-h3;
-    line-height: 1.3;
-}
-
-h4 {
-    font-size: $size-h4;
-    line-height: 1.35;
-}
-
-h5 {
-    font-size: $size-h5;
-    line-height: 1.4;
-}
-
-p {
-    font-size: $size-p;
-    line-height: $line-height;
-}
+h1 { font-size: $size-h1; line-height: 1.2; } // min 2rem, grows with 5% viewport, max 3rem
+h2 { font-size: $size-h2; line-height: 1.25; }
+h3 { font-size: $size-h3; line-height: 1.3; }
+h4 { font-size: $size-h4; line-height: 1.35; }
+h5 { font-size: $size-h5; line-height: 1.4; }
+p { font-size: $size-p; line-height: $line-height; }
 
 /* ===== NAVBAR MÒBIL ===== */
+
+// BASE: nav-menu closed
 .nav-menu {
     align-items: center;
-    justify-content: center;
     display: none; // hidden per defecte
     position: fixed;
     top: 0;
@@ -48,41 +26,40 @@ p {
     background: $color-gray-blue;
     opacity: 0.9;
     z-index: 999;
-    padding: $space-xxl;    
+    padding-right: $space-xxl;
+    padding-left: $space-xxl;
+    padding-top: 8rem;    
 }
 
+// BASE: nav-menu buttons
 .menu-btn,
 .close-btn {
     position: absolute;
     top: 3.2rem;
     z-index: 1000;
+    right: $space-xl;
     border: none;
     background: none;
     cursor: pointer;
 }
 
-.menu-btn { right: $space-xl; }
 .close-btn {
     display: none;
-    right: 3.85rem;}
+    right: 3.2rem;
+}
 
+//OPEN NAVBAR (js adds .menu-open)
 .navbar.menu-open {
-    .menu-btn {
-        display: none;
-    }
 
-    .close-btn {
-        display: block;
-    }
+    .menu-btn { display: none; }
+    .close-btn { display: block; }
 
     .logo-svg {
         position: relative;
         z-index: 1001;
         
         .logo-letters,
-        circle {
-            fill: $color-white; // logo blanc quan el menu està obert
-        }
+        circle { fill: $color-white; } // white logo when .menu-open
         .inner-bookmark {
             fill: $color-gray-blue;
             opacity: 0.9;
@@ -93,7 +70,6 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: $space-xl;
 
 
         #features {
@@ -136,23 +112,16 @@ p {
         }
 
         .social-media-h {
-            display: flex;
-            flex-direction: row;
+            @include flex(row, center, center);
             gap: $space-m;
             padding-top: $space-m2;
-            justify-content: center;
 
             a {
-                display: flex;
+                @include flex (row, center, center);
                 width: $space-l;
                 height: $space-l;
-                align-items: center;
-                justify-content: center;
                 
-                img {
-                    max-width: 100%;
-                    
-                }
+                img { max-width: 100%; }
             }
         }
         }
@@ -168,7 +137,7 @@ p {
 /* Hero image individual */
 .hero-images img {
     max-width: 800px;
-    width: 110%;
+    width: 100%;
     align-self: center;
     height: auto;
     z-index: 1;
@@ -176,11 +145,12 @@ p {
 
 /* Forma de fons del hero */
 .hero-bg-shape {
-    @include responsive-blob($radius-blobr-mbl, $radius-blobr-dkp, 95%, 75%, (bottom: -1rem, right: -4rem));
+    @include responsive-blob($radius-blobr-mbl, $radius-blobr-dkp, 90%, 75%, (bottom: -1rem, right: -2rem));
 }
 
 /* Contenidor text + botons del hero */
 .hero-txt-btn {
+    @include section-content();
     @include flex(column, center, center);
     text-align: center;
     gap: $space-m;
@@ -188,27 +158,23 @@ p {
     p {
         line-height: $line-height;
     }
+}
 
-    }
-    /* botons dins del hero*/
+/* botons dins del hero*/
     .hero-buttons {
         @include flex(row, center, center);  // centrat per defecte
         gap: $space-m;
 
-        button {
-            /* Botons reutilitzables amb mixin */
-            &.chrome-btn {
+        .chrome-btn {
             @include button($color-primary, $space-m2, $space-s, $color-primary, $color-white);
             box-shadow: $shadow-card;
-            }
+        }
 
-        &.firefox-btn {
+        .firefox-btn {
             @include button($color-white, $space-m2, $space-s, $color-white, $color-dark-gray);
             box-shadow: $shadow-card;
         }
-        }
     }
-
 
 /* ===== FEATURES components =====*/
 
@@ -217,8 +183,9 @@ p {
     @include flex(column);
     margin-bottom: $space-l;
     gap: $space-m;
-    line-height: $line-height;
     text-align: center;
+
+    p { line-height: $line-height; }
 }
 
 /* divs de cada tab x fer border fix */
@@ -263,33 +230,25 @@ p {
 .tab-imgs {
     position: relative;
     margin-bottom: $space-m2;
+    overflow: hidden;
 
     img {
-        max-width: 80%;
+        max-width: 75%;
         height: auto;
         z-index: 1;
     }
 
     .features-bg-shape {
-        position: absolute;
-        bottom: -10px;
-        left: -10%;
-        width: 300px;
-        height: 120px;
-        background: $color-primary;
-        border-radius: $radius-blobl-mbl;
-        z-index: -1;
+        @include responsive-blob($radius-blobl-mbl, $radius-blobl-dkp, 70%, 78%, (bottom:-70px, left: 7rem));
     }
 }
 
 /* txt dins del tab */
 .text-btn {
     margin-bottom: $space-m;
-    line-height: $line-height;
 
-    h3 {
-        margin-bottom: $space-s;
-    }
+    h3 { margin-bottom: $space-s; }
+    p { line-height: $line-height; }
 }
 
 .info-btn {
@@ -523,7 +482,3 @@ p {
     list-style-type: none;
     }
 }
-
-
-
-

@@ -8,21 +8,21 @@ header {
 
 .navbar {
     @include section-container();
-    @include flex(row, center, space-between); // distribució general
-    position: relative;  // necessari per als botons absolutes del menú mòbil
+    @include section-content();
+    @include flex(row, center, space-between); // general distribution
 }
 
 /* ===== HERO general ===== */
 .hero {
 @include section-container();
-    margin-bottom: 5rem;
+    margin-bottom: $space-3xl;
     
     /* Contenidor d’imatges dins del hero */
     .hero-images {
         @include flex(column);
         margin-bottom: $space-xl;
         position: relative;
-
+        overflow: hidden;
     }
 
     /* Contenidor de text + botons */
@@ -49,69 +49,32 @@ header {
 /* ===== DOWNLOAD CARDS ===== */
 .download {
     @include section-container();
+    @include section-content();
     @include flex(column);
     gap: $space-l;
     margin-bottom: $space-3xl;
-
-    .download-txt {
-        @include flex(column);
-        gap: $space-m;
-    }
-
-    .cards {
-        @include flex(column);
-        gap: $space-m;
-    }
 }
 
 /* ===== FAQ ===== */
 .faq {
     @include section-container(); // padding + centrat + flex-col
-    @include flex (column, center, center);
-    margin-bottom: $space-xl*2;
-    width: 100%;
-    
-    .questions {
-        @include flex(column);
-        max-width: $max-content; // correcte per mobile first
-        margin: 0 auto;
-        width: 100%;
-    }
+    @include section-content();
+    @include flex (column, center, center); //treure centers
+    margin-bottom: $space-xxl;
 }
 
 /* ===== CONTACT ===== */
 .contact {
     background: $color-primary; // #5368df
-    padding: $space-3xl $space-m;
+    @include section-content($space-3xl, $space-m);
     @include flex(column);
-
-    .header-contact {
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    /* FORM */
-    .contact-form {
-    @include flex(column);
-    gap: $space-xs;
-    width: 100%;
-    max-width: $max-form;
-    margin: 0 auto;
-    }
-
-    .email-error-container {
-        width: 100%;
-        position: relative;
-        
-    }
 }
 
 /* ===== FOOTER ===== */
 footer {
     background-color: $color-gray-blue;
-    padding: $space-l; // 40px en rem
-    text-align: center;
     @include section-container();
+    @include section-content();
     @include flex(column);
     gap: $space-m2;
 }

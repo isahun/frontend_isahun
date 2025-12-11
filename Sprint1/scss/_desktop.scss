@@ -79,8 +79,8 @@
             img { 
                 max-width: 800px; 
                 width: 130%;
-                height: auto; 
                 z-index: 1; 
+                transform: translateX(0);
             }
         }
 

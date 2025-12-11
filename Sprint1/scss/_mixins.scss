@@ -2,18 +2,40 @@
 @use "sass:map";
 @use "variables" as *;
 
+//section parent container, section content with px and py, and desktop container
 @mixin section-container() {
   width: 100%;
   margin: 0 auto;
-  padding: $space-l;
+  max-width: 1400px;
 }
 
+//inner sections, padding
+@mixin section-content($py: $space-l, $px: $space-l) {
+  padding: $py $px;
+  width: 100%;
+  margin: 0 auto;
+}
+//desktop container
+@mixin desktop-container($direction: row, $align: center, $justify: center, $padding-y: $space-m2, $padding-x: 8rem, $gap: $space-m2) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  padding: $padding-y $padding-x;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+//FLEX 
 @mixin flex($direction: row, $align: center, $justify: center) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
 }
+
+//BUTTONS
 
 @mixin button($bg-color, 
   $padding-x, 
@@ -33,6 +55,7 @@
   text-decoration: none;
 }
 
+//CARDS
 @mixin card($bg: $color-white) {
   background-color: $bg;
   padding: $padding-card-y $padding-card-x;
@@ -41,7 +64,6 @@
   @include flex(column);
   text-align: center;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 @mixin error-container {
@@ -65,30 +87,27 @@
   }
 }
 
-@mixin desktop-container($direction: row, $padding-y: $space-m2, $padding-x: 8rem, $gap: $space-m2) {
-  display: flex;
-  flex-direction: $direction;
-  align-items: center;
-  padding: $padding-y $padding-x;
-  margin: 0 auto;
-}
+// RESPONSIVE BLOB
+@mixin responsive-blob($radius-mobile, 
+  $radius-desktop, 
+  $width-mobile, 
+  $width-desktop, 
+  $position: (bottom: 0, right: 0)
+  ) {
+    position: absolute;
+    bottom: map.get($position, bottom);
+    right: map.get($position, right);
+    width: $width-mobile;
+    height: clamp(180px, 20vw, 260px);
 
-// Mixin per blobs responsius
-@mixin responsive-blob($radius-mobile, $radius-desktop, $width-mobile, $width-desktop, $position: (bottom: 0, right: 0)) {
-  position: absolute;
-  bottom: map.get($position, bottom);
-  right: map.get($position, right);
-  width: $width-mobile;
-  height: clamp(180px, 20vw, 260px);
+    background-color: $color-primary;
+    border-radius: $radius-mobile;
+    z-index: -1;
 
-  background-color: $color-primary;
-  border-radius: $radius-mobile;
-  z-index: -1;
-
-  @media (min-width: 768px) {
-    width: $width-desktop;
-    height: clamp(240px, 25vw, 320px);
-    border-radius: $radius-desktop;
-  }
+    @media (min-width: 1024px) {
+      width: $width-desktop;
+      height: clamp(240px, 25vw, 320px);
+      border-radius: $radius-desktop;
+    }
 }
 
