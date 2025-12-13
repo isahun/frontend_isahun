@@ -25,6 +25,7 @@ header {
   margin: 0 auto;
   max-width: 1400px;
   margin-bottom: 6rem;
+  align-items: center;
   /* Contenidor d’imatges dins del hero */
 }
 .hero .hero-images {
@@ -32,7 +33,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -53,18 +54,11 @@ header {
   margin: 0 auto;
   max-width: 1400px;
 }
-.features .tabs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2.5rem;
-}
-.features .tabs-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+.features-text {
+  padding: 2.5rem 2.5rem;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* ===== DOWNLOAD CARDS ===== */
@@ -291,9 +285,9 @@ body.no-scroll {
 /* Forma de fons del hero */
 .hero-bg-shape {
   position: absolute;
-  bottom: -1rem;
-  right: -4rem;
-  width: 95%;
+  bottom: 0rem;
+  right: -3rem;
+  width: 90%;
   height: clamp(180px, 20vw, 260px);
   background-color: #4d5ae4;
   border-radius: 300px 0 0 300px;
@@ -301,19 +295,21 @@ body.no-scroll {
 }
 @media (min-width: 1024px) {
   .hero-bg-shape {
-    width: 80%;
+    width: 90%;
     height: clamp(240px, 25vw, 320px);
     border-radius: 400px 0 0 400px;
   }
 }
+.hero-bg-shape {
+  height: 70%;
+  bottom: 70px;
+}
 
 /* Contenidor text + botons del hero */
 .hero-txt-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  padding: 2.5rem 2.5rem;
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
   gap: 1.8rem;
 }
@@ -361,7 +357,6 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2.5rem;
   gap: 1.8rem;
   text-align: center;
 }
@@ -370,6 +365,9 @@ body.no-scroll {
 }
 
 /* divs de cada tab x fer border fix */
+.tabs {
+  margin-bottom: 1.8rem;
+}
 .tabs li {
   border-bottom: 1px solid #cfcfcf;
   list-style: none;
@@ -387,7 +385,7 @@ body.no-scroll {
   border: none;
   padding: 1.25rem;
   cursor: pointer;
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-size: clamp(1.125rem, 3vw, 1.2rem);
 }
 .tabs .tab.active {
   border-bottom: 3px solid #ff6565;
@@ -406,7 +404,7 @@ body.no-scroll {
 /* container d img d cada tab */
 .tab-imgs {
   position: relative;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   overflow: hidden;
 }
 .tab-imgs img {
@@ -416,7 +414,7 @@ body.no-scroll {
 }
 .tab-imgs .features-bg-shape {
   position: absolute;
-  bottom: -70px;
+  bottom: 2rem;
   width: 70%;
   height: clamp(180px, 20vw, 260px);
   background-color: #4d5ae4;
@@ -425,15 +423,19 @@ body.no-scroll {
 }
 @media (min-width: 1024px) {
   .tab-imgs .features-bg-shape {
-    width: 78%;
+    width: 90%;
     height: clamp(240px, 25vw, 320px);
     border-radius: 0 400px 400px 0;
   }
 }
+.tab-imgs .features-bg-shape {
+  height: 300px;
+  bottom: 20px;
+}
 
 /* txt dins del tab */
 .text-btn {
-  margin-bottom: 1.8rem;
+  padding: 1.8rem 1.8rem;
 }
 .text-btn h3 {
   margin-bottom: 1rem;
@@ -459,6 +461,18 @@ body.no-scroll {
 .download-txt {
   text-align: center;
   line-height: 1.6;
+  margin-top: 1.8rem;
+}
+.download-txt h2 {
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
 }
 
 /* Card genèrica */
@@ -531,14 +545,19 @@ body.no-scroll {
   margin-bottom: 1.8rem;
 }
 
-.faq h5 {
-  font-weight: normal;
+.faq h6 {
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-weight: bold;
 }
 
-.questions p {
+.questions {
+  width: 80%;
+}
+
+.questions ul {
   margin-bottom: 1rem;
   line-height: 1.6;
-  max-width: 600px;
+  justify-items: left;
   margin-left: auto;
   margin-right: auto;
 }
@@ -610,6 +629,7 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-weight: normal;
   text-transform: uppercase;
   color: #f7f7f7;
@@ -619,6 +639,7 @@ body.no-scroll {
 .header-contact h2 {
   color: #f7f7f7;
   font-weight: bold;
+  text-align: center;
   margin-bottom: 1.8rem;
 }
 
@@ -747,7 +768,9 @@ body.no-scroll {
     margin: 0 auto;
     width: 100%;
     max-width: 1400px;
-    padding-top: 5rem;
+    padding-top: 4rem;
+    padding-right: 6rem;
+    padding-left: 6rem;
   }
   .navbar .nav-menu {
     display: flex;
@@ -811,17 +834,19 @@ body.no-scroll {
     align-items: flex-start;
   }
   .hero .hero-images {
-    flex: 1.2;
-    position: relative;
+    flex: 1.5;
+    padding: 2.5rem;
   }
   .hero .hero-images img {
     width: 100%;
     z-index: 1;
   }
   .hero .hero-txt-btn {
-    flex: 1;
+    flex: 1.3;
     text-align: left;
     align-items: flex-start;
+    padding-left: 6rem;
+    padding-right: 0.6rem;
   }
   .hero .hero-txt-btn .hero-text {
     width: 90%;
@@ -841,30 +866,21 @@ body.no-scroll {
   }
   /* ===== FEATURES ===== */
   .features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
     text-align: center;
   }
   .features .features-text {
-    margin-bottom: 2rem;
+    margin: 0 auto;
     width: 60%;
   }
   .features .tabs {
+    display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 80%;
     justify-content: center;
+    margin: 0 auto 1.8rem;
   }
   .features .tabs li {
     flex: 1;
-    text-align: center;
   }
   .features .tabs li :hover {
     color: #ff6565;
@@ -873,14 +889,7 @@ body.no-scroll {
     border-top: none;
   }
   .features .tab-content { /* IMPORTANT, reset del layout d mobil*/
-    display: none;
-    flex-direction: row;
-    gap: 4rem;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: 0;
   }
   .features {
     /*MOSTREM EL Q TOCA*/
@@ -888,43 +897,26 @@ body.no-scroll {
   .features .tab-content.active {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
   }
   .features .tab-imgs {
     flex: 1;
     position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    overflow: hidden;
   }
   .features .tab-imgs img {
-    width: 110%;
-    max-width: 600px;
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    max-width: 800px;
     z-index: 1;
-  }
-  .features .tab-imgs .features-bg-shape {
-    position: absolute;
-    bottom: 40px;
-    transform: translateX(-30%);
-    width: 500px;
-    height: 200px;
-    background: #4d5ae4;
-    border-radius: 0 400px 400px 0;
-    z-index: -1;
+    padding-left: 4rem;
   }
   .features .text-btn {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    align-items: left;
+    padding-left: 3rem;
   }
   .features .text-btn h3 {
     margin-bottom: 1rem;
@@ -960,19 +952,25 @@ body.no-scroll {
   }
   .download .download-txt {
     width: 60%;
-    margin-bottom: 2rem;
   }
   .download .cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 0.6rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
   .download .card-firefox {
     margin-top: 4rem;
   }
   .download .card-opera {
     margin-top: 8rem;
+  }
+  .download .card-chrome,
+  .download .card-firefox,
+  .download .card-opera {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
   .download .cardbutton {
     cursor: pointer;
@@ -1037,6 +1035,7 @@ body.no-scroll {
     width: 100%;
     max-width: 1400px;
     text-align: center;
+    max-width: none;
   }
   .contact p {
     font-size: 0.8rem;
@@ -1090,6 +1089,7 @@ body.no-scroll {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    max-width: none;
     padding: 1rem 8rem;
   }
   footer .logo-links {

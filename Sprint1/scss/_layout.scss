@@ -18,11 +18,12 @@ header {
 .hero {
 @include section-container();
     margin-bottom: $space-3xl;
+    align-items: center;
     
     /* Contenidor d’imatges dins del hero */
     .hero-images {
         @include flex(column);
-        margin-bottom: $space-xl;
+        padding-bottom: $space-xl;
         position: relative;
         overflow: hidden;
     }
@@ -37,16 +38,12 @@ header {
 /* =====FEATURES=====*/
 .features {
     @include section-container();
-
-    .tabs {
-        @include flex(column);
-        margin-bottom: $space-l;
-    }
-
-    .tabs-content {
-        @include flex(column);
-    }
 }
+
+.features-text { 
+    @include section-content(); 
+}
+
 
 /* ===== DOWNLOAD CARDS ===== */
 .download {
