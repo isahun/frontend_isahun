@@ -16,12 +16,12 @@
   margin: 0 auto;
 }
 //desktop container
-@mixin desktop-container($direction: row, $align: center, $justify: center, $padding-y: $space-m2, $padding-x: 8rem, $gap: $space-m2) {
+@mixin desktop-container($direction: row, $align: center, $justify: center, $gap: $space-m2) {
   display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
-  padding: $padding-y $padding-x;
+  gap: $gap;
   margin: 0 auto;
   width: 100%;
   max-width: 1400px;

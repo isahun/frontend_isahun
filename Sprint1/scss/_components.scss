@@ -15,6 +15,9 @@ p { font-size: $size-p; line-height: $line-height; }
 /* ===== NAVBAR MÒBIL ===== */
 
 // BASE: nav-menu closed
+.navbar {
+    @include section-content($space-l, $space-l);
+}
 .nav-menu {
     align-items: center;
     display: none; // hidden per defecte
@@ -137,7 +140,7 @@ p { font-size: $size-p; line-height: $line-height; }
 /* Hero image individual */
 .hero-images img {
     max-width: 800px;
-    width: 100%;
+    width: 110%;
     align-self: center;
     height: auto;
     z-index: 1;
@@ -145,13 +148,13 @@ p { font-size: $size-p; line-height: $line-height; }
 
 /* Forma de fons del hero */
 .hero-bg-shape {
-    @include responsive-blob($radius-blobr-mbl, $radius-blobr-dkp, 90%, 75%, (bottom: -1rem, right: -2rem));
+    @include responsive-blob($radius-blobr-mbl, $radius-blobr-dkp, 95%, 80%, (bottom: -1rem, right: -4rem));
 }
 
 /* Contenidor text + botons del hero */
 .hero-txt-btn {
-    @include section-content();
     @include flex(column, center, center);
+    padding: 2rem;
     text-align: center;
     gap: $space-m;
 
@@ -482,3 +485,5 @@ p { font-size: $size-p; line-height: $line-height; }
     list-style-type: none;
     }
 }
+
+

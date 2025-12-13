@@ -10,6 +10,8 @@ header {
     @include section-container();
     @include section-content();
     @include flex(row, center, space-between); // general distribution
+    position: relative;
+    min-height: 4.5rem;
 }
 
 /* ===== HERO general ===== */
