@@ -1,5 +1,102 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    /* ===== COLORS ===== */
+    --color-white: #f7f7f7;
+    --color-black: #171616;
+    --color-light-gray: #cfcfcf;
+    --color-mid-gray: #949494;
+    --color-dark-gray: #454444;
+    --color-gray-blue: #252b46f2;
+    --color-primary: #4d5ae4;
+    --color-accent: #ff6565;
+
+    /* ===== TYPOGRAPHY ===== */
+    --font-main: Verdana, sans-serif;
+
+    --size-xs: 0.8rem;
+    --size-small: 0.9rem;
+
+    --size-h1: clamp(2rem, 3.5vw, 3rem);
+    --size-h2: clamp(1.75rem, 3vw, 2.5rem);
+    --size-h3: clamp(1.5rem, 2.5vw, 2rem);
+    --size-h4: clamp(1.25rem, 2vw, 1.75rem);
+    --size-h5: clamp(1.15rem, 1.8vw, 1.4rem);
+    --size-h6: clamp(1rem, 1.5vw, 1.1rem);
+    --size-p: clamp(0.9rem, 1.2vw, 1.1rem);
+    --size-button: clamp(1.125rem, 1.2vw, 1.2rem);
+
+    --line-height: 1.6;
+    --font-error: 0.7rem;
+
+    /* ===== SPACING ===== */
+    --space-xs: 0.6rem;
+    --space-s: 1rem;
+    --space-m: 1.8rem;
+    --space-m2: 2rem;
+    --space-l: 2.5rem;
+    --space-xl: 3rem;
+    --space-xxl: 4rem;
+    --space-3xl: 6rem;
+
+    /* ===== LAYOUT SIZES ===== */
+    --max-content: 600px;
+    --max-form: 500px;
+    --max-card: 350px;
+
+    /* ===== RADIUS ===== */
+    --radius-button: 5px;
+    --radius-card: 10px;
+
+    --radius-blob-mbl: 300px;
+    --radius-blob-dkp: 400px;
+
+    /* ===== SHADOW ===== */
+    --shadow-card: 0 5px 15px rgba(69, 68, 68, 0.3);
+  }
+}
+
 @theme {
-  --font-script: Great Vibes, cursive;
+  /* colors */
+  --color-white: var(--color-white);
+  --color-black: var(--color-black);
+  --color-light-gray: var(--color-light-gray);
+  --color-mid-gray: var(--color-mid-gray);
+  --color-dark-gray: var(--color-dark-gray);
+  --color-gray-blue: var(--color-gray-blue);
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+
+  /* font */
+  --font-sans: var(--font-main);
+
+    --text-xs: 0.8rem;
+    --text-small: 0.9rem;
+
+    --text-h1: var(--size-h1);
+    --text-h2: var(--size-h2);
+    --text-h3: var(--size-h3);
+    --text-h4: var(--size-h4);
+    --text-h5: var(--size-h5);
+    --text-h6: var(--size-h6);
+    --text-p: var(--size-p);
+    --text-button: var(--size-button);
+
+  /* spacing */
+  --spacing-xs: var(--space-xs);
+  --spacing-s: var(--space-s);
+  --spacing-m: var(--space-m);
+  --spacing-m2: var(--space-m2);
+  --spacing-l: var(--space-l);
+  --spacing-xl: var(--space-xl);
+  --spacing-xxl: var(--space-xxl);
+  --spacing-3xl: var(--space-3xl);
+
+  /* radius */
+  --radius-button: var(--radius-button);
+  --radius-card: var(--radius-card);
+
+  /* shadows */
+  --shadow-card: var(--shadow-card);
 }
