@@ -283,25 +283,27 @@
 
     <!-- //////// CONTACT SECTION //////// -->
 
-    <section class="contact bg-primary px-s py-xl lg:px-3xl lg:py-3xl flex flex-col items-center text-center gap-m">
-        <article class="header-contact">
-            <p class="text-p text-white uppercase tracking-widest mb-m lg:text-base">35,000+ already joined</p>
-            <h2 class="text-h2 text-white font-bold mb-m">Stay up-to-date with what we're doing</h2>
-        </article>
+    <section class="contact bg-primary w-full py-3xl px-m my-0 mx-auto flex flex-col items-center justify-center">
+            <article class="header-contact">
+                <p class="text-p text-white flex flex-col text-center uppercase mb-m tracking-widest lg:text-base">35,000+ already joined</p>
+                <h2 class="text-h2 text-white text-center font-bold mb-m">Stay up-to-date with what we're doing</h2>
+            </article>
 
-        <form class="contact-form flex flex-col gap-xs w-full max-w-md lg:flex-row lg:items-start lg:gap-m" name="contact-form" onsubmit="return validateForm()">
+            <label for="contact-form"></label>
+            <form class="contact-form flex flex-col gap-xs w-[70%] lg:flex-row lg:items-start lg:gap-m" name="contact-form" onsubmit="return validateForm()">
 
-            <div class="email-error-container mb-[0.6rem]">
-                <input aria-label="Email address" type="email" id="email" name="user-email" placeholder="Introduce your e-mail address" class="email-input w-95% rounded-md px-m py-xs text-base bg-white border-2  border-transparent lg:flex-2 focus:outline-none focus:border-accent">
+                <div class="email-error-container flex flex-col items-center relative w-full rounded-button">
+                    <input aria-label="Email address" type="email" id="email" name="user-email" placeholder="Introduce your e-mail address" class="email-input bg-white w-full p-s border-2 border-transparent rounded-button text-p lg:flex-2">
 
-                <img src="/icon-error.svg" alt="error sign" class="email-error-icon">
+                    <img src="/icon-error.svg" alt="error sign" class="email-error-icon absolute top-s right-s w-5">
 
-                <p class="email-error">Please introduce a valid e-mail</p>
-            </div>
+                    <p class="email-error mt-0.5 text-white text-left left-0 text-xs italic">Please introduce a valid e-mail</p>
+                </div>
 
-            <button type="submit" class="w-full px-s py-xs rounded-button border-2 max-w-[40%] lg:flex-1 self-center border-transparent bg-accent text-white font-bold shadow-card cursor-pointer hover:bg-white hover:border-accent hover:text-accent" aria-label="Send contact form">
-                Contact Us</button>
-        </form>
+                <button type="submit" class="contact-button w-full bg-accent p-s border-2 border-accent rounded-button text-white font-bold shadow-card decoration-0 cursor-pointer lg:flex-1" aria-label="Send contact form">
+                    Contact Us</button>
+            </form>
+        </div>
     </section>
 
     <!-- //////// FOOTER //////// -->

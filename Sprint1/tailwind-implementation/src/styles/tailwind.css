@@ -140,29 +140,26 @@
   }
 
   /* ===== CONTACT FORM ===== */
-.email-error-container {
-  @apply relative w-full rounded-button px-m pb-[1.5rem] pt-[1.5rem];
-}
+.email-error {
+  display:none;
 
-.email-error-container img {
-  @apply absolute right-s top-s w-5 hidden;
+}
+.email-error-icon {
+  display: none;
 }
 
 .email-error-container.error {
-  @apply bg-accent;
-}
-
-.email-error-container.error img {
-  @apply block;
-}
-
-.email-error {
-  @apply hidden absolute bottom-[0.3rem] left-[0.6rem] text-white text-[0.7rem] italic;
+  @apply bg-accent flex flex-col items-center pr-0.5 pl-0.5 pt-0.5;
 }
 
 .email-error-container.error .email-error {
-  @apply block;
+  display: block;
+  text-align: left;
 }
+
+.email-error-container.error .email-error-icon {
+  display: block;
 }
 
 
+}

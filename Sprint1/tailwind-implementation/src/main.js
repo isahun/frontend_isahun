@@ -88,9 +88,10 @@ function validateForm() {
     }
 
     container.classList.remove("error");
-    error.textContent = "Your info was successfully sent!"
+    error.innerHTML = "Your info was successfully sent!"
     return true;
 }
+window.validateForm = validateForm;
 
 
 
