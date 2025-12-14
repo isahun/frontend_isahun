@@ -75,21 +75,20 @@ for (let i = 0; i < question.length; i++) {
 }
 
 function validateForm() {
-    const userEmail = document.forms["contact-form"]["user-email"].value;
-    const container = document.querySelector(".email-error-container");
-    const error = document.querySelector(".email-error"); /* aqui hem d posar un punt pk fem getelementbyclassname */
+    const form = document.forms["contact-form"];
+    const userEmail = form["user-email"].value;
 
-    if (!userEmail) {
+    const container = document.querySelector(".email-error-container");
+    const error = container.querySelector(".email-error"); /* aqui hem d posar un punt pk fem getelementbyclassname */
+
+
+    if (!userEmail || !userEmail.includes("@")) {
         container.classList.add("error");
-        error.classList.add("error");
-        return false;
-    } else if (!userEmail.includes("@")) {
-        container.classList.add("error")
-        error.classList.add("error");
         return false;
     }
-    container.classList.remove("error")
-    error.innerHTML = "Your info was successfully sent!"
+
+    container.classList.remove("error");
+    error.textContent = "Your info was successfully sent!"
     return true;
 }
 
