@@ -31,16 +31,15 @@ for (let i = 0; i < tabs.length; i++) {
 
         /*treiem active de totes les tabs (nomes botons)*/ 
         for (let j = 0; j < tabs.length; j++) {
-            tabs[j].classList.remove("active","border-b-4","border-red-500");
+            tabs[j].classList.remove("active");
 
         /*treiem active de totes les tabs amb contingut*/ 
             content[j].classList.add("hidden");
         }
         /*afegim active a la tab clicada (nomes botons)*/
-        tabs[i].classList.add("active","border-b-4","border-red-500");
+        tabs[i].classList.add("active");
         content[i].classList.remove("hidden");
     });
-
 }
 
 const question = document.querySelectorAll(".question"); /* retorna una col·lecció d'elements amb la classe question */

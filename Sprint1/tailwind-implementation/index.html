@@ -55,106 +55,120 @@
 
     <!-- //////// HERO SECTION //////// -->
     
-    <section class="hero flex flex-col max-w-350 gap-xl mx-auto px-l py-l lg:flex-row-reverse lg:items-start lg:gap-xxl lg:px-3xl">
-        <figure class="hero-images relative flex-1 overflow-hidden  flex-col w-full mb-12 lg:flex-row lg:gap-1.5">
-            <img class="relative w-full z-10 lg:w-[120%] lg:flex-1.5" src="/illustration-hero.svg" alt="A digital drawing of a blank website displayed on PC screen">
-            <div class="hero-bg-shape absolute bottom-0 right-[-15%] w-[90%] h-[70%] lg:bottom-[8%] lg:right-[0%] lg:w-[95%] lg:h-[60%] bg-primary rounded-l-full -z-10 overflow-hidden">
-        </figure>
+    <section class="hero w-full overflow-hidden">
+        <!--wrapper w/o padding, only to center -->
+        <div class="mx-auto max-w-350">
+        <!--wrapper w padding -->
+            <div class="flex flex-col lg:flex-row-reverse px-l lg:px-3xl">
+                <figure class="hero-images relative flex-1 my-s">
+                    <img class="w-full z-10" src="/illustration-hero.svg" alt="A digital drawing of a blank website displayed on PC screen">
+                    <div class="hero-bg-shape absolute bottom-0 right-0 translate-x-[30%] w-[95%] h-[80%] bg-primary rounded-l-full -z-10"></div>
+                </figure>
 
-        <div class="hero-txt-btn flex flex-col items-center text-center gap-6 lg:items-start lg:text-left flex-1">
-                <h1 class="text-h1 font-bold text-black">
-                A Simple Bookmark Manager
-                </h1>
-                <p class="text-p leading-relaxed text-dark-gray 0 max-w-[90%] lg:max-w-[80%]">
-                A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
-                </p>
-                
-            <nav class="hero-buttons flex flex-row justify-center items-center gap-4" aria-label="Installation buttons">
-                <button class="chrome-btn bg-primary text-white font-semibold px-6 py-3 rounded-lg shadow-lg border-2 border-primary cursor-pointer 
-                hover:bg-white hover:text-primary hover:border-primary transition" aria-label="Go to Bookmark download page for Chrome">                
-                    Get it on Chrome 
-                </button>
-                <button class="firefox-btn bg-white text-dark-gray font-semibold px-6 py-3 rounded-lg shadow-lg cursor-pointer border-2 border-white hover:border-dark-gray transition" aria-label="Go to Bookmark download page for Firefox">
-                    Get it on Firefox
-                </button>
-            </nav>
+                <div class="hero-txt-btn flex flex-col items-center text-center gap-m lg:items-start lg:text-left flex-1">
+                        <h1 class="text-h1 font-bold text-black">
+                        A Simple Bookmark Manager
+                        </h1>
+                        <p class="text-p leading-relaxed text-dark-gray max-w-[90%] lg:max-w-[80%]">
+                        A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
+                        </p>
+                        
+                    <div class="hero-buttons flex gap-s" aria-label="Installation buttons">
+                        <button class="chrome-btn text-p bg-primary text-white font-semibold px-6 py-4 rounded-button shadow-card border-2 border-primary cursor-pointer
+                        lg:hover:bg-white lg:hover:text-primary lg:hover:border-primary transition" aria-label="Go to Bookmark download page for Chrome">                
+                            Get it on Chrome 
+                        </button>
+                        <button class="firefox-btn bg-white text-p text-dark-gray font-semibold px-6 py-4 rounded-button shadow-card cursor-pointer border-2 border-white lg:hover:border-dark-gray transition" aria-label="Go to Bookmark download page for Firefox">
+                            Get it on Firefox
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
 <!-- //////// FEATURES SECTION //////// -->
 
-<section class="features w-full max-w-7xl mx-auto text-center px-(--space-l) lg:px-0 mb-(--space-3xl)">
-    <div class="features-text flex flex-col text-center gap-(--space-m) mb-(--space-xl) mx-auto leading-relaxed lg:max-w-[60%]">
-        <h2 class="text-h2 max-w-xl mx-auto font-semibold">Features</h2>
-            <p class="text-p">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
-    </div>
+<section class="features w-full overflow-hidden">
 
-        <ul class="tabs flex flex-col mb-12 w-full justify-center lg:flex-row lg:w-full lg:gap-x-10 lg:items-center lg:border-b lg:border-gray-400">
-            <li class="border-t border-b border-gray-400 list-none text-center lg:border-none lg:border-t-0">
-                <button class="tab active py-4 cursor-pointer text-lg border-b-4 border-accent lg:hover:text-accent">
+    <!-- Wrapper layout-->
+    <div class="mx-auto max-w-350">
+        <article class="features-text px-l pt-3xl lg:px-3xl mb-xl text-center mx-auto lg:max-w-[60%]">
+            <h2 class="text-h2 text-black font-semibold">Features</h2>
+            <p class="text-p mt-s leading-line-height text-dark-gray">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        </article>
+
+        <ul class="tabs flex flex-col text-center border-t border-light-gray lg:flex lg:flex-row lg:justify-center lg:gap-xxl lg:border-t-0 lg:border-b">
+            <li class="border-b border-light-gray list-none lg:border-0 hover:cursor-pointer">
+                <button class="tab active">
                     Simple Bookmarking
                 </button>
             </li>
-            <li class="border-b border-gray-400 list-none text-center lg:border-none">
-                <button class="tab py-4 text-lg cursor-pointer lg:hover:text-accent">
+            <li class="border-b border-light-gray list-none hover:cursor-pointer lg:border-0">
+                <button class="tab">
                     Speedy Searching
                 </button>
             </li>
-            <li class="border-b border-light-gray list-none text-center lg:border-none">
-                <button class="tab py-4 text-lg cursor-pointer lg:hover:text-accent">
+            <li class="border-b border-light-gray list-none hover:cursor-pointer lg:border-none">
+                <button class="tab">
                     Easy Sharing
                 </button>
             </li>
-        </ul>
-        
-        <main class="tabs-content flex flex-col">
-            <article class="tab-content active flex flex-col text-center lg:flex-row lg:items-center lg:gap-10">
-                <figure class="tab-imgs relative mb-8 flex justify-center lg:flex-1 lg:max-w-1/2">
-                    <div class="features-bg-shape absolute -bottom-2 -left-10 w-72 h-32 bg-primary rounded-bl-[80px] -z-10"></div>
-                    <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-1.svg" alt="">
+        </ul>    
+
+        <!-- Content -->
+        <main class="tabs-content mt-xl">
+            
+            <!-- Tab 1 -->
+            <article class="tab-content active">
+                <figure class="tab-imgs relative mb-l lg:flex-1">
+                    <div class="features-bg-shape absolute bottom-0 left-0  w-[90%] h-[70%] bg-primary rounded-br-button z-10"></div>
+                    <img class="w-full relative z-10" src="/illustration-features-tab-1.svg" alt="An illustration of a desktop layout">
                 </figure>
         
-            <div class="text-btn mb-6 leading-relaxed lg:flex-1 lg:max-w-1/2 lg:text-left">
-                <h3 class="text-h3 font-semibold mb-3">Bookmark in one click</h3>
-                <p class="text-p">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                <button class="info-btn border-2 bg-primary text-white mt-6 py-3 px-6 rounded-md lg:hover:bg-white lg:border-2 lg:hover:border-primary lg:hover:text-primary">
-                    More Info
-                </button>
-            </div>
-        </article>
-
-        <article class="tab-content hidden flex flex-col text-center lg:flex-row lg:items-center lg:gap-10">
-            <figure class="tab-imgs relative mb-8 flex justify-center lg:flex-1 lg:max-w-1/2">
-                <div class="features-bg-shape absolute -bottom-2 -left-10 w-72 h-32 bg-primary rounded-bl-[80px] -z-10"></div>
-                    <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-2.svg" alt="">
-            </figure>
-            
-            <div class="text-btn mb-6 leading-relaxed lg:flex-1 lg:max-w-1/2 lg:text-left">
-                <h3 class="text-h3 font-semibold mb-3">Intelligent search</h3>
-                    <p class="text-p">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                    <button class="info-btn border-2 bg-[#5267DF] text-white mt-6 py-3 px-6 rounded-md lg:hover:bg-white lg:border-2 lg:hover:border-[#5267DF] lg:hover:text-[#5267DF]">
+                <div class="text-btn mb-m leading-line-height lg:flex-1 lg:text-left">
+                    <h3 class="text-h3 font-semibold mb-s">Bookmark in one click</h3>
+                    <p class="text-p">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                    <button class="info-btn">
                         More Info
                     </button>
-            </div>    
-        </article>
-        
-        <article class="tab-content hidden flex flex-col text-center lg:flex-row lg:items-center lg:gap-10">
-            <figure class="tab-imgs relative mb-8 flex justify-center lg:flex-1 lg:max-w-1/2">
-                <div class="features-bg-shape absolute -bottom-2 -left-10 w-72 h-32 bg-[#5267DF] rounded-bl-[80px] -z-10"></div>
-                    <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-3.svg" alt="">
-            </figure>
-
-            <div class="text-btn mb-6 leading-relaxed lg:flex-1 lg:max-w-1/2 lg:text-left">
-                <h3 class="text-h3 font-semibold mb-3">Easy sharing</h3>
-                <p class="text-p">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-                <button class="info-btn bg-[#5267DF] text-white py-3 px-6 rounded-md hover:bg-blue-600">
-                        More info
-                    </button>    
                 </div>
             </article>
+
+            <!-- Tab 2 -->
+            <article class="tab-content">
+                <figure class="tab-imgs relative mb-8 flex justify-center lg:flex-1 lg:max-w-1/2">
+                    <div class="features-bg-shape absolute bottom-0 left-0 translate-x-[30%] w-[95%] h-[80%] bg-primary rounded-r-full -z-10"></div>
+                    <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-2.svg" alt="An illustration of a magnifying lens over a desktop layout">
+                </figure>
+                
+                <div class="text-btn mb-6 leading-relaxed lg:flex-1 lg:max-w-1/2 lg:text-left">
+                    <h3 class="text-h3 font-semibold mb-3">Intelligent search</h3>
+                    <p class="text-p">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                    <button class="info-btn">
+                        More Info
+                    </button>
+                </div>    
+            </article>
             
+            <!-- Tab 3 -->
+            <article class="tab-content">
+                <figure class="tab-imgs relative mb-8 flex justify-center lg:flex-1 lg:max-w-1/2">
+                    <div class="features-bg-shape absolute -bottom-2 -left-10 w-72 h-32 bg-primary rounded-bl-[80px] -z-10"></div>
+                        <img class="max-w-[80%] h-auto z-10" src="/illustration-features-tab-3.svg" alt="An illustration of two human figures waving">
+                </figure>
+
+                <div class="text-btn mb-6 leading-relaxed lg:flex-1 lg:max-w-1/2 lg:text-left">
+                    <h3 class="text-h3 font-semibold mb-3">Easy sharing</h3>
+                    <p class="text-p">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                    <button class="info-btn">
+                        More info
+                    </button>
+                </div>
+            </article>    
         </main>
-    </section>
+    </div>
+</section>
 
     <!-- //////// DOWNLOAD SECTION //////// -->
 

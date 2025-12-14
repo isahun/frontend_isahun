@@ -93,6 +93,8 @@
   --spacing-xxl: var(--space-xxl);
   --spacing-3xl: var(--space-3xl);
 
+  --leading-m: var(--line-height);
+
   /* radius */
   --radius-button: var(--radius-button);
   --radius-card: var(--radius-card);
@@ -100,3 +102,34 @@
   /* shadows */
   --shadow-card: var(--shadow-card);
 }
+
+@layer components {
+
+  /* ===== FEATURES TABS ===== */
+  .tab {
+    @apply py-xs text-h5 cursor-pointer transition 
+    hover:text-accent lg:text-h6;
+  }
+
+  .tab.active {
+    @apply border-b-4 border-accent;
+  }
+
+  .tab-content {
+    @apply hidden flex flex-col text-center
+          lg:flex-row lg:items-center lg:gap-xxl;
+    }
+
+    .tab-content.active {
+      @apply flex flex-col items-center text-center gap-xl 
+      lg:flex-row lg:text-left
+    }
+
+    .info-btn {
+      @apply mt-m px-m py-s rounded-button bg-primary 
+      text-white border-2 border-primary
+      hover:bg-white hover:text-primary transition;    
+    }
+  }
+
+
