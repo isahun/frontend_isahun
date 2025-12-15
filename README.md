@@ -90,39 +90,39 @@ frontend_isahun_workspace_16112025.code-workspace
 
 This project was developed following an **iterative approach**, and each branch uses a **different setup**, aligned with the goals of each iteration. For this reason, installation and execution steps **vary depending on the branch**.
 
-### 
-1️⃣ Clone the repository
-git clone https://github.com/isahun/frontend_isahun.git
-cd Sprint1
-npm install
+###
 
-2️⃣ Switch to the branch you want to review
-git checkout <branch-name>
+1️⃣ Clone the repository:
+  git clone https://github.com/isahun/frontend_isahun.git 
+  cd Sprint1
+  npm install
+
+2️⃣ Switch to the branch you want to review: git checkout <branch-name>
 
 🔹 feature/vanilla-implementation
-  All code is located inside the Sprint1 directory
-  No build tools required
-  👉 Run: Open the HTML files directly in the browser
+  - All code is located inside the Sprint1 directory
+  - No build tools required
+   👉 Run: Open the HTML files directly in the browser
 
 🔹 feature/sass-implementation
-  The project remains inside the Sprint1 directory
-  Styles are written using SASS (SCSS)
-  👉 Compile styles:
-  npx sass src/styles:dist/styles
-  Then open the HTML files in the browser.
+  - The project remains inside the Sprint1 directory
+  - Styles are written using SASS (SCSS)
+   👉 Compile styles:
+    - npx sass src/styles:dist/styles
+    - Then open the HTML files in the browser.
 
 🔹 feature/tailwind-implementation
-  This iteration uses Tailwind CSS with Vite
-  The code is located inside the subdirectory:
-  Sprint1/tailwind-implementation/
-  👉 Steps:
+  - This iteration uses Tailwind CSS with Vite
+  - The code is located inside the subdirectory:
+    - Sprint1/tailwind-implementation/
+    👉 Steps:
+    - cd tailwind-implementation
+    - npm install
+    - npm run dev
   
-  cd tailwind-implementation
-  npm install
-  npm run dev
   Or for production:
-  npm run build
-  npm run preview
+    - npm run build
+    - npm run preview
 
   Note: this iteration uses Vite, so the project should not be opened directly with Live Server after the build.
 
@@ -130,5 +130,6 @@ git checkout <branch-name>
   The difference in folder structure between branches is a deliberate decision:
     Early iterations focus on layout and styling fundamentals
     The final iteration introduces modern tooling (Vite + Tailwind)
-    This approach helps illustrate the evolution of the project and different frontend workflows.
+    
+  This approach helps illustrate the evolution of the project and different frontend workflows.
 ---
