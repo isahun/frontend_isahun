@@ -70,10 +70,9 @@ Basic accessibility guidelines have been applied:
 ---
 
 ## 🚀 Available Scripts
-
-npm run dev       # Development environment
-npm run build     # Production build
-npm run preview   # Preview production build
+- npm run dev       # Development environment
+- npm run build     # Production build
+- npm run preview   # Preview production build
 
 
 .gitignore
